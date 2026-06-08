@@ -594,6 +594,117 @@
       }
     }
 
+    /* ===== GCP COMPANIES SECTION ===== */
+    .gcp-companies-section {
+      background: #0a0f1c;
+      padding: 100px 50px;
+    }
+
+    .companies-subtitle {
+      text-align: center;
+      color: #b0b8cc;
+      font-size: 1.1rem;
+      margin-bottom: 60px;
+      font-weight: 500;
+    }
+
+    .companies-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 20px;
+      margin-bottom: 50px;
+    }
+
+    .company-card {
+      background: linear-gradient(135deg, rgba(0, 255, 204, 0.1) 0%, rgba(0, 255, 204, 0.05) 100%);
+      border: 2px solid rgba(0, 255, 204, 0.2);
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 100px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .company-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .company-card:hover::before {
+      left: 100%;
+    }
+
+    .company-card:hover {
+      border-color: #00ffcc;
+      background: linear-gradient(135deg, rgba(0, 255, 204, 0.2) 0%, rgba(0, 255, 204, 0.1) 100%);
+      box-shadow: 0 10px 30px rgba(0, 255, 204, 0.15);
+      transform: translateY(-5px);
+    }
+
+    .company-card {
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.95rem;
+      font-family: 'Outfit', sans-serif;
+      position: relative;
+      z-index: 1;
+      line-height: 1.4;
+    }
+
+    .companies-footer {
+      text-align: center;
+      padding: 30px;
+      background: rgba(0, 255, 204, 0.05);
+      border: 2px solid rgba(0, 255, 204, 0.1);
+      border-radius: 12px;
+    }
+
+    .companies-footer p {
+      color: #00ffcc;
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    @media (max-width: 1024px) {
+      .companies-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 15px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .gcp-companies-section {
+        padding: 60px 20px;
+      }
+
+      .companies-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 12px;
+      }
+
+      .company-card {
+        padding: 15px;
+        min-height: 80px;
+      }
+
+      .company-card span {
+        font-size: 0.85rem;
+      }
+    }
+
     /* ===== ENHANCED COURSE CARDS ===== */
     .scroll-title {
       font-family: 'Outfit', sans-serif;
@@ -1305,6 +1416,200 @@
               <p>Tier-1 cities & specialized domains offer highest salary packages</p>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 100+ COMPANIES USING GCP IN IT MARKET ================= -->
+    <section class="gcp-companies-section">
+      <div class="container">
+        <h2 class="section-heading">🚀 100+ Companies Using GCP Cloud Today</h2>
+        <p class="companies-subtitle">Join the fastest-growing cloud platform trusted by Fortune 500 companies</p>
+
+        <div class="companies-grid">
+          <!-- Tech Giants -->
+          <div class="company-card">Google</div>
+          <div class="company-card">Microsoft</div>
+          <div class="company-card">Spotify</div>
+          <div class="company-card">Twitter</div>
+          <div class="company-card">Snapchat</div>
+          <div class="company-card">Slack</div>
+          <div class="company-card">Shopify</div>
+          <div class="company-card">Docker</div>
+          <div class="company-card">GitLab</div>
+          <div class="company-card">Coursera</div>
+
+          <!-- Cloud & SaaS -->
+          <div class="company-card">Salesforce</div>
+          <div class="company-card">Databricks</div>
+          <div class="company-card">Stripe</div>
+          <div class="company-card">Twilio</div>
+          <div class="company-card">SendGrid</div>
+          <div class="company-card">Auth0</div>
+          <div class="company-card">HashiCorp</div>
+          <div class="company-card">Elastic</div>
+          <div class="company-card">Atlassian</div>
+          <div class="company-card">GitHub</div>
+
+          <!-- Financial Services -->
+          <div class="company-card">JPMorgan</div>
+          <div class="company-card">Goldman Sachs</div>
+          <div class="company-card">Barclays</div>
+          <div class="company-card">HSBC</div>
+          <div class="company-card">Citigroup</div>
+          <div class="company-card">Morgan Stanley</div>
+          <div class="company-card">Bank of America</div>
+          <div class="company-card">PayPal</div>
+          <div class="company-card">Square</div>
+          <div class="company-card">Robinhood</div>
+
+          <!-- E-Commerce & Retail -->
+          <div class="company-card">Walmart</div>
+          <div class="company-card">Best Buy</div>
+          <div class="company-card">eBay</div>
+          <div class="company-card">Alibaba</div>
+          <div class="company-card">Flipkart</div>
+          <div class="company-card">Swiggy</div>
+          <div class="company-card">Zomato</div>
+          <div class="company-card">OYO Rooms</div>
+          <div class="company-card">Paytm</div>
+          <div class="company-card">PhonePe</div>
+
+          <!-- Media & Entertainment -->
+          <div class="company-card">Netflix</div>
+          <div class="company-card">Disney</div>
+          <div class="company-card">YouTube</div>
+          <div class="company-card">BBC</div>
+          <div class="company-card">Reuters</div>
+          <div class="company-card">The Guardian</div>
+          <div class="company-card">Hulu</div>
+          <div class="company-card">SoundCloud</div>
+          <div class="company-card">Vice Media</div>
+          <div class="company-card">Vimeo</div>
+
+          <!-- Travel & Logistics -->
+          <div class="company-card">Airbnb</div>
+          <div class="company-card">Booking.com</div>
+          <div class="company-card">Expedia</div>
+          <div class="company-card">Uber</div>
+          <div class="company-card">Ola</div>
+          <div class="company-card">Grab</div>
+          <div class="company-card">FedEx</div>
+          <div class="company-card">UPS</div>
+          <div class="company-card">Deutsche Post</div>
+          <div class="company-card">SNCF Rail</div>
+
+          <!-- Health & Biotech -->
+          <div class="company-card">Healthline</div>
+          <div class="company-card">Teladoc Health</div>
+          <div class="company-card">Zocdoc</div>
+          <div class="company-card">Practo</div>
+          <div class="company-card">Heal Healthcare</div>
+          <div class="company-card">Fitbit</div>
+          <div class="company-card">CVS Health</div>
+          <div class="company-card">Walgreens</div>
+          <div class="company-card">Veeva Systems</div>
+          <div class="company-card">Flatiron Health</div>
+
+          <!-- IT & Software -->
+          <div class="company-card">IBM</div>
+          <div class="company-card">Infosys</div>
+          <div class="company-card">TCS</div>
+          <div class="company-card">HCL Tech</div>
+          <div class="company-card">Tech Mahindra</div>
+          <div class="company-card">Accenture</div>
+          <div class="company-card">Deloitte</div>
+          <div class="company-card">KPMG</div>
+          <div class="company-card">EY</div>
+          <div class="company-card">PwC</div>
+
+          <!-- Startups & Unicorns -->
+          <div class="company-card">Byju's</div>
+          <div class="company-card">Unacademy</div>
+          <div class="company-card">Vedantu</div>
+          <div class="company-card">Dream11</div>
+          <div class="company-card">Razorpay</div>
+          <div class="company-card">Freshworks</div>
+          <div class="company-card">Druva</div>
+          <div class="company-card">CloudSEK</div>
+          <div class="company-card">Unbxd</div>
+          <div class="company-card">Knowlarity</div>
+
+          <!-- Automotive -->
+          <div class="company-card">Ford</div>
+          <div class="company-card">General Motors</div>
+          <div class="company-card">Volkswagen</div>
+          <div class="company-card">Toyota</div>
+          <div class="company-card">Honda</div>
+          <div class="company-card">Hyundai</div>
+          <div class="company-card">Kia Motors</div>
+          <div class="company-card">Maruti Suzuki</div>
+          <div class="company-card">Mahindra & Mahindra</div>
+          <div class="company-card">Tata Motors</div>
+
+          <!-- Retail & Consumer -->
+          <div class="company-card">Amazon</div>
+          <div class="company-card">Target</div>
+          <div class="company-card">Costco</div>
+          <div class="company-card">Home Depot</div>
+          <div class="company-card">Lowe's</div>
+          <div class="company-card">CVS Pharmacy</div>
+          <div class="company-card">Walgreens</div>
+          <div class="company-card">IKEA</div>
+          <div class="company-card">H&M</div>
+          <div class="company-card">Zara</div>
+
+          <!-- Energy & Utilities -->
+          <div class="company-card">Shell</div>
+          <div class="company-card">BP</div>
+          <div class="company-card">Chevron</div>
+          <div class="company-card">ExxonMobil</div>
+          <div class="company-card">Saudi Aramco</div>
+          <div class="company-card">NTPC</div>
+          <div class="company-card">Power Grid</div>
+          <div class="company-card">ONGC</div>
+          <div class="company-card">NextEra Energy</div>
+          <div class="company-card">Duke Energy</div>
+
+          <!-- Pharmaceuticals & Healthcare -->
+          <div class="company-card">Pfizer</div>
+          <div class="company-card">Moderna</div>
+          <div class="company-card">Johnson & Johnson</div>
+          <div class="company-card">AstraZeneca</div>
+          <div class="company-card">Novartis</div>
+          <div class="company-card">Roche</div>
+          <div class="company-card">Merck</div>
+          <div class="company-card">Bristol Myers Squibb</div>
+          <div class="company-card">Eli Lilly</div>
+          <div class="company-card">AbbVie</div>
+
+          <!-- Consumer Goods -->
+          <div class="company-card">Procter & Gamble</div>
+          <div class="company-card">Unilever</div>
+          <div class="company-card">Coca-Cola</div>
+          <div class="company-card">PepsiCo</div>
+          <div class="company-card">Nestlé</div>
+          <div class="company-card">Kraft Heinz</div>
+          <div class="company-card">Mondelez</div>
+          <div class="company-card">General Mills</div>
+          <div class="company-card">Kellogg's</div>
+          <div class="company-card">Campbell Soup</div>
+
+          <!-- Additional Major Companies -->
+          <div class="company-card">Mastercard</div>
+          <div class="company-card">Visa</div>
+          <div class="company-card">American Express</div>
+          <div class="company-card">PagerDuty</div>
+          <div class="company-card">Looker</div>
+          <div class="company-card">Firebase</div>
+          <div class="company-card">Siemens</div>
+          <div class="company-card">SAP</div>
+          <div class="company-card">Oracle Database</div>
+          <div class="company-card">And 40+ More...</div>
+        </div>
+
+        <div class="companies-footer">
+          <p>✨ These companies trust GCP for their data, AI/ML, and cloud infrastructure needs</p>
         </div>
       </div>
     </section>
