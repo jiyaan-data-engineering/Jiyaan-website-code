@@ -381,6 +381,272 @@
       }
     }
 
+    /* ===== EARNING POTENTIAL & CAREER PROGRESSION ===== */
+    .earning-potential {
+      background: #0a0f1c;
+      padding: 100px 50px;
+    }
+
+    .career-progression {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+      margin-bottom: 80px;
+      align-items: start;
+    }
+
+    .career-card {
+      background: #0f1528;
+      padding: 30px;
+      border-radius: 15px;
+      border: 2px solid rgba(0, 255, 204, 0.1);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s ease;
+    }
+
+    .career-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #00ffcc, transparent);
+    }
+
+    .career-card.fresher::before {
+      background: linear-gradient(90deg, #6366f1, #6366f1);
+    }
+
+    .career-card.junior::before {
+      background: linear-gradient(90deg, #8b5cf6, #8b5cf6);
+    }
+
+    .career-card.senior::before {
+      background: linear-gradient(90deg, #3b82f6, #3b82f6);
+    }
+
+    .career-card.lead::before {
+      background: linear-gradient(90deg, #f59e0b, #f59e0b);
+    }
+
+    .career-card:hover {
+      transform: translateY(-15px);
+      border-color: #00ffcc;
+      box-shadow: 0 20px 50px rgba(0, 255, 204, 0.2);
+    }
+
+    .career-level-badge {
+      display: inline-block;
+      background: rgba(0, 255, 204, 0.2);
+      color: #00ffcc;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .career-icon {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      display: block;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .career-card h3 {
+      color: #fff;
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .salary-display {
+      background: rgba(0, 255, 204, 0.1);
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      border-left: 3px solid #00ffcc;
+    }
+
+    .salary-amount {
+      color: #00ffcc;
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-bottom: 5px;
+    }
+
+    .salary-monthly {
+      color: #b0b8cc;
+      font-size: 0.9rem;
+    }
+
+    .career-focus {
+      margin-bottom: 20px;
+    }
+
+    .focus-title {
+      color: #b0b8cc;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .focus-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .focus-list li {
+      color: #b0b8cc;
+      font-size: 0.9rem;
+      padding: 5px 0;
+      line-height: 1.6;
+    }
+
+    .call-indicator {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(0, 255, 204, 0.1);
+    }
+
+    .indicator-label {
+      color: #b0b8cc;
+      font-size: 0.85rem;
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .progress-bar {
+      height: 6px;
+      background: rgba(0, 255, 204, 0.1);
+      border-radius: 3px;
+      overflow: hidden;
+      margin-bottom: 8px;
+    }
+
+    .progress {
+      height: 100%;
+      background: linear-gradient(90deg, #00ffcc, #00cc99);
+      transition: width 2s ease-out;
+      animation: growProgress 2s ease-out;
+    }
+
+    @keyframes growProgress {
+      from { width: 0; }
+      to { width: var(--progress-width, 100%); }
+    }
+
+    .progress-text {
+      color: #00ffcc;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .progression-arrow {
+      display: none;
+      font-size: 2rem;
+      color: #00ffcc;
+      text-align: center;
+      align-self: center;
+      animation: slideArrow 1.5s ease-in-out infinite;
+    }
+
+    @keyframes slideArrow {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(8px); }
+    }
+
+    @media (min-width: 1200px) {
+      .career-progression {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      .progression-arrow {
+        display: block;
+      }
+    }
+
+    /* Earning Insights */
+    .earning-insights {
+      background: linear-gradient(135deg, rgba(0, 255, 204, 0.1) 0%, rgba(0, 255, 204, 0.05) 100%);
+      padding: 40px;
+      border-radius: 15px;
+      border: 2px solid #00ffcc;
+    }
+
+    .insights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .insight-card {
+      background: rgba(15, 21, 40, 0.8);
+      padding: 25px;
+      border-radius: 12px;
+      border: 1px solid rgba(0, 255, 204, 0.15);
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .insight-card:hover {
+      border-color: #00ffcc;
+      background: rgba(15, 21, 40, 0.95);
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(0, 255, 204, 0.15);
+    }
+
+    .insight-icon {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      display: block;
+      animation: bounce 2s ease-in-out infinite;
+    }
+
+    .insight-card h4 {
+      color: #00ffcc;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .insight-card p {
+      color: #b0b8cc;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .earning-potential {
+        padding: 60px 20px;
+      }
+
+      .career-progression {
+        grid-template-columns: 1fr;
+        margin-bottom: 40px;
+      }
+
+      .progression-arrow {
+        display: none;
+      }
+
+      .insights-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     /* ===== ENHANCED COURSE CARDS ===== */
     .scroll-title {
       font-family: 'Outfit', sans-serif;
@@ -989,6 +1255,165 @@
             <p class="job-months">Jun, Nov, Dec</p>
             <p class="job-activity">Avoid job switching</p>
             <div class="job-badge not-recommended">Not Recommended</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EARNING POTENTIAL & CAREER PROGRESSION ================= -->
+    <section class="earning-potential">
+      <div class="container">
+        <h2 class="section-heading">💰 Real-World Earning Potential & Career Growth</h2>
+
+        <div class="career-progression">
+          <!-- Fresher Level -->
+          <div class="career-card fresher">
+            <div class="career-level-badge">Level 1</div>
+            <div class="career-icon">🎓</div>
+            <h3>Fresher (0-1 Years)</h3>
+            <div class="salary-display">
+              <div class="salary-amount">₹2 - 4.5 LPA</div>
+              <div class="salary-monthly">₹18K - ₹35K/month</div>
+            </div>
+            <div class="career-focus">
+              <p class="focus-title">Focus Areas:</p>
+              <ul class="focus-list">
+                <li>✓ Learning Phase</li>
+                <li>✓ Build Foundation</li>
+                <li>✓ Skill Development</li>
+              </ul>
+            </div>
+            <div class="call-indicator">
+              <span class="indicator-label">Interview Calls:</span>
+              <div class="progress-bar">
+                <div class="progress" style="width: 30%"></div>
+              </div>
+              <span class="progress-text">30% Calls</span>
+            </div>
+          </div>
+
+          <!-- Arrow Animation -->
+          <div class="progression-arrow">→</div>
+
+          <!-- Junior Level -->
+          <div class="career-card junior">
+            <div class="career-level-badge">Level 2</div>
+            <div class="career-icon">⚙️</div>
+            <h3>Junior (1-3 Years)</h3>
+            <div class="salary-display">
+              <div class="salary-amount">₹4 - 8 LPA</div>
+              <div class="salary-monthly">₹30K - ₹60K/month</div>
+            </div>
+            <div class="career-focus">
+              <p class="focus-title">Growth Areas:</p>
+              <ul class="focus-list">
+                <li>✓ Skill Building</li>
+                <li>✓ Job Switching</li>
+                <li>✓ 2-3x Growth</li>
+              </ul>
+            </div>
+            <div class="call-indicator">
+              <span class="indicator-label">Interview Calls:</span>
+              <div class="progress-bar">
+                <div class="progress" style="width: 60%"></div>
+              </div>
+              <span class="progress-text">60% Calls</span>
+            </div>
+          </div>
+
+          <!-- Arrow Animation -->
+          <div class="progression-arrow">→</div>
+
+          <!-- Senior Level -->
+          <div class="career-card senior">
+            <div class="career-level-badge">Level 3</div>
+            <div class="career-icon">🚀</div>
+            <h3>Senior (3-5 Years)</h3>
+            <div class="salary-display">
+              <div class="salary-amount">₹10 - 15 LPA</div>
+              <div class="salary-monthly">₹75K - ₹110K/month</div>
+            </div>
+            <div class="career-focus">
+              <p class="focus-title">Prime Opportunity:</p>
+              <ul class="focus-list">
+                <li>✓ Growth Phase</li>
+                <li>✓ Big Jump</li>
+                <li>✓ 100% Growth</li>
+              </ul>
+            </div>
+            <div class="call-indicator">
+              <span class="indicator-label">Interview Calls:</span>
+              <div class="progress-bar">
+                <div class="progress" style="width: 90%"></div>
+              </div>
+              <span class="progress-text">90% Calls</span>
+            </div>
+          </div>
+
+          <!-- Arrow Animation -->
+          <div class="progression-arrow">→</div>
+
+          <!-- Lead Level -->
+          <div class="career-card lead">
+            <div class="career-level-badge">Level 4</div>
+            <div class="career-icon">👑</div>
+            <h3>Lead (5+ Years)</h3>
+            <div class="salary-display">
+              <div class="salary-amount">₹15 - 30+ LPA</div>
+              <div class="salary-monthly">₹110K - ₹200K+/month</div>
+            </div>
+            <div class="career-focus">
+              <p class="focus-title">Leadership Role:</p>
+              <ul class="focus-list">
+                <li>✓ Leadership</li>
+                <li>✓ Specialist</li>
+                <li>✓ Strategic</li>
+              </ul>
+            </div>
+            <div class="call-indicator">
+              <span class="indicator-label">Interview Calls:</span>
+              <div class="progress-bar">
+                <div class="progress" style="width: 100%"></div>
+              </div>
+              <span class="progress-text">100% Calls</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Key Insights -->
+        <div class="earning-insights">
+          <h3 style="color: #00ffcc; text-align: center; margin-bottom: 30px; font-size: 1.3rem; font-weight: 700; font-family: 'Outfit', sans-serif;">How You Get Interview Calls</h3>
+          <div class="insights-grid">
+            <div class="insight-card">
+              <div class="insight-icon">📈</div>
+              <h4>Experience + Skills</h4>
+              <p>Every year of experience + skill mastery increases your call rate by 15-20%</p>
+            </div>
+            <div class="insight-card">
+              <div class="insight-icon">🎯</div>
+              <h4>Job Timing</h4>
+              <p>Apply during peak months (Jan-Mar) - Get 3x more interview calls</p>
+            </div>
+            <div class="insight-card">
+              <div class="insight-icon">💼</div>
+              <h4>Portfolio Impact</h4>
+              <p>Strong portfolio & projects = 10x faster callbacks from top companies</p>
+            </div>
+            <div class="insight-card">
+              <div class="insight-icon">🏆</div>
+              <h4>Certification Power</h4>
+              <p>GCP certifications unlock premium roles & salary bumps of 20-30%</p>
+            </div>
+            <div class="insight-card">
+              <div class="insight-icon">🤝</div>
+              <h4>Networking</h4>
+              <p>LinkedIn presence & referrals generate 5x more qualified opportunities</p>
+            </div>
+            <div class="insight-card">
+              <div class="insight-icon">📊</div>
+              <h4>Location & Domain</h4>
+              <p>Tier-1 cities & specialized domains offer highest salary packages</p>
+            </div>
           </div>
         </div>
       </div>
