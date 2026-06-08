@@ -15,7 +15,7 @@
   <meta name="keywords" content="GCP Data Engineering Course, Best Data Engineering Training, SQL for Data Engineering, Python for Data Science, PySpark Training, BigQuery Course, Jiyaan Institute, Cloud Engineering Placement">
   <meta name="author" content="Jiyaan Institute of Technology">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#4285F4">
+  <meta name="theme-color" content="#0066FF">
   <link rel="canonical" href="https://jiyaaninstitute.in/">
 
   <!-- Open Graph / Facebook -->
@@ -96,8 +96,8 @@
 
     body {
       font-family: 'Inter', 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      color: #1a1a1a;
-      background: #ffffff;
+      color: #ffffff;
+      background: linear-gradient(135deg, #001a3d 0%, #002147 50%, #001a3d 100%);
       line-height: 1.6;
       scroll-behavior: smooth;
     }
@@ -156,7 +156,7 @@
     }
 
     nav a:hover, nav a.active {
-      color: #4285F4;
+      color: #0066FF;
     }
 
     /* ===== HERO ===== */
@@ -200,7 +200,7 @@
       font-size: clamp(2rem, 8vw, 4rem);
       font-weight: 900;
       margin-bottom: 20px;
-      background: linear-gradient(120deg, #4285F4, #34A853, #FBBC04, #EA4335);
+      background: linear-gradient(120deg, #0066FF, #00DD66, #FFCC00, #FF3333);
       background-size: 200% auto;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -241,7 +241,7 @@
     }
 
     .btn:not(.outline) {
-      background: linear-gradient(135deg, #4285F4, #1967D2);
+      background: linear-gradient(135deg, #0066FF, #004DD4);
       color: white;
       box-shadow: 0 10px 30px rgba(66, 133, 244, 0.3);
     }
@@ -272,13 +272,133 @@
       font-weight: 900;
       text-align: center;
       margin-bottom: 60px;
-      color: #0f0f2e;
+      color: #0066FF;
+      text-shadow: 0 0 25px rgba(0, 102, 255, 0.4);
     }
 
     /* ===== WHY CHOOSE US ===== */
+    /* ===== INTERACTIVE SIMULATOR SECTION ===== */
+    .simulator-section {
+      background: rgba(0, 26, 61, 0.8);
+      padding: 100px 20px;
+      position: relative;
+    }
+
+    .simulator-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background:
+        radial-gradient(circle at 10% 20%, rgba(0, 102, 255, 0.06) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(0, 221, 102, 0.06) 0%, transparent 20%);
+      pointer-events: none;
+    }
+
+    .simulator-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .stage-box {
+      background: linear-gradient(135deg, rgba(0, 102, 255, 0.12) 0%, rgba(0, 102, 255, 0.08) 100%);
+      border: 2px solid #0066FF;
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      min-width: 140px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stage-box::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(0, 221, 102, 0.3), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .stage-box:hover {
+      transform: translateY(-8px);
+      border-color: #00DD66;
+      box-shadow: 0 0 20px rgba(0, 221, 102, 0.5), 0 8px 25px rgba(0, 102, 255, 0.2);
+    }
+
+    .stage-box:hover::before {
+      left: 100%;
+    }
+
+    .stage-box.active {
+      border-color: #00DD66;
+      background: linear-gradient(135deg, rgba(0, 221, 102, 0.2) 0%, rgba(0, 102, 255, 0.2) 100%);
+      box-shadow: 0 0 30px rgba(0, 221, 102, 0.6);
+    }
+
+    .stage-icon {
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+    }
+
+    .stage-box h3 {
+      color: #00DD66;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+
+    .stage-service {
+      color: #9DD6FF;
+      font-size: 0.85rem;
+      margin: 0;
+    }
+
+    .stage-details {
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px solid #0066FF;
+      color: #B3D9FF;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      text-align: left;
+    }
+
+    .stage-details p {
+      margin: 8px 0;
+    }
+
+    .flow-arrow {
+      color: #0066FF;
+      font-size: 2rem;
+      font-weight: bold;
+      opacity: 0.6;
+      transition: all 0.3s ease;
+    }
+
+    .stage-box:hover ~ .flow-arrow {
+      color: #00DD66;
+      opacity: 1;
+      transform: scale(1.3);
+    }
+
     /* ===== GCP JOURNEY SECTION ===== */
     .gcp-journey-section {
-      background: white;
+      background: rgba(0, 26, 61, 0.7);
       padding: 100px 20px;
     }
 
@@ -294,7 +414,7 @@
       background: #f8fafc;
       padding: 30px;
       border-radius: 12px;
-      border-left: 5px solid #4285F4;
+      border-left: 5px solid #0066FF;
       transition: all 0.3s ease;
       position: relative;
     }
@@ -302,19 +422,19 @@
     .journey-item:hover {
       transform: translateY(-8px);
       box-shadow: 0 12px 30px rgba(66, 133, 244, 0.15);
-      border-left-color: #34A853;
+      border-left-color: #00DD66;
     }
 
     .journey-item.highlight {
-      background: linear-gradient(135deg, #4285F4 0%, #1967D2 100%);
+      background: linear-gradient(135deg, #0066FF 0%, #004DD4 100%);
       color: white;
-      border-left-color: #FBBC04;
+      border-left-color: #FFCC00;
     }
 
     .journey-year {
       font-size: 1.5rem;
       font-weight: 900;
-      color: #1967D2;
+      color: #004DD4;
       margin-bottom: 12px;
       display: inline-block;
       background: white;
@@ -340,7 +460,7 @@
     }
 
     .journey-content p {
-      color: #64748b;
+      color: #9DD6FF;
       font-size: 0.95rem;
       line-height: 1.6;
     }
@@ -351,7 +471,7 @@
 
     /* ===== WHY CHOOSE GCP SECTION ===== */
     .why-gcp-section {
-      background: white;
+      background: rgba(0, 26, 61, 0.9);
       padding: 100px 20px;
     }
 
@@ -370,7 +490,7 @@
       padding: 30px;
       background: #f8fafc;
       border-radius: 12px;
-      border-left: 5px solid #4285F4;
+      border-left: 5px solid #0066FF;
       transition: all 0.3s;
     }
 
@@ -385,7 +505,7 @@
     }
 
     .feature-box p {
-      color: #64748b;
+      color: #9DD6FF;
     }
 
     .feature-icon {
@@ -408,7 +528,7 @@
       background: white;
       padding: 30px;
       border-radius: 12px;
-      border-left: 5px solid #4285F4;
+      border-left: 5px solid #0066FF;
       text-align: center;
       transition: all 0.3s;
     }
@@ -419,7 +539,7 @@
     }
 
     .salary-box.highlight {
-      background: linear-gradient(135deg, #4285F4, #1967D2);
+      background: linear-gradient(135deg, #0066FF, #004DD4);
       color: white;
       border: none;
       transform: scale(1.05);
@@ -432,7 +552,7 @@
     }
 
     .salary-box:not(.highlight) .ctc {
-      color: #1967D2;
+      color: #004DD4;
     }
 
     .salary-box.highlight .ctc {
@@ -453,7 +573,7 @@
     .career-points li {
       padding: 8px 0;
       border-bottom: 1px solid #e2e8f0;
-      color: #64748b;
+      color: #9DD6FF;
     }
 
     .salary-box.highlight .career-points li {
@@ -463,7 +583,7 @@
 
     .career-points li::before {
       content: '✓ ';
-      color: #34A853;
+      color: #00DD66;
       font-weight: 800;
       margin-right: 8px;
     }
@@ -493,14 +613,14 @@
     }
 
     .step:hover {
-      border-color: #4285F4;
+      border-color: #0066FF;
       box-shadow: 0 8px 20px rgba(66, 133, 244, 0.15);
     }
 
     .step-number {
       width: 35px;
       height: 35px;
-      background: linear-gradient(135deg, #4285F4, #1967D2);
+      background: linear-gradient(135deg, #0066FF, #004DD4);
       color: white;
       border-radius: 50%;
       margin: 0 auto 10px;
@@ -517,7 +637,7 @@
 
     .step p {
       font-size: 0.85rem;
-      color: #64748b;
+      color: #9DD6FF;
     }
 
     .tool {
@@ -526,13 +646,13 @@
       background: #f1f5f9;
       border-radius: 15px;
       font-size: 0.75rem;
-      color: #1967D2;
+      color: #004DD4;
       font-weight: 600;
       margin-top: 8px;
     }
 
     .step-arrow {
-      color: #4285F4;
+      color: #0066FF;
       font-weight: 700;
       margin: 0 5px;
     }
@@ -589,7 +709,7 @@
     }
 
     .card.highlight-card {
-      background: linear-gradient(135deg, #4285F4, #1967D2);
+      background: linear-gradient(135deg, #0066FF, #004DD4);
       color: white;
     }
 
@@ -614,15 +734,15 @@
     }
 
     .insight-card.best {
-      background: linear-gradient(135deg, #34A853, #2d8a4f);
+      background: linear-gradient(135deg, #00DD66, #2d8a4f);
     }
 
     .insight-card.good {
-      background: linear-gradient(135deg, #4285F4, #1967D2);
+      background: linear-gradient(135deg, #0066FF, #004DD4);
     }
 
     .insight-card.avoid {
-      background: linear-gradient(135deg, #FBBC04, #f59e0b);
+      background: linear-gradient(135deg, #FFCC00, #f59e0b);
     }
 
     .insight-card:hover {
@@ -676,13 +796,13 @@
     .stat-number {
       font-size: 2rem;
       font-weight: 900;
-      color: #1967D2;
+      color: #004DD4;
       margin-bottom: 10px;
     }
 
     .stat-text {
       font-size: 1rem;
-      color: #64748b;
+      color: #9DD6FF;
       font-weight: 600;
     }
 
@@ -701,7 +821,7 @@
       background: #f8fafc;
       padding: 30px;
       border-radius: 12px;
-      border-top: 4px solid #4285F4;
+      border-top: 4px solid #0066FF;
       transition: all 0.3s;
     }
 
@@ -720,7 +840,7 @@
     .testimonial-avatar {
       width: 50px;
       height: 50px;
-      background: linear-gradient(135deg, #4285F4, #1967D2);
+      background: linear-gradient(135deg, #0066FF, #004DD4);
       color: white;
       border-radius: 50%;
       display: flex;
@@ -737,7 +857,7 @@
     .testimonial-info p {
       margin: 5px 0 0 0;
       font-size: 0.9rem;
-      color: #64748b;
+      color: #9DD6FF;
     }
 
     .stars {
@@ -777,7 +897,7 @@
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #4285F4, #1967D2);
+      background: linear-gradient(135deg, #0066FF, #004DD4);
     }
 
     .btn-secondary {
@@ -922,11 +1042,131 @@
       </div>
     </section>
 
+    <!-- ================= INTERACTIVE DATA PIPELINE SIMULATOR ================= -->
+    <section class="simulator-section">
+      <div class="container">
+        <h2 class="section-title">🎮 Interactive Data Pipeline Simulator</h2>
+        <p style="text-align: center; color: #9DD6FF; margin-bottom: 60px; font-size: 1.05rem;">
+          Click on each stage to see real data flowing through the GCP pipeline
+        </p>
+
+        <div class="simulator-container">
+          <!-- Stage 1: Ingest -->
+          <div class="stage-box" data-stage="ingest">
+            <div class="stage-icon">📥</div>
+            <h3>INGEST</h3>
+            <p class="stage-service">Cloud Pub/Sub</p>
+            <div class="stage-details" style="display: none;">
+              <p><strong>What happens:</strong> Real-time events stream in from APIs</p>
+              <p><strong>Example:</strong> User clicks "Buy" → event sent immediately</p>
+              <p><strong>Throughput:</strong> 100K+ events/second</p>
+            </div>
+          </div>
+
+          <div class="flow-arrow">→</div>
+
+          <!-- Stage 2: Store -->
+          <div class="stage-box" data-stage="store">
+            <div class="stage-icon">💾</div>
+            <h3>STORE</h3>
+            <p class="stage-service">Cloud Storage (GCS)</p>
+            <div class="stage-details" style="display: none;">
+              <p><strong>What happens:</strong> Raw data persisted in data lake</p>
+              <p><strong>Example:</strong> JSON files stored: gs://data-lake/events/</p>
+              <p><strong>Capacity:</strong> Unlimited scalability</p>
+            </div>
+          </div>
+
+          <div class="flow-arrow">→</div>
+
+          <!-- Stage 3: Process -->
+          <div class="stage-box" data-stage="process">
+            <div class="stage-icon">⚙️</div>
+            <h3>PROCESS</h3>
+            <p class="stage-service">Cloud Dataflow</p>
+            <div class="stage-details" style="display: none;">
+              <p><strong>What happens:</strong> Transform & clean data in real-time</p>
+              <p><strong>Example:</strong> Enrich events with user info</p>
+              <p><strong>Latency:</strong> Sub-second processing</p>
+            </div>
+          </div>
+
+          <div class="flow-arrow">→</div>
+
+          <!-- Stage 4: Warehouse -->
+          <div class="stage-box" data-stage="warehouse">
+            <div class="stage-icon">📊</div>
+            <h3>WAREHOUSE</h3>
+            <p class="stage-service">BigQuery</p>
+            <div class="stage-details" style="display: none;">
+              <p><strong>What happens:</strong> Store structured data for analysis</p>
+              <p><strong>Example:</strong> Petabyte-scale queries in seconds</p>
+              <p><strong>Speed:</strong> Fastest data warehouse</p>
+            </div>
+          </div>
+
+          <div class="flow-arrow">→</div>
+
+          <!-- Stage 5: Analyze -->
+          <div class="stage-box" data-stage="analyze">
+            <div class="stage-icon">🤖</div>
+            <h3>ANALYZE</h3>
+            <p class="stage-service">Vertex AI</p>
+            <div class="stage-details" style="display: none;">
+              <p><strong>What happens:</strong> ML models create predictions</p>
+              <p><strong>Example:</strong> Predict churn, recommend products</p>
+              <p><strong>Accuracy:</strong> 95%+ prediction accuracy</p>
+            </div>
+          </div>
+
+          <div class="flow-arrow">→</div>
+
+          <!-- Stage 6: Visualize -->
+          <div class="stage-box" data-stage="visualize">
+            <div class="stage-icon">📈</div>
+            <h3>VISUALIZE</h3>
+            <p class="stage-service">Looker</p>
+            <div class="stage-details" style="display: none;">
+              <p><strong>What happens:</strong> Real-time dashboards update</p>
+              <p><strong>Example:</strong> Live sales by region, top products</p>
+              <p><strong>Refresh:</strong> Every 5 minutes</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Simulator Stats -->
+        <div style="margin-top: 60px; text-align: center;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; padding: 30px; background: rgba(66, 133, 244, 0.1); border-radius: 12px; border: 2px solid #0066FF;">
+            <div>
+              <div style="font-size: 2rem; font-weight: 900; color: #00d4ff; margin-bottom: 8px;" id="events-counter">0</div>
+              <div style="color: #9DD6FF; font-weight: 600; font-size: 0.9rem;">Events Processed</div>
+            </div>
+            <div>
+              <div style="font-size: 2rem; font-weight: 900; color: #00DD66; margin-bottom: 8px;" id="queries-counter">0</div>
+              <div style="color: #9DD6FF; font-weight: 600; font-size: 0.9rem;">BigQuery Queries</div>
+            </div>
+            <div>
+              <div style="font-size: 2rem; font-weight: 900; color: #FFCC00; margin-bottom: 8px;" id="predictions-counter">0</div>
+              <div style="color: #9DD6FF; font-weight: 600; font-size: 0.9rem;">ML Predictions</div>
+            </div>
+            <div>
+              <div style="font-size: 2rem; font-weight: 900; color: #FF3333; margin-bottom: 8px;" id="latency-counter">0ms</div>
+              <div style="color: #9DD6FF; font-weight: 600; font-size: 0.9rem;">End-to-End Latency</div>
+            </div>
+          </div>
+        </div>
+
+        <p style="text-align: center; color: #7CB3FF; margin-top: 40px; font-size: 0.9rem;">
+          💡 Tip: Click on any stage above to learn more about what happens at each step!
+        </p>
+      </div>
+    </section>
+
     <!-- ================= GOOGLE CLOUD PLATFORM JOURNEY ================= -->
     <section class="gcp-journey-section">
       <div class="container">
         <h2 class="section-title">Google Cloud Platform Evolution: 2008 - 2025</h2>
-        <p style="text-align: center; color: #64748b; margin-bottom: 50px; font-size: 1.05rem;">
+        <p style="text-align: center; color: #9DD6FF; margin-bottom: 50px; font-size: 1.05rem;">
           Journey of Google's cloud transformation and how Jiyaan Institute is training the next generation of GCP experts
         </p>
 
@@ -1000,24 +1240,24 @@
           <h3 style="text-align: center; margin-bottom: 40px; color: #0f0f2e;">Why GCP Dominates Enterprise Data Engineering</h3>
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
             <div style="text-align: center;">
-              <div style="font-size: 2.5rem; font-weight: 900; color: #4285F4; margin-bottom: 10px;">8M+</div>
-              <div style="color: #64748b; font-weight: 600;">Active GCP Users</div>
-              <p style="color: #64748b; margin-top: 8px; font-size: 0.9rem;">Millions of organizations trust GCP</p>
+              <div style="font-size: 2.5rem; font-weight: 900; color: #0066FF; margin-bottom: 10px;">8M+</div>
+              <div style="color: #9DD6FF; font-weight: 600;">Active GCP Users</div>
+              <p style="color: #9DD6FF; margin-top: 8px; font-size: 0.9rem;">Millions of organizations trust GCP</p>
             </div>
             <div style="text-align: center;">
-              <div style="font-size: 2.5rem; font-weight: 900; color: #1967D2; margin-bottom: 10px;">35+</div>
-              <div style="color: #64748b; font-weight: 600;">Global Regions</div>
-              <p style="color: #64748b; margin-top: 8px; font-size: 0.9rem;">Worldwide infrastructure coverage</p>
+              <div style="font-size: 2.5rem; font-weight: 900; color: #004DD4; margin-bottom: 10px;">35+</div>
+              <div style="color: #9DD6FF; font-weight: 600;">Global Regions</div>
+              <p style="color: #9DD6FF; margin-top: 8px; font-size: 0.9rem;">Worldwide infrastructure coverage</p>
             </div>
             <div style="text-align: center;">
-              <div style="font-size: 2.5rem; font-weight: 900; color: #34A853; margin-bottom: 10px;">99.99%</div>
-              <div style="color: #64748b; font-weight: 600;">Uptime SLA</div>
-              <p style="color: #64748b; margin-top: 8px; font-size: 0.9rem;">Enterprise-grade reliability</p>
+              <div style="font-size: 2.5rem; font-weight: 900; color: #00DD66; margin-bottom: 10px;">99.99%</div>
+              <div style="color: #9DD6FF; font-weight: 600;">Uptime SLA</div>
+              <p style="color: #9DD6FF; margin-top: 8px; font-size: 0.9rem;">Enterprise-grade reliability</p>
             </div>
             <div style="text-align: center;">
-              <div style="font-size: 2.5rem; font-weight: 900; color: #FBBC04; margin-bottom: 10px;">$33B+</div>
-              <div style="color: #64748b; font-weight: 600;">Cloud Revenue</div>
-              <p style="color: #64748b; margin-top: 8px; font-size: 0.9rem;">Fastest-growing major cloud provider</p>
+              <div style="font-size: 2.5rem; font-weight: 900; color: #FFCC00; margin-bottom: 10px;">$33B+</div>
+              <div style="color: #9DD6FF; font-weight: 600;">Cloud Revenue</div>
+              <p style="color: #9DD6FF; margin-top: 8px; font-size: 0.9rem;">Fastest-growing major cloud provider</p>
             </div>
           </div>
         </div>
@@ -1028,7 +1268,7 @@
     <section class="why-gcp-section">
       <div class="container">
         <h2 class="section-title">Why Choose Google Cloud Platform?</h2>
-        <p style="text-align: center; color: #64748b; margin-bottom: 50px; font-size: 1.05rem;">
+        <p style="text-align: center; color: #9DD6FF; margin-bottom: 50px; font-size: 1.05rem;">
           GCP vs AWS vs Azure: See why enterprises are choosing Google Cloud
         </p>
 
@@ -1036,7 +1276,7 @@
         <div style="overflow-x: auto; margin-bottom: 60px;">
           <table style="width: 100%; border-collapse: collapse; background: white;">
             <thead>
-              <tr style="background: linear-gradient(135deg, #4285F4 0%, #1967D2 100%); color: white;">
+              <tr style="background: linear-gradient(135deg, #0066FF 0%, #004DD4 100%); color: white;">
                 <th style="padding: 20px; text-align: left; border: 1px solid #e2e8f0; font-weight: 700;">Feature</th>
                 <th style="padding: 20px; text-align: center; border: 1px solid #e2e8f0; font-weight: 700;">🔷 GCP</th>
                 <th style="padding: 20px; text-align: center; border: 1px solid #e2e8f0; font-weight: 700;">AWS</th>
@@ -1046,37 +1286,37 @@
             <tbody>
               <tr style="border-bottom: 1px solid #e2e8f0;">
                 <td style="padding: 15px; border: 1px solid #e2e8f0;">Data Analytics & BigQuery</td>
-                <td style="padding: 15px; text-align: center; border: 1px solid #e2e8f0; color: #34A853; font-weight: 600;">✓ Industry Leader</td>
+                <td style="padding: 15px; text-align: center; border: 1px solid #e2e8f0; color: #00DD66; font-weight: 600;">✓ Industry Leader</td>
                 <td style="padding: 15px; text-align: center; border: 1px solid #e2e8f0;">Redshift (Slower)</td>
                 <td style="padding: 15px; text-align: center; border: 1px solid #e2e8f0;">Synapse (Basic)</td>
               </tr>
               <tr style="border-bottom: 1px solid #e2e8f0; background: #f8fafc;">
                 <td style="padding: 15px; border: 1px solid #e2e8f0;">Machine Learning</td>
-                <td style="padding: 15px; text-align: center; border: 1px solid #e2e8f0; color: #34A853; font-weight: 600;">✓ Vertex AI (Best)</td>
+                <td style="padding: 15px; text-align: center; border: 1px solid #e2e8f0; color: #00DD66; font-weight: 600;">✓ Vertex AI (Best)</td>
                 <td style="padding: 15px; text-align: center; border: 1px solid #e2e8f0;">SageMaker</td>
                 <td style="padding: 15px; text-align: center; border: 1px solid #e2e8f0;">ML Services</td>
               </tr>
               <tr style="border-bottom: 1px solid #e2e8f0;">
                 <td style="padding: 15px; border: 1px solid #e2e8f0;">Real-time Streaming</td>
-                <td style="padding: 15px; text-align: center; border: 1px solid #e2e8f0; color: #34A853; font-weight: 600;">✓ Pub/Sub + Dataflow</td>
+                <td style="padding: 15px; text-align: center; border: 1px solid #e2e8f0; color: #00DD66; font-weight: 600;">✓ Pub/Sub + Dataflow</td>
                 <td style="padding: 15px; text-align: center; border: 1px solid #e2e8f0;">Kinesis (Limited)</td>
                 <td style="padding: 15px; text-align: center; border: 1px solid #e2e8f0;">Event Hubs</td>
               </tr>
               <tr style="border-bottom: 1px solid #e2e8f0; background: #f8fafc;">
                 <td style="padding: 15px; border: 1px solid #e2e8f0;">Pricing Model</td>
-                <td style="padding: 15px; text-align: center; border: 1px solid #e2e8f0; color: #34A853; font-weight: 600;">✓ Most Competitive</td>
+                <td style="padding: 15px; text-align: center; border: 1px solid #e2e8f0; color: #00DD66; font-weight: 600;">✓ Most Competitive</td>
                 <td style="padding: 15px; text-align: center; border: 1px solid #e2e8f0;">Higher Cost</td>
                 <td style="padding: 15px; text-align: center; border: 1px solid #e2e8f0;">Mid-range</td>
               </tr>
               <tr style="border-bottom: 1px solid #e2e8f0;">
                 <td style="padding: 15px; border: 1px solid #e2e8f0;">Data Warehousing</td>
-                <td style="padding: 15px; text-align: center; border: 1px solid #e2e8f0; color: #34A853; font-weight: 600;">✓ BigQuery (Fastest)</td>
+                <td style="padding: 15px; text-align: center; border: 1px solid #e2e8f0; color: #00DD66; font-weight: 600;">✓ BigQuery (Fastest)</td>
                 <td style="padding: 15px; text-align: center; border: 1px solid #e2e8f0;">Redshift</td>
                 <td style="padding: 15px; text-align: center; border: 1px solid #e2e8f0;">Synapse</td>
               </tr>
               <tr style="background: #f8fafc;">
                 <td style="padding: 15px; border: 1px solid #e2e8f0;">Generative AI Integration</td>
-                <td style="padding: 15px; text-align: center; border: 1px solid #e2e8f0; color: #34A853; font-weight: 600;">✓ Leading Edge</td>
+                <td style="padding: 15px; text-align: center; border: 1px solid #e2e8f0; color: #00DD66; font-weight: 600;">✓ Leading Edge</td>
                 <td style="padding: 15px; text-align: center; border: 1px solid #e2e8f0;">Bedrock</td>
                 <td style="padding: 15px; text-align: center; border: 1px solid #e2e8f0;">OpenAI Integration</td>
               </tr>
@@ -1088,29 +1328,29 @@
         <div style="background: linear-gradient(135deg, #f0f7ff 0%, #e8f0ff 100%); padding: 40px; border-radius: 15px; margin-bottom: 60px;">
           <h3 style="text-align: center; margin-bottom: 40px; color: #0f0f2e;">GCP's Competitive Advantages</h3>
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
-            <div style="background: white; padding: 25px; border-radius: 12px; border-left: 4px solid #4285F4;">
+            <div style="background: white; padding: 25px; border-radius: 12px; border-left: 4px solid #0066FF;">
               <h4 style="margin-bottom: 10px; color: #0f0f2e;">🚀 Speed & Performance</h4>
-              <p style="color: #64748b; margin: 0;">BigQuery processes terabytes in seconds. 10-100x faster than competitors for analytics.</p>
+              <p style="color: #9DD6FF; margin: 0;">BigQuery processes terabytes in seconds. 10-100x faster than competitors for analytics.</p>
             </div>
-            <div style="background: white; padding: 25px; border-radius: 12px; border-left: 4px solid #1967D2;">
+            <div style="background: white; padding: 25px; border-radius: 12px; border-left: 4px solid #004DD4;">
               <h4 style="margin-bottom: 10px; color: #0f0f2e;">💰 Cost Efficiency</h4>
-              <p style="color: #64748b; margin: 0;">Pay only for what you use. GCP pricing is 30-40% lower than AWS for equivalent workloads.</p>
+              <p style="color: #9DD6FF; margin: 0;">Pay only for what you use. GCP pricing is 30-40% lower than AWS for equivalent workloads.</p>
             </div>
-            <div style="background: white; padding: 25px; border-radius: 12px; border-left: 4px solid #34A853;">
+            <div style="background: white; padding: 25px; border-radius: 12px; border-left: 4px solid #00DD66;">
               <h4 style="margin-bottom: 10px; color: #0f0f2e;">🤖 AI/ML Excellence</h4>
-              <p style="color: #64748b; margin: 0;">Google's AI expertise built in. Vertex AI provides pre-trained models and AutoML capabilities.</p>
+              <p style="color: #9DD6FF; margin: 0;">Google's AI expertise built in. Vertex AI provides pre-trained models and AutoML capabilities.</p>
             </div>
-            <div style="background: white; padding: 25px; border-radius: 12px; border-left: 4px solid #FBBC04;">
+            <div style="background: white; padding: 25px; border-radius: 12px; border-left: 4px solid #FFCC00;">
               <h4 style="margin-bottom: 10px; color: #0f0f2e;">⚡ Real-time Processing</h4>
-              <p style="color: #64748b; margin: 0;">Pub/Sub + Dataflow enable streaming at massive scale with ease.</p>
+              <p style="color: #9DD6FF; margin: 0;">Pub/Sub + Dataflow enable streaming at massive scale with ease.</p>
             </div>
-            <div style="background: white; padding: 25px; border-radius: 12px; border-left: 4px solid #EA4335;">
+            <div style="background: white; padding: 25px; border-radius: 12px; border-left: 4px solid #FF3333;">
               <h4 style="margin-bottom: 10px; color: #0f0f2e;">🔒 Security & Privacy</h4>
-              <p style="color: #64748b; margin: 0;">Built on Google's infrastructure. Best-in-class encryption and compliance certifications.</p>
+              <p style="color: #9DD6FF; margin: 0;">Built on Google's infrastructure. Best-in-class encryption and compliance certifications.</p>
             </div>
             <div style="background: white; padding: 25px; border-radius: 12px; border-left: 4px solid #5F6368;">
               <h4 style="margin-bottom: 10px; color: #0f0f2e;">📚 Simplicity</h4>
-              <p style="color: #64748b; margin: 0;">Less complex architecture. Easier to learn and faster time-to-value than competitors.</p>
+              <p style="color: #9DD6FF; margin: 0;">Less complex architecture. Easier to learn and faster time-to-value than competitors.</p>
             </div>
           </div>
         </div>
@@ -1123,65 +1363,65 @@
               <div style="padding: 20px; border-radius: 10px; background: #f8fafc;">
                 <div style="font-size: 2rem; margin-bottom: 8px;">🔍</div>
                 <div style="font-weight: 700; color: #0f0f2e;">Google</div>
-                <div style="font-size: 0.85rem; color: #64748b;">Search, Maps, YouTube</div>
+                <div style="font-size: 0.85rem; color: #9DD6FF;">Search, Maps, YouTube</div>
               </div>
               <div style="padding: 20px; border-radius: 10px; background: #f8fafc;">
                 <div style="font-size: 2rem; margin-bottom: 8px;">🎬</div>
                 <div style="font-weight: 700; color: #0f0f2e;">Netflix</div>
-                <div style="font-size: 0.85rem; color: #64748b;">Streaming Analytics</div>
+                <div style="font-size: 0.85rem; color: #9DD6FF;">Streaming Analytics</div>
               </div>
               <div style="padding: 20px; border-radius: 10px; background: #f8fafc;">
                 <div style="font-size: 2rem; margin-bottom: 8px;">🎮</div>
                 <div style="font-weight: 700; color: #0f0f2e;">Twitter / X</div>
-                <div style="font-size: 0.85rem; color: #64748b;">Real-time Data</div>
+                <div style="font-size: 0.85rem; color: #9DD6FF;">Real-time Data</div>
               </div>
               <div style="padding: 20px; border-radius: 10px; background: #f8fafc;">
                 <div style="font-size: 2rem; margin-bottom: 8px;">🏦</div>
                 <div style="font-weight: 700; color: #0f0f2e;">HSBC</div>
-                <div style="font-size: 0.85rem; color: #64748b;">Financial Services</div>
+                <div style="font-size: 0.85rem; color: #9DD6FF;">Financial Services</div>
               </div>
               <div style="padding: 20px; border-radius: 10px; background: #f8fafc;">
                 <div style="font-size: 2rem; margin-bottom: 8px;">🚗</div>
                 <div style="font-weight: 700; color: #0f0f2e;">Volkswagen</div>
-                <div style="font-size: 0.85rem; color: #64748b;">IoT & Analytics</div>
+                <div style="font-size: 0.85rem; color: #9DD6FF;">IoT & Analytics</div>
               </div>
               <div style="padding: 20px; border-radius: 10px; background: #f8fafc;">
                 <div style="font-size: 2rem; margin-bottom: 8px;">🏥</div>
                 <div style="font-weight: 700; color: #0f0f2e;">Unilever</div>
-                <div style="font-size: 0.85rem; color: #64748b;">Marketing Analytics</div>
+                <div style="font-size: 0.85rem; color: #9DD6FF;">Marketing Analytics</div>
               </div>
               <div style="padding: 20px; border-radius: 10px; background: #f8fafc;">
                 <div style="font-size: 2rem; margin-bottom: 8px;">📱</div>
                 <div style="font-weight: 700; color: #0f0f2e;">Spotify</div>
-                <div style="font-size: 0.85rem; color: #64748b;">Music Analytics</div>
+                <div style="font-size: 0.85rem; color: #9DD6FF;">Music Analytics</div>
               </div>
               <div style="padding: 20px; border-radius: 10px; background: #f8fafc;">
                 <div style="font-size: 2rem; margin-bottom: 8px;">🛍️</div>
                 <div style="font-weight: 700; color: #0f0f2e;">eBay</div>
-                <div style="font-size: 0.85rem; color: #64748b;">E-commerce Data</div>
+                <div style="font-size: 0.85rem; color: #9DD6FF;">E-commerce Data</div>
               </div>
               <div style="padding: 20px; border-radius: 10px; background: #f8fafc;">
                 <div style="font-size: 2rem; margin-bottom: 8px;">📡</div>
                 <div style="font-weight: 700; color: #0f0f2e;">The New York Times</div>
-                <div style="font-size: 0.85rem; color: #64748b;">News Analytics</div>
+                <div style="font-size: 0.85rem; color: #9DD6FF;">News Analytics</div>
               </div>
               <div style="padding: 20px; border-radius: 10px; background: #f8fafc;">
                 <div style="font-size: 2rem; margin-bottom: 8px;">🎯</div>
                 <div style="font-weight: 700; color: #0f0f2e;">Colgate-Palmolive</div>
-                <div style="font-size: 0.85rem; color: #64748b;">Supply Chain Data</div>
+                <div style="font-size: 0.85rem; color: #9DD6FF;">Supply Chain Data</div>
               </div>
               <div style="padding: 20px; border-radius: 10px; background: #f8fafc;">
                 <div style="font-size: 2rem; margin-bottom: 8px;">🏢</div>
                 <div style="font-weight: 700; color: #0f0f2e;">Deutsche Bank</div>
-                <div style="font-size: 0.85rem; color: #64748b;">Risk Analytics</div>
+                <div style="font-size: 0.85rem; color: #9DD6FF;">Risk Analytics</div>
               </div>
               <div style="padding: 20px; border-radius: 10px; background: #f8fafc;">
                 <div style="font-size: 2rem; margin-bottom: 8px;">🚀</div>
                 <div style="font-weight: 700; color: #0f0f2e;">Snapchat</div>
-                <div style="font-size: 0.85rem; color: #64748b;">Real-time Analytics</div>
+                <div style="font-size: 0.85rem; color: #9DD6FF;">Real-time Analytics</div>
               </div>
             </div>
-            <p style="text-align: center; color: #64748b; margin-top: 30px; font-size: 0.95rem;">
+            <p style="text-align: center; color: #9DD6FF; margin-top: 30px; font-size: 0.95rem;">
               + Thousands more enterprises across Fortune 500 companies, startups, and governments worldwide
             </p>
           </div>
@@ -1281,6 +1521,11 @@
     <section class="gcp-pipeline-section">
       <div class="container">
         <h2 class="section-title">Complete Data Engineering Pipeline</h2>
+        <p style="text-align: center; color: #9DD6FF; margin-bottom: 60px; font-size: 1.05rem;">
+          Real-world example: E-commerce Platform Real-time Analytics
+        </p>
+
+        <!-- Pipeline Visualization -->
         <div class="pipeline-steps">
           <div class="step"><div class="step-number">1</div><h4>INGEST</h4><p>Cloud Streaming</p><span class="tool">Pub/Sub</span></div>
           <div class="step-arrow">→</div>
@@ -1293,6 +1538,124 @@
           <div class="step"><div class="step-number">5</div><h4>ANALYZE</h4><p>ML</p><span class="tool">Vertex AI</span></div>
           <div class="step-arrow">→</div>
           <div class="step"><div class="step-number">6</div><h4>VISUALIZE</h4><p>Reports</p><span class="tool">Looker</span></div>
+        </div>
+
+        <!-- Real-time Use Case -->
+        <div style="margin-top: 80px; background: linear-gradient(135deg, #f0f7ff 0%, #e8f0ff 100%); padding: 50px; border-radius: 15px; border: 2px solid #0066FF;">
+          <h3 style="text-align: center; margin-bottom: 50px; color: #0f0f2e; font-size: 1.8rem;">
+            📊 Real-Time Use Case: E-Commerce Sales Analytics Platform
+          </h3>
+
+          <!-- Use Case Table -->
+          <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 10px; overflow: hidden;">
+              <thead>
+                <tr style="background: linear-gradient(135deg, #0066FF 0%, #004DD4 100%); color: white;">
+                  <th style="padding: 18px; text-align: left; font-weight: 700; border-right: 2px solid white;">Stage</th>
+                  <th style="padding: 18px; text-align: left; font-weight: 700; border-right: 2px solid white;">GCP Service</th>
+                  <th style="padding: 18px; text-align: left; font-weight: 700; border-right: 2px solid white;">What Happens</th>
+                  <th style="padding: 18px; text-align: left; font-weight: 700;">Real Example</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom: 2px solid #e2e8f0;">
+                  <td style="padding: 18px; font-weight: 700; color: #0066FF; border-right: 1px solid #e2e8f0;">1. INGEST</td>
+                  <td style="padding: 18px; font-weight: 600; color: #0f0f2e; border-right: 1px solid #e2e8f0;">Pub/Sub</td>
+                  <td style="padding: 18px; color: #9DD6FF; border-right: 1px solid #e2e8f0;">Real-time event streaming from your app</td>
+                  <td style="padding: 18px; color: #475569;">Customer clicks "Buy Now" → event sent instantly to Pub/Sub (100K events/sec)</td>
+                </tr>
+                <tr style="border-bottom: 2px solid #e2e8f0; background: #f8fafc;">
+                  <td style="padding: 18px; font-weight: 700; color: #004DD4; border-right: 1px solid #e2e8f0;">2. STORE</td>
+                  <td style="padding: 18px; font-weight: 600; color: #0f0f2e; border-right: 1px solid #e2e8f0;">Cloud Storage (GCS)</td>
+                  <td style="padding: 18px; color: #9DD6FF; border-right: 1px solid #e2e8f0;">Raw data persisted in data lake</td>
+                  <td style="padding: 18px; color: #475569;">Raw events stored as JSON files: gs://data-lake/events/2025/06/08/</td>
+                </tr>
+                <tr style="border-bottom: 2px solid #e2e8f0;">
+                  <td style="padding: 18px; font-weight: 700; color: #00DD66; border-right: 1px solid #e2e8f0;">3. PROCESS</td>
+                  <td style="padding: 18px; font-weight: 600; color: #0f0f2e; border-right: 1px solid #e2e8f0;">Dataflow (Apache Beam)</td>
+                  <td style="padding: 18px; color: #9DD6FF; border-right: 1px solid #e2e8f0;">Transform & clean data in real-time</td>
+                  <td style="padding: 18px; color: #475569;">Enrich events with user info, calculate order totals, remove duplicates</td>
+                </tr>
+                <tr style="border-bottom: 2px solid #e2e8f0; background: #f8fafc;">
+                  <td style="padding: 18px; font-weight: 700; color: #FFCC00; border-right: 1px solid #e2e8f0;">4. WAREHOUSE</td>
+                  <td style="padding: 18px; font-weight: 600; color: #0f0f2e; border-right: 1px solid #e2e8f0;">BigQuery</td>
+                  <td style="padding: 18px; color: #9DD6FF; border-right: 1px solid #e2e8f0;">Store structured data for analysis</td>
+                  <td style="padding: 18px; color: #475569;">Processed events loaded: orders, user_events, transactions tables (PB scale)</td>
+                </tr>
+                <tr style="border-bottom: 2px solid #e2e8f0;">
+                  <td style="padding: 18px; font-weight: 700; color: #FF3333; border-right: 1px solid #e2e8f0;">5. ANALYZE</td>
+                  <td style="padding: 18px; font-weight: 600; color: #0f0f2e; border-right: 1px solid #e2e8f0;">Vertex AI + BigQuery ML</td>
+                  <td style="padding: 18px; color: #9DD6FF; border-right: 1px solid #e2e8f0;">Build predictive models & insights</td>
+                  <td style="padding: 18px; color: #475569;">ML models: churn prediction, product recommendations, fraud detection</td>
+                </tr>
+                <tr style="background: #f8fafc;">
+                  <td style="padding: 18px; font-weight: 700; color: #5F6368; border-right: 1px solid #e2e8f0;">6. VISUALIZE</td>
+                  <td style="padding: 18px; font-weight: 600; color: #0f0f2e; border-right: 1px solid #e2e8f0;">Looker + Data Studio</td>
+                  <td style="padding: 18px; color: #9DD6FF; border-right: 1px solid #e2e8f0;">Real-time dashboards & reports</td>
+                  <td style="padding: 18px; color: #475569;">Live dashboard: sales by region, top products, customer trends (updates every 5 min)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Key Metrics -->
+          <div style="margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 25px;">
+            <div style="background: white; padding: 25px; border-radius: 10px; border-left: 4px solid #0066FF; text-align: center;">
+              <div style="font-size: 2rem; font-weight: 900; color: #0066FF; margin-bottom: 8px;">100K</div>
+              <div style="color: #9DD6FF; font-weight: 600;">Events/Second</div>
+              <p style="color: #9DD6FF; margin-top: 8px; font-size: 0.9rem;">Ingest & process throughput</p>
+            </div>
+            <div style="background: white; padding: 25px; border-radius: 10px; border-left: 4px solid #004DD4; text-align: center;">
+              <div style="font-size: 2rem; font-weight: 900; color: #004DD4; margin-bottom: 8px;">< 5min</div>
+              <div style="color: #9DD6FF; font-weight: 600;">End-to-End Latency</div>
+              <p style="color: #9DD6FF; margin-top: 8px; font-size: 0.9rem;">From event to dashboard</p>
+            </div>
+            <div style="background: white; padding: 25px; border-radius: 10px; border-left: 4px solid #00DD66; text-align: center;">
+              <div style="font-size: 2rem; font-weight: 900; color: #00DD66; margin-bottom: 8px;">$0.006</div>
+              <div style="color: #9DD6FF; font-weight: 600;">Cost/GB Analysis</div>
+              <p style="color: #9DD6FF; margin-top: 8px; font-size: 0.9rem;">BigQuery query cost</p>
+            </div>
+            <div style="background: white; padding: 25px; border-radius: 10px; border-left: 4px solid #FFCC00; text-align: center;">
+              <div style="font-size: 2rem; font-weight: 900; color: #FFCC00; margin-bottom: 8px;">99.99%</div>
+              <div style="color: #9DD6FF; font-weight: 600;">Availability SLA</div>
+              <p style="color: #9DD6FF; margin-top: 8px; font-size: 0.9rem;">Enterprise reliability</p>
+            </div>
+          </div>
+
+          <!-- Data Flow Summary -->
+          <div style="margin-top: 40px; background: white; padding: 30px; border-radius: 10px; border: 2px solid #0066FF;">
+            <h4 style="color: #0f0f2e; margin-bottom: 20px; font-size: 1.1rem;">💡 The Complete Picture:</h4>
+            <div style="color: #475569; line-height: 1.8; font-size: 0.95rem;">
+              <p><strong>Morning:</strong> Customer browses products → events streamed via Pub/Sub</p>
+              <p><strong>Throughout Day:</strong> Events processed by Dataflow, transformed, and loaded into BigQuery in real-time</p>
+              <p><strong>Real-time:</strong> ML models running on Vertex AI predict customer churn and recommend next products</p>
+              <p><strong>5-min Dashboard:</strong> Looker displays live sales metrics, top performers, and anomalies detected by ML</p>
+              <p><strong>Decision Making:</strong> Marketing team sees real-time trends and adjusts campaigns instantly</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Stats -->
+        <div style="margin-top: 50px; text-align: center;">
+          <h3 style="color: #0f0f2e; margin-bottom: 30px;">Scale & Performance</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+            <div>
+              <div style="font-size: 1.8rem; font-weight: 900; color: #0066FF; margin-bottom: 8px;">1.5M</div>
+              <div style="color: #9DD6FF; font-size: 0.9rem; font-weight: 600;">Queries/Day in BigQuery</div>
+            </div>
+            <div>
+              <div style="font-size: 1.8rem; font-weight: 900; color: #004DD4; margin-bottom: 8px;">500TB</div>
+              <div style="color: #9DD6FF; font-size: 0.9rem; font-weight: 600;">Data Processed/Month</div>
+            </div>
+            <div>
+              <div style="font-size: 1.8rem; font-weight: 900; color: #00DD66; margin-bottom: 8px;">250K</div>
+              <div style="color: #9DD6FF; font-size: 0.9rem; font-weight: 600;">Predictions/Day from Vertex AI</div>
+            </div>
+            <div>
+              <div style="font-size: 1.8rem; font-weight: 900; color: #FFCC00; margin-bottom: 8px;">60%</div>
+              <div style="color: #9DD6FF; font-size: 0.9rem; font-weight: 600;">Cost Reduction vs AWS</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1448,6 +1811,62 @@
 
   <!-- JS -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js?v=2" defer></script>
+
+  <!-- Interactive Pipeline Simulator -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Stage box click handlers
+      document.querySelectorAll('.stage-box').forEach(box => {
+        box.addEventListener('click', function() {
+          document.querySelectorAll('.stage-box').forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          const details = this.querySelector('.stage-details');
+          if (details) {
+            details.style.display = details.style.display === 'none' ? 'block' : 'none';
+          }
+          animateCounters();
+        });
+      });
+
+      function animateCounters() {
+        const animateNumber = (elementId, finalValue, suffix = '') => {
+          const element = document.getElementById(elementId);
+          if (!element) return;
+          const increment = finalValue / 20;
+          let current = 0;
+          const interval = setInterval(() => {
+            current += increment;
+            if (current >= finalValue) {
+              element.textContent = finalValue.toLocaleString() + suffix;
+              clearInterval(interval);
+            } else {
+              element.textContent = Math.floor(current).toLocaleString() + suffix;
+            }
+          }, 30);
+        };
+
+        animateNumber('events-counter', Math.floor(Math.random() * 500000) + 100000);
+        animateNumber('queries-counter', Math.floor(Math.random() * 10000) + 1000);
+        animateNumber('predictions-counter', Math.floor(Math.random() * 500000) + 100000);
+
+        const latencyElement = document.getElementById('latency-counter');
+        const randomLatency = Math.floor(Math.random() * 3000) + 100;
+        let currentLatency = 0;
+        const latencyInterval = setInterval(() => {
+          currentLatency += randomLatency / 20;
+          if (currentLatency >= randomLatency) {
+            latencyElement.textContent = randomLatency + 'ms';
+            clearInterval(latencyInterval);
+          } else {
+            latencyElement.textContent = Math.floor(currentLatency) + 'ms';
+          }
+        }, 30);
+      }
+
+      setTimeout(animateCounters, 800);
+    });
+  </script>
+
   <script src="assets/js/main.js?v=2" defer></script>
 
 </body>
