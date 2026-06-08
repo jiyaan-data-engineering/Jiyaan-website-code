@@ -3778,6 +3778,123 @@
       }
     }
 
+    /* ===== ENHANCED NAVBAR ===== */
+
+    .navbar {
+      position: relative;
+      z-index: 100;
+    }
+
+    /* Animated Logo */
+    .animated-logo {
+      animation: float 4s ease-in-out infinite, glow-pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes glow-pulse {
+      0%, 100% {
+        filter: drop-shadow(0 0 10px rgba(0, 255, 204, 0.4));
+      }
+      50% {
+        filter: drop-shadow(0 0 20px rgba(0, 255, 204, 0.8));
+      }
+    }
+
+    /* Gradient Brand Name */
+    .gradient-brand {
+      background: linear-gradient(135deg, #00ffcc 0%, #4285F4 50%, #00ffcc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: gradient-shift 3s ease-in-out infinite;
+      font-weight: 900;
+    }
+
+    @keyframes gradient-shift {
+      0%, 100% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+    }
+
+    /* Animated Tagline */
+    .tagline-enhanced {
+      color: #00ffcc;
+      font-weight: 700;
+      letter-spacing: 2px;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    /* Enhanced Navigation */
+    .nav-enhanced {
+      display: flex;
+      gap: 5px;
+    }
+
+    .nav-link {
+      position: relative;
+      padding: 8px 16px;
+      transition: all 0.3s ease;
+      color: #b0b8cc;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .nav-link::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #00ffcc, #4285F4, #00ffcc);
+      transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .nav-link:hover {
+      color: #00ffcc;
+      background: rgba(0, 255, 204, 0.1);
+      border-radius: 6px;
+    }
+
+    .nav-link:hover::before {
+      width: calc(100% - 32px);
+    }
+
+    .nav-link.active {
+      color: #00ffcc;
+      background: rgba(0, 255, 204, 0.15);
+      border-radius: 6px;
+    }
+
+    .nav-link.active::before {
+      width: calc(100% - 32px);
+    }
+
+    /* Glowing Line Under Navbar */
+    .navbar-glow-line {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #00ffcc 50%, transparent);
+      box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+      animation: glow-shift 3s ease-in-out infinite;
+    }
+
+    @keyframes glow-shift {
+      0%, 100% {
+        opacity: 0.5;
+        box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
+      }
+      50% {
+        opacity: 1;
+        box-shadow: 0 0 30px rgba(0, 255, 204, 0.7);
+      }
+    }
+
     /* ===== ENHANCED HERO ===== */
 
     /* Animated Background */
@@ -4216,10 +4333,12 @@
   <header class="navbar" id="navbar">
 
     <div class="brand">
-      <img src="assets/images/logo.webp" class="logo glow" alt="Jiyaan Logo" loading="eager">
+      <!-- Animated Logo with Glow -->
+      <img src="assets/images/logo.webp" class="logo glow animated-logo" alt="Jiyaan Logo" loading="eager">
 
       <div class="brand-text">
-        <span class="brand-name">JIYAAN</span>
+        <!-- Gradient Brand Name -->
+        <span class="brand-name gradient-brand">JIYAAN</span>
 
         <div class="sub-title">
           <span class="text">INSTITUTE OF TECHNOLOGY</span>
@@ -4232,20 +4351,24 @@
           </div>
         </div>
 
-        <p>GCP DATA ENGINEERING EXCELLENCE</p>
+        <!-- Animated Tagline -->
+        <p class="tagline-enhanced">GCP DATA ENGINEERING EXCELLENCE</p>
       </div>
     </div>
 
     <!-- Hamburger -->
     <div class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" role="button" tabindex="0" aria-expanded="false" aria-controls="nav">☰</div>
 
-    <!-- Nav -->
-    <nav id="nav" aria-label="Main Navigation">
-      <a href="/" class="active" aria-current="page">Home</a>
-      <a href="/about">About</a>
-      <a href="/courses">Courses</a>
-      <a href="/contact">Contact</a>
+    <!-- Enhanced Nav -->
+    <nav id="nav" class="nav-enhanced" aria-label="Main Navigation">
+      <a href="/" class="nav-link active" aria-current="page">Home</a>
+      <a href="/about" class="nav-link">About</a>
+      <a href="/courses" class="nav-link">Courses</a>
+      <a href="/contact" class="nav-link">Contact</a>
     </nav>
+
+    <!-- Glowing Line Under Navbar -->
+    <div class="navbar-glow-line"></div>
 
   </header>
 
