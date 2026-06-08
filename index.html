@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <!-- Global Security Policies -->
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
@@ -17,7 +17,6 @@
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#4285F4">
   <link rel="canonical" href="https://jiyaaninstitute.in/">
-  <meta name="google-site-verification" content="ADD_YOUR_GOOGLE_VERIFICATION_CODE_HERE">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
@@ -34,17 +33,15 @@
   <meta name="twitter:title" content="Jiyaan Institute | GCP Data Engineering Excellence">
   <meta name="twitter:description" content="Accelerate your career with premium GCP Data Engineering courses. Real-time projects and 100% placement support.">
   <meta name="twitter:image" content="https://jiyaaninstitute.in/assets/images/logo.webp">
-  <meta name="twitter:site" content="@jiyaaninstitute">
 
   <!-- Preconnect & Preload -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://unpkg.com" crossorigin>
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="preconnect" href="https://img.icons8.com" crossorigin>
-  
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
-  
+
   <link rel="preload" href="assets/css/main.css?v=2" as="style">
   <link rel="preload" href="assets/images/logo.webp" as="image">
 
@@ -70,7 +67,7 @@
         "@type": "EducationalOrganization",
         "@id": "https://jiyaaninstitute.in/#organization",
         "name": "Jiyaan Institute of Technology",
-        "description": "Premium training institute for GCP Data Engineering, offering specialized courses in BigQuery, Airflow, and Cloud Dataflow.",
+        "description": "Premium training institute for GCP Data Engineering",
         "url": "https://jiyaaninstitute.in",
         "logo": {
           "@type": "ImageObject",
@@ -84,199 +81,1014 @@
           "contactType": "customer service",
           "areaServed": "IN",
           "availableLanguage": "en"
-        },
-        "sameAs": [
-          "https://wa.me/919876543210"
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://jiyaaninstitute.in/#website",
-        "url": "https://jiyaaninstitute.in/",
-        "name": "Jiyaan Institute",
-        "publisher": {
-          "@id": "https://jiyaaninstitute.in/#organization"
-        },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://jiyaaninstitute.in/courses?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      },
-      {
-        "@type": "LocalBusiness",
-        "name": "Jiyaan Institute of Technology",
-        "image": "https://jiyaaninstitute.in/assets/images/logo.webp",
-        "@id": "https://jiyaaninstitute.in/#localbusiness",
-        "url": "https://jiyaaninstitute.in",
-        "telephone": "+91-9876543210",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Hyderabad",
-          "addressLocality": "Hyderabad",
-          "addressRegion": "Telangana",
-          "postalCode": "500001",
-          "addressCountry": "IN"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 17.3850,
-          "longitude": 78.4867
         }
       }
     ]
   }
   </script>
 
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: #1a1a1a;
+      background: #ffffff;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      background: linear-gradient(135deg, #001d3d 0%, #003d7a 100%);
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      color: white;
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+    }
+
+    .brand-text span {
+      display: block;
+      font-weight: 700;
+    }
+
+    .brand-name {
+      font-size: 1.3rem;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover, nav a.active {
+      color: #4285F4;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: linear-gradient(135deg, #001d3d 0%, #003d7a 100%);
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(66, 133, 244, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: float 20s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(30px); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+    }
+
+    .main-title {
+      font-size: clamp(2rem, 8vw, 4rem);
+      font-weight: 900;
+      margin-bottom: 20px;
+      background: linear-gradient(120deg, #4285F4, #34A853, #FBBC04, #EA4335);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .role {
+      font-size: clamp(1.3rem, 4vw, 2rem);
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #7dd3fc;
+    }
+
+    .skills {
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+      color: #cbd5e1;
+      line-height: 1.8;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 15px 40px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s;
+      cursor: pointer;
+      border: none;
+      display: inline-block;
+    }
+
+    .btn:not(.outline) {
+      background: linear-gradient(135deg, #4285F4, #1967D2);
+      color: white;
+      box-shadow: 0 10px 30px rgba(66, 133, 244, 0.3);
+    }
+
+    .btn:not(.outline):hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 45px rgba(66, 133, 244, 0.4);
+    }
+
+    .btn.outline {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .btn.outline:hover {
+      background: white;
+      color: #001d3d;
+    }
+
+    /* ===== SECTIONS ===== */
+    section {
+      padding: 80px 20px;
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 6vw, 3rem);
+      font-weight: 900;
+      text-align: center;
+      margin-bottom: 60px;
+      color: #0f0f2e;
+    }
+
+    /* ===== WHY CHOOSE US ===== */
+    .why-choose-section {
+      background: white;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .feature-box {
+      padding: 30px;
+      background: #f8fafc;
+      border-radius: 12px;
+      border-left: 5px solid #4285F4;
+      transition: all 0.3s;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(66, 133, 244, 0.15);
+    }
+
+    .feature-box h3 {
+      margin-bottom: 15px;
+      color: #0f0f2e;
+    }
+
+    .feature-box p {
+      color: #64748b;
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    /* ===== SALARY SECTION ===== */
+    .salary-career-section {
+      background: #f8fafc;
+    }
+
+    .salary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+    }
+
+    .salary-box {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      border-left: 5px solid #4285F4;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .salary-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .salary-box.highlight {
+      background: linear-gradient(135deg, #4285F4, #1967D2);
+      color: white;
+      border: none;
+      transform: scale(1.05);
+    }
+
+    .ctc {
+      font-size: 1.8rem;
+      font-weight: 900;
+      margin: 15px 0;
+    }
+
+    .salary-box:not(.highlight) .ctc {
+      color: #1967D2;
+    }
+
+    .salary-box.highlight .ctc {
+      color: white;
+    }
+
+    .take-home {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .career-points {
+      list-style: none;
+      text-align: left;
+    }
+
+    .career-points li {
+      padding: 8px 0;
+      border-bottom: 1px solid #e2e8f0;
+      color: #64748b;
+    }
+
+    .salary-box.highlight .career-points li {
+      border-color: rgba(255, 255, 255, 0.2);
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .career-points li::before {
+      content: '✓ ';
+      color: #34A853;
+      font-weight: 800;
+      margin-right: 8px;
+    }
+
+    /* ===== PIPELINE SECTION ===== */
+    .gcp-pipeline-section {
+      background: white;
+    }
+
+    .pipeline-steps {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 60px;
+    }
+
+    .step {
+      background: white;
+      padding: 25px 20px;
+      border-radius: 12px;
+      text-align: center;
+      min-width: 140px;
+      border: 2px solid #e2e8f0;
+      transition: all 0.3s;
+    }
+
+    .step:hover {
+      border-color: #4285F4;
+      box-shadow: 0 8px 20px rgba(66, 133, 244, 0.15);
+    }
+
+    .step-number {
+      width: 35px;
+      height: 35px;
+      background: linear-gradient(135deg, #4285F4, #1967D2);
+      color: white;
+      border-radius: 50%;
+      margin: 0 auto 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+    }
+
+    .step h4 {
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+
+    .tool {
+      display: inline-block;
+      padding: 5px 10px;
+      background: #f1f5f9;
+      border-radius: 15px;
+      font-size: 0.75rem;
+      color: #1967D2;
+      font-weight: 600;
+      margin-top: 8px;
+    }
+
+    .step-arrow {
+      color: #4285F4;
+      font-weight: 700;
+      margin: 0 5px;
+    }
+
+    /* ===== COURSES SECTION ===== */
+    .ultimate-scroll {
+      background: #f8fafc;
+    }
+
+    .scroll-wrapper {
+      overflow-x: auto;
+      padding: 20px 0;
+    }
+
+    .scroll-track {
+      display: flex;
+      gap: 20px;
+      min-width: min-content;
+    }
+
+    .card {
+      min-width: 200px;
+      background: white;
+      padding: 30px 20px;
+      border-radius: 12px;
+      text-align: center;
+      text-decoration: none;
+      color: #0f0f2e;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(66, 133, 244, 0.15);
+    }
+
+    .card img {
+      width: 60px;
+      height: 60px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover img {
+      transform: scale(1.1);
+    }
+
+    .card span {
+      font-weight: 600;
+    }
+
+    .card.highlight-card {
+      background: linear-gradient(135deg, #4285F4, #1967D2);
+      color: white;
+    }
+
+    /* ===== JOB MARKET ===== */
+    .job-market-section {
+      background: white;
+    }
+
+    .insight-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+
+    .insight-card {
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      color: white;
+      transition: all 0.3s;
+    }
+
+    .insight-card.best {
+      background: linear-gradient(135deg, #34A853, #2d8a4f);
+    }
+
+    .insight-card.good {
+      background: linear-gradient(135deg, #4285F4, #1967D2);
+    }
+
+    .insight-card.avoid {
+      background: linear-gradient(135deg, #FBBC04, #f59e0b);
+    }
+
+    .insight-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .insight-card h4 {
+      margin: 15px 0;
+    }
+
+    .action-badge {
+      display: inline-block;
+      padding: 8px 16px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-top: 15px;
+    }
+
+    /* ===== STATS SECTION ===== */
+    .stats-container {
+      background: #f8fafc;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+    }
+
+    .stat-box {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s;
+    }
+
+    .stat-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(66, 133, 244, 0.15);
+    }
+
+    .stat-icon {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #1967D2;
+      margin-bottom: 10px;
+    }
+
+    .stat-text {
+      font-size: 1rem;
+      color: #64748b;
+      font-weight: 600;
+    }
+
+    /* ===== TESTIMONIALS ===== */
+    .testimonials-section {
+      background: white;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .testimonial-item {
+      background: #f8fafc;
+      padding: 30px;
+      border-radius: 12px;
+      border-top: 4px solid #4285F4;
+      transition: all 0.3s;
+    }
+
+    .testimonial-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .testimonial-avatar {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, #4285F4, #1967D2);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+    }
+
+    .testimonial-info h4 {
+      margin: 0;
+      color: #0f0f2e;
+    }
+
+    .testimonial-info p {
+      margin: 5px 0 0 0;
+      font-size: 0.9rem;
+      color: #64748b;
+    }
+
+    .stars {
+      margin-bottom: 12px;
+      letter-spacing: 2px;
+    }
+
+    .testimonial-text {
+      color: #475569;
+      font-style: italic;
+    }
+
+    /* ===== CTA ===== */
+    .cta-final {
+      background: linear-gradient(135deg, #001d3d 0%, #003d7a 100%);
+      color: white;
+      text-align: center;
+    }
+
+    .cta-content h2 {
+      font-size: clamp(1.8rem, 5vw, 2.5rem);
+      margin-bottom: 20px;
+    }
+
+    .cta-content p {
+      font-size: 1.1rem;
+      color: #cbd5e1;
+      margin-bottom: 40px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #4285F4, #1967D2);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      background: white;
+      color: #001d3d;
+    }
+
+    .cta-features {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      color: #cbd5e1;
+      font-weight: 600;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #0f0f2e;
+      color: #cbd5e1;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    /* ===== WHATSAPP ===== */
+    .whatsapp {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+      transition: all 0.3s;
+      text-decoration: none;
+      z-index: 999;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.1);
+      box-shadow: 0 12px 35px rgba(37, 211, 102, 0.4);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+
+      .hero {
+        padding: 60px 20px;
+        min-height: auto;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 300px;
+      }
+
+      section {
+        padding: 60px 20px;
+      }
+
+      .section-title {
+        margin-bottom: 40px;
+      }
+
+      .features-grid,
+      .salary-grid,
+      .stats-grid,
+      .testimonials-grid,
+      .insight-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+      }
+
+      .cta-features {
+        gap: 20px;
+        font-size: 0.95rem;
+      }
+
+      .whatsapp {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
   <!-- ================= NAVBAR ================= -->
-  <header class="navbar" id="navbar">
-
+  <header class="navbar">
     <div class="brand">
-      <img src="assets/images/logo.webp" class="logo glow" alt="Jiyaan Logo" loading="eager">
-
+      <img src="assets/images/logo.webp" class="logo" alt="Jiyaan Logo">
       <div class="brand-text">
         <span class="brand-name">JIYAAN</span>
-
-        <div class="sub-title">
-          <span class="text">INSTITUTE OF TECHNOLOGY</span>
-
-          <div class="lines" aria-hidden="true">
-            <span class="line blue"></span>
-            <span class="line green"></span>
-            <span class="line yellow"></span>
-            <span class="line red"></span>
-          </div>
-        </div>
-
-        <p>GCP DATA ENGINEERING EXCELLENCE</p>
+        <span style="font-size: 0.85rem;">INSTITUTE OF TECHNOLOGY</span>
       </div>
     </div>
-
-    <!-- Hamburger -->
-    <div class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" role="button" tabindex="0" aria-expanded="false" aria-controls="nav">☰</div>
-
-    <!-- Nav -->
-    <nav id="nav" aria-label="Main Navigation">
-      <a href="/" class="active" aria-current="page">Home</a>
+    <nav>
+      <a href="/" class="active">Home</a>
       <a href="/about">About</a>
       <a href="/courses">Courses</a>
       <a href="/contact">Contact</a>
     </nav>
-
   </header>
 
   <main id="main-content">
     <!-- ================= HERO ================= -->
-    <section class="hero" aria-labelledby="hero-title">
-
+    <section class="hero">
       <div class="hero-content">
-
-        <!-- Main Heading -->
-        <h1 class="main-title" id="hero-title">
-          <span class="highlight">Jiyaan Institute of Technology</span>
-        </h1>
-
-        <!-- Role -->
-        <h2 class="role">
-          <span class="gradient-text">GCP Data Engineer</span>
-        </h2>
-
-        <!-- Skills -->
-        <p class="skills">
-          Master of IT Skills, SQL, Python, BigData, PySpark, Data Modelling, Linux Basics, GCP Cloud, Git, Jira, Real Time Projects and Job Profile Building.
-        </p>
-
-        <!-- Buttons -->
+        <h1 class="main-title"><span class="highlight">Jiyaan Institute of Technology</span></h1>
+        <h2 class="role"><span class="gradient-text">GCP Data Engineer</span></h2>
+        <p class="skills">Master IT Skills, SQL, Python, BigData, PySpark, Data Modelling, Linux, GCP Cloud, Git, Jira, Real Time Projects & Job Profile Building</p>
         <div class="hero-buttons">
-          <a href="/courses" class="btn" aria-label="Start learning our courses">Start Learning</a>
-          <a href="/contact" class="btn outline" aria-label="Get a free consultation">Free Consultation</a>
+          <a href="/courses" class="btn">Start Learning</a>
+          <a href="/contact" class="btn outline">Free Consultation</a>
         </div>
-
       </div>
-
     </section>
 
-    <!-- ================= ULTIMATE PREMIUM GCP STACK ================= -->
+    <!-- ================= WHY CHOOSE US ================= -->
+    <section class="why-choose-section">
+      <div class="container">
+        <h2 class="section-title">Why Choose Jiyaan Institute?</h2>
+        <div class="features-grid">
+          <div class="feature-box">
+            <div class="feature-icon">🎯</div>
+            <h3>Industry-Expert Mentors</h3>
+            <p>Learn from GCP certified professionals with 10+ years of experience</p>
+          </div>
+          <div class="feature-box">
+            <div class="feature-icon">📊</div>
+            <h3>Real-Time Projects</h3>
+            <p>Work on live GCP projects and build an impressive portfolio</p>
+          </div>
+          <div class="feature-box">
+            <div class="feature-icon">🚀</div>
+            <h3>100% Placement Support</h3>
+            <p>Partnerships with 100+ hiring companies</p>
+          </div>
+          <div class="feature-box">
+            <div class="feature-icon">🔐</div>
+            <h3>GCP Certified Program</h3>
+            <p>Aligned with official Google Cloud Professional certifications</p>
+          </div>
+          <div class="feature-box">
+            <div class="feature-icon">♾️</div>
+            <h3>Lifetime Access</h3>
+            <p>Lifetime access to updated course materials and support</p>
+          </div>
+          <div class="feature-box">
+            <div class="feature-icon">💡</div>
+            <h3>Flexible Learning</h3>
+            <p>Self-paced and instructor-led options available</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SALARY & CAREER ================= -->
+    <section class="salary-career-section">
+      <div class="container">
+        <h2 class="section-title">Real-World Earning Potential</h2>
+        <div class="salary-grid">
+          <div class="salary-box">
+            <h3>🎯 Fresher (0-1 Years)</h3>
+            <div class="ctc">₹2 - 4.5 LPA</div>
+            <p class="take-home">₹18K - ₹35K/month</p>
+            <ul class="career-points">
+              <li>Learning Phase</li>
+              <li>Build Foundation</li>
+              <li>Skill Development</li>
+            </ul>
+          </div>
+          <div class="salary-box">
+            <h3>📈 Junior (1-3 Years)</h3>
+            <div class="ctc">₹4 - 8 LPA</div>
+            <p class="take-home">₹30K - ₹60K/month</p>
+            <ul class="career-points">
+              <li>Skill Building</li>
+              <li>Job Switching</li>
+              <li>2-3x Growth</li>
+            </ul>
+          </div>
+          <div class="salary-box highlight">
+            <h3>💼 Senior (3-5 Years)</h3>
+            <div class="ctc">₹10 - 15 LPA</div>
+            <p class="take-home">₹75K - ₹110K/month</p>
+            <ul class="career-points">
+              <li>Growth Phase</li>
+              <li>Big Jump</li>
+              <li>100% Growth</li>
+            </ul>
+          </div>
+          <div class="salary-box">
+            <h3>🚀 Lead (5+ Years)</h3>
+            <div class="ctc">₹15 - 30+ LPA</div>
+            <p class="take-home">₹110K - ₹200K+/month</p>
+            <ul class="career-points">
+              <li>Leadership</li>
+              <li>Specialist</li>
+              <li>Strategic</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= GCP PIPELINE ================= -->
+    <section class="gcp-pipeline-section">
+      <div class="container">
+        <h2 class="section-title">Complete Data Engineering Pipeline</h2>
+        <div class="pipeline-steps">
+          <div class="step"><div class="step-number">1</div><h4>INGEST</h4><p>Cloud Streaming</p><span class="tool">Pub/Sub</span></div>
+          <div class="step-arrow">→</div>
+          <div class="step"><div class="step-number">2</div><h4>STORE</h4><p>Data Lake</p><span class="tool">GCS</span></div>
+          <div class="step-arrow">→</div>
+          <div class="step"><div class="step-number">3</div><h4>PROCESS</h4><p>ETL</p><span class="tool">Dataflow</span></div>
+          <div class="step-arrow">→</div>
+          <div class="step"><div class="step-number">4</div><h4>WAREHOUSE</h4><p>Analytics</p><span class="tool">BigQuery</span></div>
+          <div class="step-arrow">→</div>
+          <div class="step"><div class="step-number">5</div><h4>ANALYZE</h4><p>ML</p><span class="tool">Vertex AI</span></div>
+          <div class="step-arrow">→</div>
+          <div class="step"><div class="step-number">6</div><h4>VISUALIZE</h4><p>Reports</p><span class="tool">Looker</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= COURSES ================= -->
     <section class="ultimate-scroll">
-
-      <h2 class="scroll-title">Jiyaan Institute Courses</h2>
-
-      <div class="scroll-wrapper">
-        <div class="scroll-track">
-
-          <!-- CARD -->
-          <a href="/course-detail?course=GCP Cloud" class="card">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="GCP Cloud" width="50" height="50" loading="lazy">
-            <span>GCP Cloud</span>
-          </a>
-
-          <a href="/course-detail?course=Python" class="card">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width="50" height="50" loading="lazy">
-            <span>Python</span>
-          </a>
-
-          <a href="/course-detail?course=SQL" class="card">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" width="50" height="50" loading="lazy">
-            <span>SQL</span>
-          </a>
-
-          <a href="/course-detail?course=Big Data" class="card">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg" alt="Big Data" width="50" height="50" loading="lazy">
-            <span>Big Data</span>
-          </a>
-
-          <a href="/course-detail?course=PySpark" class="card">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original-wordmark.svg" alt="PySpark" width="50" height="50" loading="lazy">
-            <span>PySpark</span>
-          </a>
-
-          <a href="/course-detail?course=Linux Basics" class="card">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux Basics" width="50" height="50" loading="lazy">
-            <span>Linux</span>
-          </a>
-
-          <a href="/course-detail?course=Git" class="card">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" width="50" height="50" loading="lazy">
-            <span>Git</span>
-          </a>
-
-          <a href="/course-detail?course=Jira" class="card">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" alt="Jira" width="50" height="50" loading="lazy">
-            <span>Jira</span>
-          </a>
-
-          <a href="/course-detail?course=IT Skills" class="card">
-            <img src="https://img.icons8.com/fluency/96/system-task.png" alt="IT Skills" width="50" height="50" loading="lazy">
-            <span>IT Skills</span>
-          </a>
-
-          <a href="/course-detail?course=Data Modelling" class="card">
-            <img src="https://img.icons8.com/color/96/data-configuration.png" alt="Data Modelling" width="50" height="50" loading="lazy">
-            <span>Data Modelling</span>
-          </a>
-
-          <a href="/course-detail?course=Real Time Projects" class="card">
-            <img src="https://img.icons8.com/fluency/96/source-code.png" alt="Real Time Projects" width="50" height="50" loading="lazy">
-            <span>Real Time Projects</span>
-          </a>
-
-          <a href="/course-detail?course=Job Profile Building" class="card highlight-card">
-            <img src="https://img.icons8.com/fluency/96/resume.png" alt="Job Profile Building" width="50" height="50" loading="lazy">
-            <span>Job Profile Building</span>
-          </a>
-
-          <!-- DUPLICATE SAME BLOCK AGAIN for infinite scroll -->
-          <!-- (copy same cards again) -->
-
+      <div class="container">
+        <h2 class="section-title">Jiyaan Institute Courses</h2>
+        <div class="scroll-wrapper">
+          <div class="scroll-track">
+            <a href="/course-detail?course=GCP Cloud" class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="GCP"><span>GCP Cloud</span></a>
+            <a href="/course-detail?course=Python" class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"><span>Python</span></a>
+            <a href="/course-detail?course=SQL" class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL"><span>SQL</span></a>
+            <a href="/course-detail?course=Big Data" class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg" alt="Big Data"><span>Big Data</span></a>
+            <a href="/course-detail?course=PySpark" class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original-wordmark.svg" alt="PySpark"><span>PySpark</span></a>
+            <a href="/course-detail?course=Linux" class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux"><span>Linux</span></a>
+            <a href="/course-detail?course=Git" class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"><span>Git</span></a>
+            <a href="/course-detail?course=Jira" class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" alt="Jira"><span>Jira</span></a>
+            <a href="/course-detail?course=Data Modelling" class="card"><img src="https://img.icons8.com/color/96/data-configuration.png" alt="Data Modelling"><span>Data Modelling</span></a>
+            <a href="/course-detail?course=Job Profile" class="card highlight-card"><img src="https://img.icons8.com/fluency/96/resume.png" alt="Job Profile"><span>Job Profile</span></a>
+          </div>
         </div>
       </div>
-
     </section>
-    
+
+    <!-- ================= JOB MARKET ================= -->
+    <section class="job-market-section">
+      <div class="container">
+        <h2 class="section-title">Job Market Trends 2024-2025</h2>
+        <div class="insight-grid">
+          <div class="insight-card best">
+            <div style="font-size: 2.5rem;">🔥</div>
+            <h4>PEAK Months</h4>
+            <p><strong>Jan, Feb, Mar</strong></p>
+            <p>Highest hiring activity</p>
+            <div class="action-badge">Best Opportunity</div>
+          </div>
+          <div class="insight-card good">
+            <div style="font-size: 2.5rem;">✅</div>
+            <h4>GOOD Months</h4>
+            <p><strong>Apr, Jul, Aug, Sep</strong></p>
+            <p>Good hiring activity</p>
+            <div class="action-badge">Favorable</div>
+          </div>
+          <div class="insight-card avoid">
+            <div style="font-size: 2.5rem;">⚠️</div>
+            <h4>SLOW Months</h4>
+            <p><strong>Jun, Nov, Dec</strong></p>
+            <p>Avoid job switching</p>
+            <div class="action-badge">Not Recommended</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= STATS ================= -->
+    <section class="stats-container">
+      <div class="container">
+        <h2 class="section-title">Our Track Record</h2>
+        <div class="stats-grid">
+          <div class="stat-box">
+            <div class="stat-icon">📚</div>
+            <div class="stat-number">500+</div>
+            <div class="stat-text">Students Trained</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-icon">💼</div>
+            <div class="stat-number">95%</div>
+            <div class="stat-text">Placement Rate</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-icon">🏢</div>
+            <div class="stat-number">100+</div>
+            <div class="stat-text">Partner Companies</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-icon">⭐</div>
+            <div class="stat-number">4.9/5</div>
+            <div class="stat-text">Student Rating</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TESTIMONIALS ================= -->
+    <section class="testimonials-section">
+      <div class="container">
+        <h2 class="section-title">Success Stories</h2>
+        <div class="testimonials-grid">
+          <div class="testimonial-item">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">RK</div>
+              <div class="testimonial-info">
+                <h4>Rahul Kumar</h4>
+                <p>Data Engineer @ Google</p>
+              </div>
+            </div>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">"Jiyaan Institute changed my career completely. Real-time projects and expert mentoring helped me secure a position at Google!"</p>
+          </div>
+          <div class="testimonial-item">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">PS</div>
+              <div class="testimonial-info">
+                <h4>Priya Singh</h4>
+                <p>Senior Engineer @ Microsoft</p>
+              </div>
+            </div>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">"The curriculum is comprehensive. Instructors are always available to help. Best investment in my career!"</p>
+          </div>
+          <div class="testimonial-item">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">AP</div>
+              <div class="testimonial-info">
+                <h4>Amit Patel</h4>
+                <p>Cloud Engineer @ Amazon AWS</p>
+              </div>
+            </div>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">"From beginner to job-ready in 3 months! Placement support was outstanding. Got placed in my dream company!"</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="cta-final">
+      <div class="container cta-content">
+        <h2>Ready to Master GCP Data Engineering?</h2>
+        <p>Join 500+ successful students and transform your career</p>
+        <div class="cta-buttons">
+          <a href="/courses" class="btn btn-primary">Explore Courses</a>
+          <a href="/contact" class="btn btn-secondary">Book Free Demo</a>
+        </div>
+        <div class="cta-features">
+          <span>✓ Free Career Guidance</span>
+          <span>✓ 100% Placement Support</span>
+          <span>✓ Certified Instructors</span>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- ================= FOOTER ================= -->
@@ -284,8 +1096,8 @@
     <p>© 2026 Jiyaan Institute of Technology</p>
   </footer>
 
-  <!-- WhatsApp (Secured) -->
-  <a href="#" id="secure-wa" class="whatsapp" aria-label="Chat with us on WhatsApp" target="_blank" rel="noopener noreferrer">💬</a>
+  <!-- WhatsApp -->
+  <a href="#" id="secure-wa" class="whatsapp" aria-label="Chat on WhatsApp">💬</a>
 
   <!-- JS -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js?v=2" defer></script>
