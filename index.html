@@ -1238,10 +1238,10 @@
 
     /* ===== DATA ENGINEERING PIPELINE ===== */
     .pipeline-section {
-      background: linear-gradient(135deg, rgba(0, 255, 204, 0.05) 0%, rgba(100, 149, 237, 0.05) 100%);
+      background: linear-gradient(135deg, rgba(66, 133, 244, 0.03) 0%, rgba(100, 149, 237, 0.03) 100%);
       padding: 100px 50px;
-      border-top: 2px solid rgba(0, 255, 204, 0.2);
-      border-bottom: 2px solid rgba(0, 255, 204, 0.2);
+      border-top: 2px solid rgba(66, 133, 244, 0.2);
+      border-bottom: 2px solid rgba(66, 133, 244, 0.2);
     }
 
     .pipeline-subtitle {
@@ -1255,7 +1255,9 @@
     .pipeline-wrapper {
       display: flex;
       flex-direction: column;
-      gap: 40px;
+      gap: 50px;
+      max-width: 1400px;
+      margin: 0 auto;
     }
 
     .pipeline-sources,
@@ -1264,7 +1266,7 @@
       border: 2px solid;
       border-image: linear-gradient(90deg, #4285F4, #EA4335, #FBBC04, #34A853) 1;
       border-radius: 12px;
-      padding: 30px;
+      padding: 35px 30px;
       animation: slideInUp 0.8s ease-out;
     }
 
@@ -1314,9 +1316,12 @@
     .pipeline-flow {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       gap: 0;
       flex-wrap: wrap;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px 0;
     }
 
     .pipeline-stage {
@@ -1512,23 +1517,43 @@
       }
     }
 
+    @media (max-width: 1024px) {
+      .pipeline-section {
+        padding: 80px 40px;
+      }
+
+      .pipeline-wrapper {
+        gap: 35px;
+      }
+
+      .pipeline-flow {
+        gap: 8px;
+      }
+    }
+
     @media (max-width: 768px) {
       .pipeline-section {
         padding: 60px 20px;
       }
 
+      .pipeline-wrapper {
+        gap: 30px;
+      }
+
       .pipeline-flow {
         flex-direction: column;
-        gap: 20px;
+        gap: 25px;
       }
 
       .pipeline-arrow {
         transform: rotate(90deg);
+        font-size: 1.5rem;
       }
 
       .pipeline-stats {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
+        margin-top: 40px;
       }
 
       .stat-box {
@@ -1539,6 +1564,22 @@
         width: 45px;
         height: 45px;
         font-size: 1.1rem;
+      }
+
+      .pipeline-sources,
+      .pipeline-targets {
+        padding: 25px 20px;
+      }
+
+      .sources-list,
+      .targets-list {
+        gap: 10px;
+      }
+
+      .source-item,
+      .target-item {
+        padding: 10px 15px;
+        font-size: 0.85rem;
       }
     }
 
