@@ -2597,9 +2597,7 @@
     }
 
     .gcp-main-card {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 50px;
+      display: block;
       background: linear-gradient(135deg, rgba(66, 133, 244, 0.08) 0%, rgba(52, 168, 83, 0.08) 100%);
       border: 2px solid rgba(0, 255, 204, 0.2);
       border-radius: 18px;
@@ -2653,37 +2651,59 @@
     }
 
     .main-stats {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
+      display: none;
     }
 
     .stat-box {
-      background: rgba(0, 255, 204, 0.08);
-      border: 1px solid rgba(0, 255, 204, 0.2);
-      border-radius: 12px;
-      padding: 20px;
+      background: linear-gradient(135deg, rgba(0, 255, 204, 0.08) 0%, rgba(66, 133, 244, 0.05) 100%);
+      border: 2px solid rgba(0, 255, 204, 0.2);
+      border-radius: 14px;
+      padding: 25px;
       text-align: center;
-      transition: all 0.3s ease;
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      position: relative;
     }
 
     .stat-box:hover {
       border-color: #00ffcc;
-      background: rgba(0, 255, 204, 0.12);
+      background: linear-gradient(135deg, rgba(0, 255, 204, 0.15) 0%, rgba(0, 255, 204, 0.08) 100%);
+      box-shadow: 0 12px 30px rgba(0, 255, 204, 0.2);
+      transform: translateY(-8px);
+    }
+
+    .stat-icon {
+      font-size: 2.2rem;
+      display: block;
+      margin-bottom: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .stat-box:hover .stat-icon {
+      transform: scale(1.15) rotate(5deg);
     }
 
     .stat-value {
-      color: #00ffcc;
-      font-size: 1.5rem;
+      color: #fff;
+      font-size: 1.2rem;
       font-weight: 800;
       font-family: 'Outfit', sans-serif;
+      margin-bottom: 8px;
     }
 
     .stat-label {
       color: #b0b8cc;
       font-size: 0.85rem;
-      margin-top: 5px;
-      font-weight: 600;
+      font-weight: 500;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .stat-box.gcp-service {
+      background: linear-gradient(135deg, rgba(66, 133, 244, 0.08) 0%, rgba(52, 168, 83, 0.06) 100%);
+    }
+
+    .stat-box.gcp-service:hover {
+      background: linear-gradient(135deg, rgba(66, 133, 244, 0.15) 0%, rgba(52, 168, 83, 0.12) 100%);
     }
 
     .subsection-title {
@@ -3027,8 +3047,6 @@
       }
 
       .gcp-main-card {
-        grid-template-columns: 1fr;
-        gap: 30px;
         padding: 40px;
       }
 
@@ -3344,20 +3362,6 @@
               <span class="feature-badge">Infrastructure as Service (IaaS)</span>
               <span class="feature-badge">Platform as Service (PaaS)</span>
               <span class="feature-badge">Serverless Computing</span>
-            </div>
-          </div>
-          <div class="main-stats">
-            <div class="stat-box">
-              <div class="stat-value">US$26.3B</div>
-              <div class="stat-label">Revenue (2022)</div>
-            </div>
-            <div class="stat-box">
-              <div class="stat-value">Google</div>
-              <div class="stat-label">Owner</div>
-            </div>
-            <div class="stat-box">
-              <div class="stat-value">April 2008</div>
-              <div class="stat-label">Launch Date</div>
             </div>
           </div>
         </div>
