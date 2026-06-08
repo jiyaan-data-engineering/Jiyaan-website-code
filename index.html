@@ -70,8 +70,9 @@
     }
 
     .container {
-      max-width: 1200px;
+      max-width: 1400px;
       margin: 0 auto;
+      width: 100%;
     }
 
     .section-heading {
@@ -385,24 +386,23 @@
     .earning-potential {
       background: #0a0f1c;
       padding: 100px 50px;
+      overflow-x: auto;
     }
 
     .career-progression {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 25px;
+      gap: 20px;
       margin-bottom: 80px;
-      align-items: start;
     }
 
     .career-card {
       background: #0f1528;
-      padding: 30px;
-      border-radius: 15px;
-      border: 2px solid rgba(0, 255, 204, 0.1);
-      position: relative;
-      overflow: hidden;
-      transition: all 0.4s ease;
+      padding: 25px;
+      border-radius: 12px;
+      border: 2px solid rgba(0, 255, 204, 0.2);
+      text-align: center;
+      transition: all 0.3s ease;
     }
 
     .career-card::before {
@@ -411,163 +411,94 @@
       top: 0;
       left: 0;
       right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, #00ffcc, transparent);
-    }
-
-    .career-card.fresher::before {
+      height: 3px;
       background: linear-gradient(90deg, #6366f1, #6366f1);
+      display: none;
     }
 
-    .career-card.junior::before {
-      background: linear-gradient(90deg, #8b5cf6, #8b5cf6);
-    }
-
-    .career-card.senior::before {
-      background: linear-gradient(90deg, #3b82f6, #3b82f6);
-    }
-
-    .career-card.lead::before {
-      background: linear-gradient(90deg, #f59e0b, #f59e0b);
+    .career-card.senior-highlight {
+      background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+      border-color: #3b82f6;
     }
 
     .career-card:hover {
-      transform: translateY(-15px);
+      transform: translateY(-8px);
       border-color: #00ffcc;
-      box-shadow: 0 20px 50px rgba(0, 255, 204, 0.2);
+      box-shadow: 0 15px 35px rgba(0, 255, 204, 0.15);
     }
 
-    .career-level-badge {
-      display: inline-block;
-      background: rgba(0, 255, 204, 0.2);
-      color: #00ffcc;
-      padding: 5px 12px;
-      border-radius: 20px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      margin-bottom: 15px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .career-icon {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
+    .card-icon {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
       display: block;
-      animation: float 3s ease-in-out infinite;
     }
 
     .career-card h3 {
       color: #fff;
-      font-size: 1.25rem;
+      font-size: 1.1rem;
       font-weight: 700;
-      margin-bottom: 20px;
+      margin: 10px 0 15px 0;
       font-family: 'Outfit', sans-serif;
     }
 
-    .salary-display {
-      background: rgba(0, 255, 204, 0.1);
-      padding: 15px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      border-left: 3px solid #00ffcc;
-    }
-
-    .salary-amount {
-      color: #00ffcc;
-      font-size: 1.4rem;
+    .card-salary {
+      color: #3b82f6;
+      font-size: 1.3rem;
       font-weight: 800;
       margin-bottom: 5px;
     }
 
-    .salary-monthly {
-      color: #b0b8cc;
-      font-size: 0.9rem;
+    .career-card.senior-highlight .card-salary {
+      color: #fff;
     }
 
-    .career-focus {
-      margin-bottom: 20px;
-    }
-
-    .focus-title {
+    .card-monthly {
       color: #b0b8cc;
       font-size: 0.85rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+      margin-bottom: 15px;
     }
 
-    .focus-list {
+    .card-points {
       list-style: none;
       padding: 0;
       margin: 0;
+      text-align: left;
     }
 
-    .focus-list li {
+    .card-points li {
       color: #b0b8cc;
       font-size: 0.9rem;
-      padding: 5px 0;
-      line-height: 1.6;
+      padding: 4px 0;
+      line-height: 1.5;
     }
 
-    .call-indicator {
-      margin-top: 20px;
-      padding-top: 20px;
-      border-top: 1px solid rgba(0, 255, 204, 0.1);
+    .career-card.senior-highlight .card-points li {
+      color: #e0e7ff;
     }
 
-    .indicator-label {
-      color: #b0b8cc;
-      font-size: 0.85rem;
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 600;
-    }
-
-    .progress-bar {
-      height: 6px;
-      background: rgba(0, 255, 204, 0.1);
-      border-radius: 3px;
-      overflow: hidden;
-      margin-bottom: 8px;
-    }
-
-    .progress {
-      height: 100%;
-      background: linear-gradient(90deg, #00ffcc, #00cc99);
-      transition: width 2s ease-out;
-      animation: growProgress 2s ease-out;
-    }
-
-    @keyframes growProgress {
-      from { width: 0; }
-      to { width: var(--progress-width, 100%); }
-    }
-
-    .progress-text {
+    .card-calls {
       color: #00ffcc;
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       font-weight: 700;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(0, 255, 204, 0.2);
     }
 
-    .progression-arrow {
-      display: none;
-      font-size: 2rem;
-      color: #00ffcc;
-      text-align: center;
-      align-self: center;
-      animation: slideArrow 1.5s ease-in-out infinite;
+    .career-card.senior-highlight .card-calls {
+      color: #fff;
+      border-top-color: rgba(255, 255, 255, 0.2);
     }
 
-    @keyframes slideArrow {
-      0%, 100% { transform: translateX(0); }
-      50% { transform: translateX(8px); }
+    @media (max-width: 1200px) {
+      .career-progression {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
-    @media (min-width: 1200px) {
-      .progression-arrow {
-        display: block;
+    @media (max-width: 768px) {
+      .career-progression {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -1282,117 +1213,60 @@
         <h2 class="section-heading">💰 Real-World Earning Potential & Career Growth</h2>
 
         <div class="career-progression">
-          <!-- Fresher Level -->
-          <div class="career-card fresher">
-            <div class="career-level-badge">Level 1</div>
-            <div class="career-icon">🎓</div>
+          <!-- Fresher -->
+          <div class="career-card">
+            <div class="card-icon">🎓</div>
             <h3>Fresher (0-1 Years)</h3>
-            <div class="salary-display">
-              <div class="salary-amount">₹2 - 4.5 LPA</div>
-              <div class="salary-monthly">₹18K - ₹35K/month</div>
-            </div>
-            <div class="career-focus">
-              <p class="focus-title">Focus Areas:</p>
-              <ul class="focus-list">
-                <li>✓ Learning Phase</li>
-                <li>✓ Build Foundation</li>
-                <li>✓ Skill Development</li>
-              </ul>
-            </div>
-            <div class="call-indicator">
-              <span class="indicator-label">Interview Calls:</span>
-              <div class="progress-bar">
-                <div class="progress" style="width: 30%"></div>
-              </div>
-              <span class="progress-text">30% Calls</span>
-            </div>
+            <div class="card-salary">₹2 - 4.5 LPA</div>
+            <div class="card-monthly">₹18K - ₹35K/month</div>
+            <ul class="card-points">
+              <li>✓ Learning Phase</li>
+              <li>✓ Build Foundation</li>
+              <li>✓ Skill Development</li>
+            </ul>
+            <div class="card-calls">30% Interview Calls</div>
           </div>
 
-          <!-- Arrow Animation -->
-          <div class="progression-arrow">→</div>
-
-          <!-- Junior Level -->
-          <div class="career-card junior">
-            <div class="career-level-badge">Level 2</div>
-            <div class="career-icon">⚙️</div>
+          <!-- Junior -->
+          <div class="career-card">
+            <div class="card-icon">⚙️</div>
             <h3>Junior (1-3 Years)</h3>
-            <div class="salary-display">
-              <div class="salary-amount">₹4 - 8 LPA</div>
-              <div class="salary-monthly">₹30K - ₹60K/month</div>
-            </div>
-            <div class="career-focus">
-              <p class="focus-title">Growth Areas:</p>
-              <ul class="focus-list">
-                <li>✓ Skill Building</li>
-                <li>✓ Job Switching</li>
-                <li>✓ 2-3x Growth</li>
-              </ul>
-            </div>
-            <div class="call-indicator">
-              <span class="indicator-label">Interview Calls:</span>
-              <div class="progress-bar">
-                <div class="progress" style="width: 60%"></div>
-              </div>
-              <span class="progress-text">60% Calls</span>
-            </div>
+            <div class="card-salary">₹4 - 8 LPA</div>
+            <div class="card-monthly">₹30K - ₹60K/month</div>
+            <ul class="card-points">
+              <li>✓ Skill Building</li>
+              <li>✓ Job Switching</li>
+              <li>✓ 2-3x Growth</li>
+            </ul>
+            <div class="card-calls">60% Interview Calls</div>
           </div>
 
-          <!-- Arrow Animation -->
-          <div class="progression-arrow">→</div>
-
-          <!-- Senior Level -->
-          <div class="career-card senior">
-            <div class="career-level-badge">Level 3</div>
-            <div class="career-icon">🚀</div>
+          <!-- Senior -->
+          <div class="career-card senior-highlight">
+            <div class="card-icon">🚀</div>
             <h3>Senior (3-5 Years)</h3>
-            <div class="salary-display">
-              <div class="salary-amount">₹10 - 15 LPA</div>
-              <div class="salary-monthly">₹75K - ₹110K/month</div>
-            </div>
-            <div class="career-focus">
-              <p class="focus-title">Prime Opportunity:</p>
-              <ul class="focus-list">
-                <li>✓ Growth Phase</li>
-                <li>✓ Big Jump</li>
-                <li>✓ 100% Growth</li>
-              </ul>
-            </div>
-            <div class="call-indicator">
-              <span class="indicator-label">Interview Calls:</span>
-              <div class="progress-bar">
-                <div class="progress" style="width: 90%"></div>
-              </div>
-              <span class="progress-text">90% Calls</span>
-            </div>
+            <div class="card-salary">₹10 - 15 LPA</div>
+            <div class="card-monthly">₹75K - ₹110K/month</div>
+            <ul class="card-points">
+              <li>✓ Growth Phase</li>
+              <li>✓ Big Jump</li>
+              <li>✓ 100% Growth</li>
+            </ul>
+            <div class="card-calls">90% Interview Calls</div>
           </div>
 
-          <!-- Arrow Animation -->
-          <div class="progression-arrow">→</div>
-
-          <!-- Lead Level -->
-          <div class="career-card lead">
-            <div class="career-level-badge">Level 4</div>
-            <div class="career-icon">👑</div>
+          <!-- Lead -->
+          <div class="career-card">
+            <div class="card-icon">👑</div>
             <h3>Lead (5+ Years)</h3>
-            <div class="salary-display">
-              <div class="salary-amount">₹15 - 30+ LPA</div>
-              <div class="salary-monthly">₹110K - ₹200K+/month</div>
-            </div>
-            <div class="career-focus">
-              <p class="focus-title">Leadership Role:</p>
-              <ul class="focus-list">
-                <li>✓ Leadership</li>
-                <li>✓ Specialist</li>
-                <li>✓ Strategic</li>
-              </ul>
-            </div>
-            <div class="call-indicator">
-              <span class="indicator-label">Interview Calls:</span>
-              <div class="progress-bar">
-                <div class="progress" style="width: 100%"></div>
-              </div>
-              <span class="progress-text">100% Calls</span>
-            </div>
+            <div class="card-salary">₹15 - 30+ LPA</div>
+            <div class="card-monthly">₹110K - ₹200K+/month</div>
+            <ul class="card-points">
+              <li>✓ Leadership</li>
+              <li>✓ Specialist</li>
+              <li>✓ Strategic</li>
+            </ul>
+            <div class="card-calls">100% Interview Calls</div>
           </div>
         </div>
 
