@@ -1,235 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="All Jiyaan Institute Courses - Data Engineering, Python, SQL, GCP, Big Data and more.">
-    <meta name="keywords" content="Data Engineering Courses, Python, SQL, GCP, Online Learning, Tech Courses">
-    <title>All Courses - Jiyaan Institute</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+<!-- Global Security Policies -->
+<meta name="referrer" content="strict-origin-when-cross-origin">
 
-    <link rel="stylesheet" href="assets/css/global.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/courses.css">
+<!-- Basic SEO -->
+<title>GCP Data Engineering Courses | Jiyaan Institute of Technology</title>
+<meta name="description" content="Explore our expert-led GCP Data Engineering courses. Learn SQL, Python, PySpark, BigQuery, Airflow, and Dataflow with real-time projects and certification guidance.">
+<meta name="keywords" content="Data Engineering Courses, GCP Training, Python for Data Engineering, PySpark Certification, SQL Training Hyderabad">
+<meta name="author" content="Jiyaan Institute of Technology">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4285F4">
+<link rel="canonical" href="https://jiyaaninstitute.in/courses">
 
-    <style>
-        .courses-header {
-            padding-top: 150px;
-            padding-bottom: 60px;
-            text-align: center;
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jiyaaninstitute.in/courses">
+<meta property="og:title" content="GCP Data Engineering Courses | Master Cloud Data">
+<meta property="og:description" content="Start your journey in Data Engineering. Comprehensive curriculum covering the entire GCP data stack with placement support.">
+<meta property="og:image" content="https://jiyaaninstitute.in/assets/images/logo.webp">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://jiyaaninstitute.in/courses">
+<meta property="twitter:title" content="GCP Data Engineering Courses | Master Cloud Data">
+<meta property="twitter:description" content="Start your journey in Data Engineering. Comprehensive curriculum covering the entire GCP data stack with placement support.">
+<meta property="twitter:image" content="https://jiyaaninstitute.in/assets/images/logo.webp">
+
+
+<!-- Preconnect & Preload -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://img.icons8.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+
+<link rel="preload" href="assets/css/main.css?v=2" as="style">
+<link rel="preload" href="assets/css/courses.css?v=2" as="style">
+<link rel="preload" href="assets/images/logo.webp" as="image">
+
+<!-- Favicon -->
+<link rel="icon" type="image/webp" sizes="32x32" href="assets/images/logo1.webp">
+<link rel="icon" type="image/webp" sizes="16x16" href="assets/images/logo1.webp">
+<link rel="apple-touch-icon" href="assets/images/logo1.webp">
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ItemList",
+      "name": "Jiyaan Institute Courses",
+      "description": "Professional GCP Data Engineering courses including SQL, Python, PySpark, and Cloud Services.",
+      "url": "https://jiyaaninstitute.in/courses",
+      "itemListElement": [
+        {
+          "@type": "Course",
+          "position": 1,
+          "name": "SQL",
+          "description": "Master SQL for Data Engineering and Analytics.",
+          "provider": {
+            "@id": "https://jiyaaninstitute.in/#organization"
+          }
+        },
+        {
+          "@type": "Course",
+          "position": 2,
+          "name": "Python",
+          "description": "Learn Python programming tailored for Data Engineering tasks.",
+          "provider": {
+            "@id": "https://jiyaaninstitute.in/#organization"
+          }
         }
-
-        .courses-header h1 {
-            font-size: clamp(28px, 5vw, 48px);
-            margin-bottom: 20px;
-            color: #fff;
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://jiyaaninstitute.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Courses",
+          "item": "https://jiyaaninstitute.in/courses"
         }
+      ]
+    }
+  ]
+}
+</script>
 
-        .filter-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin: 40px 0;
-            flex-wrap: wrap;
-        }
 
-        .filter-btn {
-            padding: 10px 20px;
-            background: rgba(255, 255, 255, 0.1);
-            color: #fff;
-            border: 2px solid transparent;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: 0.3s;
-            font-size: 14px;
-        }
+<!-- CSS -->
+<link rel="stylesheet" href="assets/css/main.css?v=2">
+<link rel="stylesheet" href="assets/css/global.css?v=2">
+<link rel="stylesheet" href="assets/css/courses.css?v=2">
 
-        .filter-btn:hover,
-        .filter-btn.active {
-            background: #00ffcc;
-            color: #000;
-            border-color: #00ffcc;
-        }
-    </style>
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css?v=2" rel="stylesheet">
 </head>
+
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="brand">
-            <img src="assets/images/logo.webp" alt="Jiyaan Institute Logo" class="logo glow">
-            <div class="brand-text">
-                <span class="brand-name">JIYAAN</span>
-                <p>Institute</p>
-            </div>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar" id="navbar">
+
+  <div class="brand">
+    <img src="assets/images/logo.webp" class="logo glow" alt="Jiyaan Logo">
+
+    <div class="brand-text">
+      <span class="brand-name">JIYAAN</span>
+
+      <div class="sub-title">
+        <span class="text">INSTITUTE OF TECHNOLOGY</span>
+
+        <div class="lines">
+          <span class="line blue"></span>
+          <span class="line green"></span>
+          <span class="line yellow"></span>
+          <span class="line red"></span>
         </div>
-        <span class="menu-toggle" id="menu-toggle">☰</span>
-        <nav id="nav">
-            <a href="index.html">Home</a>
-            <a href="courses.html" class="active">Courses</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </nav>
+      </div>
 
-    <!-- Custom Cursor -->
-    <div class="cursor"></div>
-    <div class="cursor-glow"></div>
+      <p>GCP DATA ENGINEERING EXCELLENCE</p>
+    </div>
+  </div>
 
-    <!-- Page Header -->
-    <section class="courses-header">
-        <h1>Explore All Courses</h1>
-        <p style="font-size: 18px; color: #aaa;">Choose from our comprehensive collection of tech and data engineering courses</p>
-    </section>
+  <!-- Hamburger -->
+  <div class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" role="button" tabindex="0" aria-expanded="false" aria-controls="nav">☰</div>
 
-    <!-- Filter Buttons -->
-    <div style="text-align: center; padding: 0 20px;">
-        <div class="filter-buttons">
-            <button class="filter-btn active" data-filter="all">All Courses</button>
-            <button class="filter-btn" data-filter="programming">Programming</button>
-            <button class="filter-btn" data-filter="data">Data Engineering</button>
-            <button class="filter-btn" data-filter="cloud">Cloud & Infrastructure</button>
-            <button class="filter-btn" data-filter="tools">Tools & Management</button>
-        </div>
+  <!-- Nav -->
+  <nav id="nav" aria-label="Main Navigation">
+    <a href="/" class="active">Home</a>
+    <a href="/about">About</a>
+    <a href="/courses">Courses</a>
+    <a href="/contact">Contact</a>
+  </nav>
+
+</header>
+
+<section>
+  <h1>Our Courses</h1>
+
+  <div class="grid">
+
+    <div class="card" data-aos="fade-up">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="GCP Cloud" class="card-icon" loading="lazy">
+      <h3>GCP Cloud</h3>
+      <a href="/course-detail?course=GCP Cloud" class="btn">View Details</a>
     </div>
 
-    <!-- Courses Grid -->
-    <section class="courses">
-        <div class="grid">
-            <!-- Programming Courses -->
-            <a href="course-detail.html?course=python" class="card course-card" data-category="programming" data-aos="flip-left">
-                <img src="assets/images/python.webp" alt="Python Programming" class="card-icon">
-                <h3>Python Programming</h3>
-                <p>Master Python from basics to advanced concepts for data engineering and automation.</p>
-                <div style="margin-top: auto; color: #00ffcc; font-weight: 600;">Beginner to Advanced</div>
-            </a>
+    <div class="card" data-aos="fade-up">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="card-icon" loading="lazy">
+      <h3>Python</h3>
+      <a href="/course-detail?course=Python" class="btn">View Details</a>
+    </div>
 
-            <a href="course-detail.html?course=sql" class="card course-card" data-category="data" data-aos="flip-left">
-                <img src="assets/images/sql.webp" alt="SQL" class="card-icon">
-                <h3>SQL Mastery</h3>
-                <p>Write efficient queries, optimize databases, and master advanced SQL concepts.</p>
-                <div style="margin-top: auto; color: #00ffcc; font-weight: 600;">Intermediate to Advanced</div>
-            </a>
+    <div class="card" data-aos="fade-up">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" class="card-icon" loading="lazy">
+      <h3>SQL</h3>
+      <a href="/course-detail?course=SQL" class="btn">View Details</a>
+    </div>
 
-            <!-- Data Engineering Courses -->
-            <a href="course-detail.html?course=pyspark" class="card course-card" data-category="data" data-aos="flip-left">
-                <img src="assets/images/pyspark.webp" alt="PySpark" class="card-icon">
-                <h3>PySpark</h3>
-                <p>Learn distributed computing and process large-scale data with Apache Spark.</p>
-                <div style="margin-top: auto; color: #00ffcc; font-weight: 600;">Advanced</div>
-            </a>
+    <div class="card" data-aos="fade-up">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg" alt="Big Data" class="card-icon" loading="lazy">
+      <h3>Big Data</h3>
+      <a href="/course-detail?course=Big Data" class="btn">View Details</a>
+    </div>
 
-            <a href="course-detail.html?course=bigdata" class="card course-card" data-category="data" data-aos="flip-left">
-                <img src="assets/images/bigdata.webp" alt="Big Data" class="card-icon">
-                <h3>Big Data Engineering</h3>
-                <p>Handle massive datasets and build scalable data pipelines for enterprise systems.</p>
-                <div style="margin-top: auto; color: #00ffcc; font-weight: 600;">Advanced</div>
-            </a>
+    <div class="card" data-aos="fade-up">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original-wordmark.svg" alt="PySpark" class="card-icon" loading="lazy">
+      <h3>PySpark</h3>
+      <a href="/course-detail?course=PySpark" class="btn">View Details</a>
+    </div>
 
-            <a href="course-detail.html?course=datamodelling" class="card course-card" data-category="data" data-aos="flip-left">
-                <img src="assets/images/datamodelling.webp" alt="Data Modeling" class="card-icon">
-                <h3>Data Modeling</h3>
-                <p>Design efficient database schemas and master data modeling best practices.</p>
-                <div style="margin-top: auto; color: #00ffcc; font-weight: 600;">Intermediate</div>
-            </a>
+    <div class="card" data-aos="fade-up">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux Basics" class="card-icon" loading="lazy">
+      <h3>Linux Basics</h3>
+      <a href="/course-detail?course=Linux Basics" class="btn">View Details</a>
+    </div>
 
-            <!-- Cloud & Infrastructure -->
-            <a href="course-detail.html?course=gcp" class="card course-card" data-category="cloud" data-aos="flip-left">
-                <img src="assets/images/gcp.webp" alt="Google Cloud Platform" class="card-icon">
-                <h3>Google Cloud Platform</h3>
-                <p>Deploy, manage, and scale applications on Google Cloud infrastructure.</p>
-                <div style="margin-top: auto; color: #00ffcc; font-weight: 600;">Intermediate to Advanced</div>
-            </a>
+    <div class="card" data-aos="fade-up">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="card-icon" loading="lazy">
+      <h3>Git</h3>
+      <a href="/course-detail?course=Git" class="btn">View Details</a>
+    </div>
 
-            <a href="course-detail.html?course=linux" class="card course-card" data-category="cloud" data-aos="flip-left">
-                <img src="assets/images/linux.webp" alt="Linux" class="card-icon">
-                <h3>Linux System Administration</h3>
-                <p>Master Linux system administration, server management, and command-line tools.</p>
-                <div style="margin-top: auto; color: #00ffcc; font-weight: 600;">Beginner to Intermediate</div>
-            </a>
+    <div class="card" data-aos="fade-up">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" alt="Jira" class="card-icon" loading="lazy">
+      <h3>Jira</h3>
+      <a href="/course-detail?course=Jira" class="btn">View Details</a>
+    </div>
 
-            <!-- Tools & Management -->
-            <a href="course-detail.html?course=git" class="card course-card" data-category="tools" data-aos="flip-left">
-                <img src="assets/images/git.webp" alt="Git" class="card-icon">
-                <h3>Git & Version Control</h3>
-                <p>Master Git workflows, branching strategies, and collaborative development practices.</p>
-                <div style="margin-top: auto; color: #00ffcc; font-weight: 600;">Beginner</div>
-            </a>
+    <div class="card" data-aos="fade-up">
+      <img src="https://img.icons8.com/fluency/96/system-task.png" alt="IT Skills" class="card-icon" loading="lazy">
+      <h3>IT Skills</h3>
+      <a href="/course-detail?course=IT Skills" class="btn">View Details</a>
+    </div>   
+ 
+    <div class="card" data-aos="fade-up">
+      <img src="https://img.icons8.com/color/96/data-configuration.png" alt="Data Modelling" class="card-icon" loading="lazy">
+      <h3>Data Modelling</h3>
+      <a href="/course-detail?course=Data Modelling" class="btn">View Details</a>
+    </div>
 
-            <a href="course-detail.html?course=jira" class="card course-card" data-category="tools" data-aos="flip-left">
-                <img src="assets/images/jira.webp" alt="Jira" class="card-icon">
-                <h3>Jira Project Management</h3>
-                <p>Track projects, manage agile workflows, and collaborate with your team effectively.</p>
-                <div style="margin-top: auto; color: #00ffcc; font-weight: 600;">Beginner</div>
-            </a>
+    <div class="card" data-aos="fade-up">
+      <img src="https://img.icons8.com/fluency/96/source-code.png" alt="Real Time Projects" class="card-icon" loading="lazy">
+      <h3>Real Time Projects</h3>
+      <a href="/course-detail?course=Real Time Projects" class="btn">View Details</a>
+    </div>
 
-            <a href="course-detail.html?course=itskills" class="card course-card" data-category="programming" data-aos="flip-left">
-                <img src="assets/images/itskills.webp" alt="IT Skills" class="card-icon">
-                <h3>Core IT Skills</h3>
-                <p>Build foundational IT knowledge essential for any technology career path.</p>
-                <div style="margin-top: auto; color: #00ffcc; font-weight: 600;">Beginner</div>
-            </a>
+    <div class="card" data-aos="fade-up">
+      <img src="https://img.icons8.com/fluency/96/resume.png" alt="Job Profile Building" class="card-icon" loading="lazy">
+      <h3>Job Profile Building</h3>
+      <a href="/course-detail?course=Job Profile Building" class="btn">View Details</a>
+    </div>  
+  </div>
+</section>
 
-            <a href="course-detail.html?course=jobprofile" class="card course-card" data-category="tools" data-aos="flip-left">
-                <img src="assets/images/jobprofilebuilding.webp" alt="Job Profile" class="card-icon">
-                <h3>Job Profile Building</h3>
-                <p>Create a standout professional profile and build your personal brand for employers.</p>
-                <div style="margin-top: auto; color: #00ffcc; font-weight: 600;">Intermediate</div>
-            </a>
+<!-- ================= FOOTER ================= -->
+<footer>
+  <p>© 2026 Jiyaan Institute of Technology</p>
+</footer>
 
-            <a href="course-detail.html?course=realtime" class="card course-card" data-category="data" data-aos="flip-left">
-                <img src="assets/images/realtimeprojects.webp" alt="Real Time Projects" class="card-icon">
-                <h3>Real-Time Industry Projects</h3>
-                <p>Work on live industry projects, build portfolio, and gain real-world experience.</p>
-                <div style="margin-top: auto; color: #00ffcc; font-weight: 600;">Advanced</div>
-            </a>
-        </div>
-    </section>
+<!-- WhatsApp (Secured) -->
+<a href="#" id="secure-wa" class="whatsapp" aria-label="Chat with us on WhatsApp" target="_blank" rel="noopener noreferrer">💬</a>
 
-    <!-- CTA Section -->
-    <section style="padding: 80px 50px; text-align: center; background: linear-gradient(135deg, #1a1a2e, #16213e);">
-        <h2 style="font-size: 32px; margin-bottom: 20px;">Still Not Sure Which Course to Choose?</h2>
-        <p style="font-size: 16px; color: #ccc; margin-bottom: 30px;">Our advisors are here to help you find the perfect course</p>
-        <a href="contact.html" class="btn">Get Free Consultation</a>
-    </section>
+<!-- JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js?v=2" defer></script>
+<script src="assets/js/main.js?v=2" defer></script>
+<script src="assets/js/course-details.js?v=2" defer></script>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Jiyaan Institute. All rights reserved.</p>
-        <p>Master Data Engineering • Transform Your Career</p>
-    </footer>
-
-    <!-- WhatsApp Button -->
-    <a href="#" id="secure-wa" class="whatsapp">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-9.746 9.798c0 2.718.732 5.355 2.122 7.682l-2.25 6.863 7.05-1.843a9.847 9.847 0 004.884 1.235h.004c5.444 0 9.944-4.467 9.967-9.978.012-2.763-.69-5.357-2.001-7.465-1.327-2.124-3.196-3.835-5.482-4.745-1.232-.656-2.503-.967-3.8-.967z"/>
-        </svg>
-    </a>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="assets/js/main.js"></script>
-
-    <script>
-        // Filter functionality
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const filter = this.dataset.filter;
-
-                // Update active button
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
-
-                // Filter cards
-                document.querySelectorAll('.course-card').forEach(card => {
-                    if (filter === 'all' || card.dataset.category === filter) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 </html>
