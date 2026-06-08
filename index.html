@@ -2578,6 +2578,507 @@
       }
     }
 
+    /* ===== GCP OVERVIEW SECTION ===== */
+    .gcp-overview-section {
+      background: linear-gradient(135deg, rgba(66, 133, 244, 0.08) 0%, rgba(52, 168, 83, 0.08) 100%);
+      padding: 120px 50px;
+      border-top: 2px solid rgba(66, 133, 244, 0.15);
+      border-bottom: 2px solid rgba(52, 168, 83, 0.15);
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #b0b8cc;
+      font-size: 1.15rem;
+      margin-bottom: 80px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      animation: slideInDown 0.8s ease-out;
+    }
+
+    .gcp-main-card {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 50px;
+      background: linear-gradient(135deg, rgba(66, 133, 244, 0.08) 0%, rgba(52, 168, 83, 0.08) 100%);
+      border: 2px solid rgba(0, 255, 204, 0.2);
+      border-radius: 18px;
+      padding: 50px;
+      margin-bottom: 80px;
+      animation: slideInUp 0.8s ease-out;
+      transition: all 0.3s ease;
+    }
+
+    .gcp-main-card:hover {
+      border-color: #00ffcc;
+      box-shadow: 0 20px 50px rgba(0, 255, 204, 0.2);
+      transform: translateY(-5px);
+    }
+
+    .main-content h3 {
+      color: #fff;
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .main-content p {
+      color: #b0b8cc;
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 25px;
+    }
+
+    .gcp-key-features {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .feature-badge {
+      background: linear-gradient(135deg, rgba(66, 133, 244, 0.25) 0%, rgba(52, 168, 83, 0.15) 100%);
+      color: #00ffcc;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      border: 1px solid rgba(0, 255, 204, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .feature-badge:hover {
+      background: linear-gradient(135deg, rgba(66, 133, 244, 0.35) 0%, rgba(52, 168, 83, 0.25) 100%);
+      border-color: #00ffcc;
+    }
+
+    .main-stats {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .stat-box {
+      background: rgba(0, 255, 204, 0.08);
+      border: 1px solid rgba(0, 255, 204, 0.2);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .stat-box:hover {
+      border-color: #00ffcc;
+      background: rgba(0, 255, 204, 0.12);
+    }
+
+    .stat-value {
+      color: #00ffcc;
+      font-size: 1.5rem;
+      font-weight: 800;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .stat-label {
+      color: #b0b8cc;
+      font-size: 0.85rem;
+      margin-top: 5px;
+      font-weight: 600;
+    }
+
+    .subsection-title {
+      color: #fff;
+      font-size: 1.6rem;
+      font-weight: 800;
+      text-align: center;
+      margin: 70px 0 45px 0;
+      font-family: 'Outfit', sans-serif;
+      animation: slideInDown 0.8s ease-out;
+    }
+
+    .services-showcase {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+      margin-bottom: 80px;
+    }
+
+    .service-box {
+      border-radius: 14px;
+      padding: 30px;
+      text-align: center;
+      color: #fff;
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      border: 2px solid;
+      animation: slideInUp 0.8s ease-out backwards;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-box:nth-child(1) { animation-delay: 0.1s; }
+    .service-box:nth-child(2) { animation-delay: 0.2s; }
+    .service-box:nth-child(3) { animation-delay: 0.3s; }
+    .service-box:nth-child(4) { animation-delay: 0.4s; }
+
+    .google-blue {
+      background: linear-gradient(135deg, rgba(66, 133, 244, 0.15) 0%, rgba(66, 133, 244, 0.05) 100%);
+      border-color: rgba(66, 133, 244, 0.4);
+      box-shadow: 0 8px 20px rgba(66, 133, 244, 0.15);
+    }
+
+    .google-blue:hover {
+      border-color: #4285F4;
+      box-shadow: 0 15px 40px rgba(66, 133, 244, 0.3);
+      transform: translateY(-8px) scale(1.05);
+    }
+
+    .google-red {
+      background: linear-gradient(135deg, rgba(234, 67, 53, 0.15) 0%, rgba(234, 67, 53, 0.05) 100%);
+      border-color: rgba(234, 67, 53, 0.4);
+      box-shadow: 0 8px 20px rgba(234, 67, 53, 0.15);
+    }
+
+    .google-red:hover {
+      border-color: #EA4335;
+      box-shadow: 0 15px 40px rgba(234, 67, 53, 0.3);
+      transform: translateY(-8px) scale(1.05);
+    }
+
+    .google-yellow {
+      background: linear-gradient(135deg, rgba(251, 188, 4, 0.15) 0%, rgba(251, 188, 4, 0.05) 100%);
+      border-color: rgba(251, 188, 4, 0.4);
+      box-shadow: 0 8px 20px rgba(251, 188, 4, 0.15);
+    }
+
+    .google-yellow:hover {
+      border-color: #FBBC04;
+      box-shadow: 0 15px 40px rgba(251, 188, 4, 0.3);
+      transform: translateY(-8px) scale(1.05);
+    }
+
+    .google-green {
+      background: linear-gradient(135deg, rgba(52, 168, 83, 0.15) 0%, rgba(52, 168, 83, 0.05) 100%);
+      border-color: rgba(52, 168, 83, 0.4);
+      box-shadow: 0 8px 20px rgba(52, 168, 83, 0.15);
+    }
+
+    .google-green:hover {
+      border-color: #34A853;
+      box-shadow: 0 15px 40px rgba(52, 168, 83, 0.3);
+      transform: translateY(-8px) scale(1.05);
+    }
+
+    .service-icon {
+      font-size: 2.5rem;
+      display: block;
+      margin-bottom: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .service-box:hover .service-icon {
+      transform: scale(1.2) rotate(10deg);
+    }
+
+    .service-box h4 {
+      font-weight: 700;
+      font-size: 1.15rem;
+      margin: 15px 0 10px 0;
+      font-family: 'Outfit', sans-serif;
+      position: relative;
+      z-index: 2;
+    }
+
+    .service-box p {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Timeline Styles */
+    .timeline-container {
+      position: relative;
+      padding: 40px 0;
+      margin-bottom: 80px;
+    }
+
+    .timeline-node {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 40px;
+      margin-bottom: 50px;
+      animation: slideInUp 0.8s ease-out backwards;
+    }
+
+    .timeline-node:nth-child(1) { animation-delay: 0.1s; }
+    .timeline-node:nth-child(3) { animation-delay: 0.2s; }
+    .timeline-node:nth-child(5) { animation-delay: 0.3s; }
+    .timeline-node:nth-child(7) { animation-delay: 0.4s; }
+    .timeline-node:nth-child(9) { animation-delay: 0.5s; }
+
+    .node-marker {
+      position: relative;
+      text-align: right;
+      padding-right: 30px;
+    }
+
+    .node-marker::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      background: linear-gradient(135deg, #4285F4, #00ffcc);
+      border-radius: 50%;
+      border: 3px solid #0a0f1c;
+      box-shadow: 0 0 15px rgba(0, 255, 204, 0.4);
+    }
+
+    .node-year {
+      color: #00ffcc;
+      font-weight: 700;
+      font-size: 0.95rem;
+      display: block;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .timeline-connector {
+      position: absolute;
+      left: calc(150px - 80px + 10px);
+      width: 2px;
+      height: 50px;
+      background: linear-gradient(180deg, #4285F4, #00ffcc);
+      margin: 0;
+    }
+
+    .timeline-start .node-marker::after,
+    .timeline-end .node-marker::after {
+      width: 24px;
+      height: 24px;
+      box-shadow: 0 0 20px rgba(0, 255, 204, 0.6);
+    }
+
+    .node-content {
+      background: rgba(66, 133, 244, 0.08);
+      border: 1px solid rgba(0, 255, 204, 0.15);
+      border-radius: 12px;
+      padding: 25px;
+      transition: all 0.3s ease;
+    }
+
+    .node-content:hover {
+      border-color: #00ffcc;
+      background: rgba(0, 255, 204, 0.08);
+      transform: translateX(10px);
+    }
+
+    .node-content h4 {
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin: 0 0 10px 0;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .node-content p {
+      color: #b0b8cc;
+      font-size: 0.9rem;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* Infrastructure Section */
+    .infrastructure-highlight {
+      background: linear-gradient(135deg, rgba(0, 255, 204, 0.05) 0%, rgba(66, 133, 244, 0.05) 100%);
+      border: 2px solid rgba(0, 255, 204, 0.15);
+      border-radius: 16px;
+      padding: 50px;
+      margin-bottom: 80px;
+    }
+
+    .infrastructure-intro {
+      text-align: center;
+      color: #b0b8cc;
+      font-size: 1.05rem;
+      margin-bottom: 40px;
+    }
+
+    .infrastructure-items {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .infra-item {
+      text-align: center;
+      padding: 25px;
+      background: rgba(66, 133, 244, 0.06);
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(0, 255, 204, 0.1);
+    }
+
+    .infra-item:hover {
+      border-color: #00ffcc;
+      background: rgba(0, 255, 204, 0.1);
+      transform: translateY(-8px);
+    }
+
+    .infra-emoji {
+      font-size: 2.5rem;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .infra-item h5 {
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin: 12px 0 8px 0;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .infra-item p {
+      color: #b0b8cc;
+      font-size: 0.85rem;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* Google Cloud Ecosystem */
+    .google-cloud-ecosystem {
+      background: linear-gradient(135deg, rgba(66, 133, 244, 0.08) 0%, rgba(52, 168, 83, 0.08) 100%);
+      border: 2px solid rgba(66, 133, 244, 0.15);
+      border-radius: 16px;
+      padding: 50px;
+      margin-bottom: 60px;
+    }
+
+    .ecosystem-intro {
+      text-align: center;
+      color: #b0b8cc;
+      font-size: 1.05rem;
+      margin-bottom: 40px;
+    }
+
+    .ecosystem-components {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .ecosystem-box {
+      background: rgba(0, 255, 204, 0.06);
+      border: 2px solid rgba(0, 255, 204, 0.2);
+      border-radius: 12px;
+      padding: 30px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .ecosystem-box:hover {
+      border-color: #00ffcc;
+      background: rgba(0, 255, 204, 0.12);
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(0, 255, 204, 0.2);
+    }
+
+    .ecosystem-box h5 {
+      color: #00ffcc;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin: 0 0 10px 0;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .ecosystem-box p {
+      color: #b0b8cc;
+      font-size: 0.9rem;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 1024px) {
+      .gcp-overview-section {
+        padding: 80px 35px;
+      }
+
+      .gcp-main-card {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 40px;
+      }
+
+      .services-showcase {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .infrastructure-items {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .ecosystem-components {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .gcp-overview-section {
+        padding: 60px 20px;
+      }
+
+      .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 40px;
+      }
+
+      .gcp-main-card {
+        padding: 30px 20px;
+        margin-bottom: 50px;
+      }
+
+      .main-content h3 {
+        font-size: 1.4rem;
+      }
+
+      .main-content p {
+        font-size: 0.9rem;
+      }
+
+      .subsection-title {
+        font-size: 1.3rem;
+        margin: 50px 0 30px 0;
+      }
+
+      .services-showcase {
+        grid-template-columns: 1fr;
+        margin-bottom: 50px;
+      }
+
+      .infrastructure-items {
+        grid-template-columns: 1fr;
+      }
+
+      .ecosystem-components {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-node {
+        grid-template-columns: 100px 1fr;
+        gap: 20px;
+      }
+
+      .google-cloud-ecosystem {
+        padding: 40px 20px;
+      }
+    }
+
     /* ===== HERO BUTTONS ===== */
     .hero-buttons {
       display: flex;
@@ -2806,6 +3307,183 @@
 
       </div>
 
+    </section>
+
+    <!-- ================= GOOGLE CLOUD PLATFORM OVERVIEW ================= -->
+    <section class="gcp-overview-section">
+      <div class="container">
+        <h2 class="section-heading">☁️ Google Cloud Platform (GCP)</h2>
+        <p class="section-subtitle">Enterprise Cloud Services by Google</p>
+
+        <!-- Main Definition Card -->
+        <div class="gcp-main-card">
+          <div class="main-content">
+            <h3>What is Google Cloud Platform?</h3>
+            <p>Google Cloud Platform (GCP) is a set of cloud services provided by Google. It includes various services like computing, data storage, data analytics, and machine learning, along with tools for managing them. GCP uses the same infrastructure as Google's own products like Google Search and Gmail.</p>
+            <div class="gcp-key-features">
+              <span class="feature-badge">Infrastructure as Service (IaaS)</span>
+              <span class="feature-badge">Platform as Service (PaaS)</span>
+              <span class="feature-badge">Serverless Computing</span>
+            </div>
+          </div>
+          <div class="main-stats">
+            <div class="stat-box">
+              <div class="stat-value">US$26.3B</div>
+              <div class="stat-label">Revenue (2022)</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-value">Google</div>
+              <div class="stat-label">Owner</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-value">April 2008</div>
+              <div class="stat-label">Launch Date</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Core Services -->
+        <h3 class="subsection-title">Services Offered</h3>
+        <div class="services-showcase">
+          <div class="service-box google-blue">
+            <span class="service-icon">💾</span>
+            <h4>Computing</h4>
+            <p>Compute Engine, App Engine, Cloud Functions</p>
+          </div>
+
+          <div class="service-box google-red">
+            <span class="service-icon">📊</span>
+            <h4>Data Storage</h4>
+            <p>Cloud Storage, BigTable, Datastore, Firestore</p>
+          </div>
+
+          <div class="service-box google-yellow">
+            <span class="service-icon">📈</span>
+            <h4>Data Analytics</h4>
+            <p>BigQuery, Cloud Dataflow, Cloud DataPrep</p>
+          </div>
+
+          <div class="service-box google-green">
+            <span class="service-icon">🤖</span>
+            <h4>Machine Learning</h4>
+            <p>Vertex AI, TensorFlow, AutoML, ML APIs</p>
+          </div>
+        </div>
+
+        <!-- GCP Evolution Timeline -->
+        <h3 class="subsection-title">GCP Journey - From 2008 to Today</h3>
+        <div class="timeline-container">
+          <div class="timeline-node timeline-start">
+            <div class="node-marker">
+              <span class="node-year">April 2008</span>
+            </div>
+            <div class="node-content">
+              <h4>🚀 Google App Engine Preview</h4>
+              <p>Google Cloud Platform started with App Engine preview - a platform for building and hosting web applications</p>
+            </div>
+          </div>
+
+          <div class="timeline-connector"></div>
+
+          <div class="timeline-node">
+            <div class="node-marker">
+              <span class="node-year">May 2010</span>
+            </div>
+            <div class="node-content">
+              <h4>💾 Cloud Storage Launch</h4>
+              <p>Google Cloud Storage launched, providing scalable object storage for enterprise data</p>
+            </div>
+          </div>
+
+          <div class="timeline-connector"></div>
+
+          <div class="timeline-node">
+            <div class="node-marker">
+              <span class="node-year">2010</span>
+            </div>
+            <div class="node-content">
+              <h4>📊 BigQuery Preview</h4>
+              <p>Preview of BigQuery announced - revolutionizing data analytics at petabyte scale</p>
+            </div>
+          </div>
+
+          <div class="timeline-connector"></div>
+
+          <div class="timeline-node">
+            <div class="node-marker">
+              <span class="node-year">2011</span>
+            </div>
+            <div class="node-content">
+              <h4>🌍 Public Availability</h4>
+              <p>GCP became available to the public - opening Google's cloud services to businesses worldwide</p>
+            </div>
+          </div>
+
+          <div class="timeline-connector"></div>
+
+          <div class="timeline-node timeline-end">
+            <div class="node-marker">
+              <span class="node-year">Today</span>
+            </div>
+            <div class="node-content">
+              <h4>🏆 Global Innovation Leader</h4>
+              <p>Continuous innovation with hundreds of services and continuous expansion globally</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Infrastructure Advantage -->
+        <div class="infrastructure-highlight">
+          <h3 class="subsection-title">Powered by Google's Proven Infrastructure</h3>
+          <p class="infrastructure-intro">GCP uses the same infrastructure as Google's own world-class products:</p>
+          <div class="infrastructure-items">
+            <div class="infra-item">
+              <span class="infra-emoji">🔍</span>
+              <h5>Google Search</h5>
+              <p>Handles billions of search queries daily with unmatched reliability</p>
+            </div>
+            <div class="infra-item">
+              <span class="infra-emoji">📧</span>
+              <h5>Gmail</h5>
+              <p>Powers billions of users with enterprise-grade email infrastructure</p>
+            </div>
+            <div class="infra-item">
+              <span class="infra-emoji">🎬</span>
+              <h5>YouTube</h5>
+              <p>Streams billions of videos globally with massive data processing</p>
+            </div>
+            <div class="infra-item">
+              <span class="infra-emoji">🗺️</span>
+              <h5>Google Maps</h5>
+              <p>Global scale infrastructure and mapping data processing expertise</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Google Cloud Ecosystem -->
+        <div class="google-cloud-ecosystem">
+          <h3 class="subsection-title">Part of Google Cloud Ecosystem</h3>
+          <p class="ecosystem-intro">GCP is part of Google Cloud - a comprehensive suite of services:</p>
+          <div class="ecosystem-components">
+            <div class="ecosystem-box">
+              <h5>☁️ GCP</h5>
+              <p>Public Cloud Infrastructure, Platform & Serverless Services</p>
+            </div>
+            <div class="ecosystem-box">
+              <h5>🏢 Google Workspace</h5>
+              <p>G Suite - Productivity & Collaboration Tools</p>
+            </div>
+            <div class="ecosystem-box">
+              <h5>🔧 Android & ChromeOS</h5>
+              <p>Enterprise Versions of Mobile & Operating Systems</p>
+            </div>
+            <div class="ecosystem-box">
+              <h5>🔗 APIs</h5>
+              <p>Machine Learning & Mapping Services & APIs</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- ================= WHY CHOOSE GCP VS AWS AND AZURE ================= -->
