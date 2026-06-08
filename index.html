@@ -276,6 +276,80 @@
     }
 
     /* ===== WHY CHOOSE US ===== */
+    /* ===== GCP JOURNEY SECTION ===== */
+    .gcp-journey-section {
+      background: white;
+      padding: 100px 20px;
+    }
+
+    .journey-timeline {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-bottom: 50px;
+      position: relative;
+    }
+
+    .journey-item {
+      background: #f8fafc;
+      padding: 30px;
+      border-radius: 12px;
+      border-left: 5px solid #4285F4;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .journey-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(66, 133, 244, 0.15);
+      border-left-color: #34A853;
+    }
+
+    .journey-item.highlight {
+      background: linear-gradient(135deg, #4285F4 0%, #1967D2 100%);
+      color: white;
+      border-left-color: #FBBC04;
+    }
+
+    .journey-year {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: #1967D2;
+      margin-bottom: 12px;
+      display: inline-block;
+      background: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(25, 103, 210, 0.1);
+    }
+
+    .journey-item.highlight .journey-year {
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      box-shadow: none;
+    }
+
+    .journey-content h4 {
+      font-size: 1.1rem;
+      margin: 15px 0 10px 0;
+      color: #0f0f2e;
+    }
+
+    .journey-item.highlight h4 {
+      color: white;
+    }
+
+    .journey-content p {
+      color: #64748b;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .journey-item.highlight p {
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* ===== WHY CHOOSE US ===== */
     .why-choose-section {
       background: white;
     }
@@ -838,6 +912,108 @@
         <div class="hero-buttons">
           <a href="/courses" class="btn">Start Learning</a>
           <a href="/contact" class="btn outline">Free Consultation</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= GOOGLE CLOUD PLATFORM JOURNEY ================= -->
+    <section class="gcp-journey-section">
+      <div class="container">
+        <h2 class="section-title">Google Cloud Platform Evolution: 2008 - 2025</h2>
+        <p style="text-align: center; color: #64748b; margin-bottom: 50px; font-size: 1.05rem;">
+          Journey of Google's cloud transformation and how Jiyaan Institute is training the next generation of GCP experts
+        </p>
+
+        <div class="journey-timeline">
+          <!-- 2008: Launch -->
+          <div class="journey-item">
+            <div class="journey-year">2008</div>
+            <div class="journey-content">
+              <h4>🚀 GCP Launch</h4>
+              <p>Google App Engine launched, marking Google's entry into cloud computing services</p>
+            </div>
+          </div>
+
+          <!-- 2010: Early Growth -->
+          <div class="journey-item">
+            <div class="journey-year">2010</div>
+            <div class="journey-content">
+              <h4>📊 BigQuery Released</h4>
+              <p>Google's powerful data warehouse service introduced for large-scale analytics</p>
+            </div>
+          </div>
+
+          <!-- 2015: Kubernetes -->
+          <div class="journey-item">
+            <div class="journey-year">2015</div>
+            <div class="journey-content">
+              <h4>☸️ Kubernetes & Container Innovation</h4>
+              <p>Google open-sources Kubernetes, revolutionizing containerized application management</p>
+            </div>
+          </div>
+
+          <!-- 2017: Data Analytics -->
+          <div class="journey-item">
+            <div class="journey-year">2017</div>
+            <div class="journey-content">
+              <h4>🤖 Cloud ML & AI Services</h4>
+              <p>Vertex AI and machine learning services launched, democratizing AI for enterprises</p>
+            </div>
+          </div>
+
+          <!-- 2020: Dataflow & Streaming -->
+          <div class="journey-item">
+            <div class="journey-year">2020</div>
+            <div class="journey-content">
+              <h4>⚡ Real-time Data Processing</h4>
+              <p>Cloud Dataflow and Pub/Sub maturity enabled real-time streaming analytics at scale</p>
+            </div>
+          </div>
+
+          <!-- 2023: Generative AI -->
+          <div class="journey-item">
+            <div class="journey-year">2023</div>
+            <div class="journey-content">
+              <h4>✨ Generative AI Era</h4>
+              <p>Vertex AI Gen AI models, Duet AI, and cutting-edge LLM integration into GCP platform</p>
+            </div>
+          </div>
+
+          <!-- 2025: Today -->
+          <div class="journey-item highlight">
+            <div class="journey-year">2025</div>
+            <div class="journey-content">
+              <h4>🎓 Jiyaan Training Excellence</h4>
+              <p>Jiyaan Institute leading GCP data engineering training, producing 500+ certified professionals</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- GCP Key Stats -->
+        <div style="margin-top: 60px; background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); padding: 40px; border-radius: 15px;">
+          <h3 style="text-align: center; margin-bottom: 40px; color: #0f0f2e;">Why GCP Dominates Enterprise Data Engineering</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+            <div style="text-align: center;">
+              <div style="font-size: 2.5rem; font-weight: 900; color: #4285F4; margin-bottom: 10px;">8M+</div>
+              <div style="color: #64748b; font-weight: 600;">Active GCP Users</div>
+              <p style="color: #64748b; margin-top: 8px; font-size: 0.9rem;">Millions of organizations trust GCP</p>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-size: 2.5rem; font-weight: 900; color: #1967D2; margin-bottom: 10px;">35+</div>
+              <div style="color: #64748b; font-weight: 600;">Global Regions</div>
+              <p style="color: #64748b; margin-top: 8px; font-size: 0.9rem;">Worldwide infrastructure coverage</p>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-size: 2.5rem; font-weight: 900; color: #34A853; margin-bottom: 10px;">99.99%</div>
+              <div style="color: #64748b; font-weight: 600;">Uptime SLA</div>
+              <p style="color: #64748b; margin-top: 8px; font-size: 0.9rem;">Enterprise-grade reliability</p>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-size: 2.5rem; font-weight: 900; color: #FBBC04; margin-bottom: 10px;">$33B+</div>
+              <div style="color: #64748b; font-weight: 600;">Cloud Revenue</div>
+              <p style="color: #64748b; margin-top: 8px; font-size: 0.9rem;">Fastest-growing major cloud provider</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
