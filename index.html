@@ -566,11 +566,6 @@
     }
 
     @media (min-width: 1200px) {
-      .career-progression {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
-      }
-
       .progression-arrow {
         display: block;
       }
@@ -634,12 +629,33 @@
       }
 
       .career-progression {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
         margin-bottom: 40px;
       }
 
       .progression-arrow {
         display: none;
+      }
+
+      .career-card {
+        padding: 20px;
+      }
+
+      .career-icon {
+        font-size: 2rem;
+      }
+
+      .career-card h3 {
+        font-size: 1rem;
+      }
+
+      .salary-amount {
+        font-size: 1.1rem;
+      }
+
+      .salary-monthly {
+        font-size: 0.8rem;
       }
 
       .insights-grid {
