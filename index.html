@@ -61,6 +61,92 @@
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css?v=2" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css?v=2"></noscript>
 
+  <!-- Why Choose Jiyaan Styles -->
+  <style>
+    .why-choose {
+      background: #0a0f1c;
+      padding: 100px 50px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-heading {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-align: center;
+      color: #fff;
+      margin-bottom: 70px;
+      letter-spacing: 1px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .feature-card {
+      background: #0f1528;
+      padding: 40px 30px;
+      border-radius: 12px;
+      border-left: 4px solid #00ffcc;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 30px rgba(0, 255, 204, 0.2);
+      border-left-color: #00ffcc;
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .feature-card h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    .feature-card p {
+      color: #b0b8cc;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .why-choose {
+        padding: 60px 20px;
+      }
+
+      .section-heading {
+        font-size: 1.8rem;
+        margin-bottom: 50px;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .feature-card {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json" nonce="U7EBsKyAneLhomJAquzzGMxkvSYufGZp">
   {
@@ -198,6 +284,57 @@
 
       </div>
 
+    </section>
+
+    <!-- ================= WHY CHOOSE JIYAAN ================= -->
+    <section class="why-choose" aria-labelledby="why-title">
+      <div class="container">
+        <h2 id="why-title" class="section-heading">Why Choose Jiyaan Institute?</h2>
+
+        <div class="features-grid">
+          <!-- Feature 1 -->
+          <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3>Industry-Expert Mentors</h3>
+            <p>Learn from GCP certified professionals with 10+ years of experience</p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Real-Time Projects</h3>
+            <p>Work on live GCP projects and build an impressive portfolio</p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="feature-card">
+            <div class="feature-icon">🚀</div>
+            <h3>100% Placement Support</h3>
+            <p>Partnerships with 100+ hiring companies</p>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3>GCP Certified Program</h3>
+            <p>Aligned with official Google Cloud Professional certifications</p>
+          </div>
+
+          <!-- Feature 5 -->
+          <div class="feature-card">
+            <div class="feature-icon">♾️</div>
+            <h3>Lifetime Access</h3>
+            <p>Lifetime access to updated course materials and support</p>
+          </div>
+
+          <!-- Feature 6 -->
+          <div class="feature-card">
+            <div class="feature-icon">💡</div>
+            <h3>Flexible Learning</h3>
+            <p>Self-paced and instructor-led options available</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- ================= ULTIMATE PREMIUM GCP STACK ================= -->
