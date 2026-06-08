@@ -3117,6 +3117,235 @@
       }
     }
 
+    /* ===== FOOTER ===== */
+    .footer-section {
+      background: linear-gradient(135deg, rgba(10, 15, 28, 0.95) 0%, rgba(15, 21, 40, 0.95) 100%);
+      border-top: 2px solid rgba(0, 255, 204, 0.15);
+      padding: 80px 50px 30px 50px;
+      margin-top: 100px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 60px;
+      margin-bottom: 50px;
+    }
+
+    /* Footer Left */
+    .footer-left {
+      animation: slideInLeft 0.8s ease-out;
+    }
+
+    .footer-logo {
+      margin-bottom: 25px;
+    }
+
+    .footer-logo h3 {
+      color: #fff;
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin: 0;
+      font-family: 'Outfit', sans-serif;
+      letter-spacing: 1px;
+    }
+
+    .logo-subtitle {
+      color: #00ffcc;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin: 8px 0 0 0;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    /* Footer Center - Quick Links */
+    .footer-center {
+      animation: slideInUp 0.8s ease-out;
+    }
+
+    .footer-heading {
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 0 0 25px 0;
+      font-family: 'Outfit', sans-serif;
+      letter-spacing: 0.5px;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 15px;
+    }
+
+    .footer-links a {
+      color: #b0b8cc;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      position: relative;
+      padding-left: 10px;
+    }
+
+    .footer-links a::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: #00ffcc;
+      opacity: 0;
+      transition: all 0.3s ease;
+      transform: translateX(-10px);
+    }
+
+    .footer-links a:hover {
+      color: #00ffcc;
+    }
+
+    .footer-links a:hover::before {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* Footer Right - Social */
+    .footer-right {
+      animation: slideInRight 0.8s ease-out;
+    }
+
+    .social-links {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+
+    .social-icon {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #b0b8cc;
+      text-decoration: none;
+      font-size: 0.95rem;
+      padding: 12px 15px;
+      border: 2px solid rgba(0, 255, 204, 0.2);
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      font-weight: 600;
+    }
+
+    .social-icon span:first-child {
+      font-size: 1.3rem;
+    }
+
+    .social-name {
+      font-weight: 600;
+    }
+
+    .social-icon.youtube {
+      border-color: rgba(255, 0, 0, 0.3);
+    }
+
+    .social-icon.youtube:hover {
+      background: rgba(255, 0, 0, 0.15);
+      border-color: #ff0000;
+      color: #ff0000;
+    }
+
+    .social-icon.instagram {
+      border-color: rgba(225, 48, 108, 0.3);
+    }
+
+    .social-icon.instagram:hover {
+      background: rgba(225, 48, 108, 0.15);
+      border-color: #e1306c;
+      color: #e1306c;
+    }
+
+    .social-icon.linkedin {
+      border-color: rgba(0, 119, 181, 0.3);
+    }
+
+    .social-icon.linkedin:hover {
+      background: rgba(0, 119, 181, 0.15);
+      border-color: #0077b5;
+      color: #0077b5;
+    }
+
+@keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .footer-section {
+        padding: 60px 35px 25px 35px;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .footer-left,
+      .footer-center,
+      .footer-right {
+        animation: slideInUp 0.8s ease-out;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .footer-section {
+        padding: 50px 20px 20px 20px;
+        margin-top: 60px;
+      }
+
+      .footer-logo h3 {
+        font-size: 1.4rem;
+      }
+
+      .footer-heading {
+        font-size: 1rem;
+        margin-bottom: 20px;
+      }
+
+      .footer-links li {
+        margin-bottom: 12px;
+      }
+
+      .footer-links a {
+        font-size: 0.9rem;
+      }
+
+      .social-icon {
+        font-size: 0.9rem;
+        padding: 10px 12px;
+      }
+
+      .social-icon span:first-child {
+        font-size: 1.1rem;
+      }
+    }
+
     /* ===== HERO BUTTONS ===== */
     .hero-buttons {
       display: flex;
@@ -4729,6 +4958,53 @@
         </div>
       </div>
     </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer-section">
+      <div class="container">
+        <div class="footer-content">
+          <!-- Footer Left: Logo & Description -->
+          <div class="footer-left">
+            <div class="footer-logo">
+              <h3>🎓 JIYAAN</h3>
+              <p class="logo-subtitle">INSTITUTE OF TECHNOLOGY</p>
+            </div>
+          </div>
+
+          <!-- Footer Center: Quick Links -->
+          <div class="footer-center">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#courses">Courses</a></li>
+              <li><a href="#success-stories">Success Stories</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Footer Right: Follow Us -->
+          <div class="footer-right">
+            <h4 class="footer-heading">Follow Us</h4>
+            <div class="social-links">
+              <a href="https://youtube.com" target="_blank" class="social-icon youtube" title="YouTube">
+                <span>▶</span>
+                <span class="social-name">YouTube</span>
+              </a>
+              <a href="https://instagram.com" target="_blank" class="social-icon instagram" title="Instagram">
+                <span>📷</span>
+                <span class="social-name">Instagram</span>
+              </a>
+              <a href="https://linkedin.com" target="_blank" class="social-icon linkedin" title="LinkedIn">
+                <span>in</span>
+                <span class="social-name">LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </footer>
 
   </main>
 
