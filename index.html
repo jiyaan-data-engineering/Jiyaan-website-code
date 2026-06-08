@@ -234,6 +234,153 @@
       }
     }
 
+    /* ===== JOB MARKET TRENDS ===== */
+    .job-market {
+      background: #0a0f1c;
+      padding: 100px 50px;
+    }
+
+    .job-market-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 35px;
+      margin-top: 50px;
+    }
+
+    .job-card {
+      padding: 40px 30px;
+      border-radius: 15px;
+      text-align: center;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .job-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: inherit;
+      z-index: -1;
+    }
+
+    .job-card.peak {
+      background: linear-gradient(135deg, rgba(34, 197, 94, 0.15) 0%, rgba(34, 197, 94, 0.05) 100%);
+      border: 2px solid #22c55e;
+    }
+
+    .job-card.good {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(59, 130, 246, 0.05) 100%);
+      border: 2px solid #3b82f6;
+    }
+
+    .job-card.slow {
+      background: linear-gradient(135deg, rgba(251, 191, 36, 0.15) 0%, rgba(251, 191, 36, 0.05) 100%);
+      border: 2px solid #fbbf24;
+    }
+
+    .job-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 40px rgba(0, 255, 204, 0.15);
+    }
+
+    .job-card.peak:hover {
+      border-color: #22c55e;
+      box-shadow: 0 20px 40px rgba(34, 197, 94, 0.2);
+    }
+
+    .job-card.good:hover {
+      border-color: #3b82f6;
+      box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+    }
+
+    .job-card.slow:hover {
+      border-color: #fbbf24;
+      box-shadow: 0 20px 40px rgba(251, 191, 36, 0.2);
+    }
+
+    .job-icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      display: block;
+      animation: bounce 2s ease-in-out infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .job-card h3 {
+      color: #fff;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .job-months {
+      color: #00ffcc;
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+    }
+
+    .job-activity {
+      color: #b0b8cc;
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .job-badge {
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+
+    .job-badge.best {
+      background: rgba(34, 197, 94, 0.2);
+      color: #22c55e;
+      border: 1px solid #22c55e;
+    }
+
+    .job-badge.favorable {
+      background: rgba(59, 130, 246, 0.2);
+      color: #3b82f6;
+      border: 1px solid #3b82f6;
+    }
+
+    .job-badge.not-recommended {
+      background: rgba(251, 191, 36, 0.2);
+      color: #fbbf24;
+      border: 1px solid #fbbf24;
+    }
+
+    @media (max-width: 768px) {
+      .job-market {
+        padding: 60px 20px;
+      }
+
+      .job-market-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .job-card {
+        padding: 30px 20px;
+      }
+
+      .job-icon {
+        font-size: 2.5rem;
+      }
+    }
+
     /* ===== ENHANCED COURSE CARDS ===== */
     .scroll-title {
       font-family: 'Outfit', sans-serif;
@@ -583,7 +730,7 @@
         </div>
 
         <div class="gcp-benefits">
-          <h3 style="color: #fff; font-size: 1.3rem; margin-bottom: 30px; text-align: center;">Why GCP Wins</h3>
+          <h3 style="color: #00ffcc; font-size: 1.6rem; margin-bottom: 40px; text-align: center; font-weight: 700; font-family: 'Outfit', sans-serif; letter-spacing: 1px;">Why GCP Wins</h3>
           <div class="benefits-grid">
             <div class="benefit-item">
               <span style="font-size: 2rem;">⚡</span>
@@ -810,7 +957,43 @@
       </div>
 
     </section>
-    
+
+    <!-- ================= JOB MARKET TRENDS ================= -->
+    <section class="job-market">
+      <div class="container">
+        <h2 class="section-heading">📊 Job Market Trends 2025-2026-2027</h2>
+
+        <div class="job-market-grid">
+          <!-- PEAK Months -->
+          <div class="job-card peak">
+            <div class="job-icon">🔥</div>
+            <h3>PEAK Months</h3>
+            <p class="job-months">Jan, Feb, Mar</p>
+            <p class="job-activity">Highest hiring activity</p>
+            <div class="job-badge best">Best Opportunity</div>
+          </div>
+
+          <!-- GOOD Months -->
+          <div class="job-card good">
+            <div class="job-icon">✅</div>
+            <h3>GOOD Months</h3>
+            <p class="job-months">Apr, Jul, Aug, Sep</p>
+            <p class="job-activity">Good hiring activity</p>
+            <div class="job-badge favorable">Favorable</div>
+          </div>
+
+          <!-- SLOW Months -->
+          <div class="job-card slow">
+            <div class="job-icon">⚠️</div>
+            <h3>SLOW Months</h3>
+            <p class="job-months">Jun, Nov, Dec</p>
+            <p class="job-activity">Avoid job switching</p>
+            <div class="job-badge not-recommended">Not Recommended</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- ================= FOOTER ================= -->
