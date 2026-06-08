@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Course Details - Jiyaan Institute comprehensive courses in data engineering and tech skills.">
+    <meta name="keywords" content="Course Details, Data Engineering, Training, Learning Path">
+    <title>Course Details - Jiyaan Institute</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/course-detail.css">
+
+    <style>
+        .course-hero {
+            padding-top: 150px;
+            padding-bottom: 80px;
+            text-align: center;
+        }
+
+        .course-hero h1 {
+            font-size: clamp(28px, 5vw, 48px);
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .course-hero img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        .course-details-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 80px;
+            align-items: start;
+        }
+
+        @media (max-width: 768px) {
+            .course-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        .course-content h2 {
+            font-size: 24px;
+            color: #fff;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .course-content p {
+            color: #aaa;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .course-content ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .course-content li {
+            color: #aaa;
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .course-content li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #00ffcc;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .course-sidebar {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 40px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .course-sidebar h3 {
+            font-size: 20px;
+            color: #00ffcc;
+            margin-bottom: 20px;
+        }
+
+        .course-info {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .course-info:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            font-size: 12px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .info-value {
+            font-size: 18px;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .enroll-btn {
+            width: 100%;
+            padding: 15px;
+            background: #00ffcc;
+            color: #000;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.3s;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .enroll-btn:hover {
+            background: #00ccaa;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 255, 204, 0.3);
+        }
+
+        .course-tag {
+            display: inline-block;
+            background: rgba(0, 255, 204, 0.1);
+            color: #00ffcc;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-right: 10px;
+            margin-bottom: 20px;
+        }
+
+        .related-courses {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            padding: 60px 20px;
+            border-radius: 15px;
+            margin-top: 80px;
+        }
+
+        .related-courses h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 28px;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="brand">
+            <img src="assets/images/logo.webp" alt="Jiyaan Institute Logo" class="logo glow">
+            <div class="brand-text">
+                <span class="brand-name">JIYAAN</span>
+                <p>Institute</p>
+            </div>
+        </div>
+        <span class="menu-toggle" id="menu-toggle">☰</span>
+        <nav id="nav">
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </nav>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-glow"></div>
+
+    <!-- Course Hero -->
+    <section class="course-hero" id="courseHero">
+        <img id="courseIcon" src="" alt="Course Icon" data-aos="zoom-in">
+        <h1 id="courseTitle">Course Title</h1>
+        <p id="courseTagline" style="font-size: 16px; color: #aaa;"></p>
+    </section>
+
+    <!-- Course Details -->
+    <div class="course-details-container">
+        <div class="course-grid">
+            <!-- Left: Course Content -->
+            <div class="course-content" data-aos="fade-right">
+                <div id="courseDescription"></div>
+
+                <h2>What You'll Learn</h2>
+                <ul id="learningPoints"></ul>
+
+                <h2>Requirements</h2>
+                <ul id="requirements"></ul>
+
+                <h2>Who Should Enroll?</h2>
+                <p id="targetAudience"></p>
+            </div>
+
+            <!-- Right: Sidebar -->
+            <div class="course-sidebar" data-aos="fade-left">
+                <div class="course-tag" id="courseDifficulty"></div>
+
+                <h3>Course Details</h3>
+                <div class="course-info">
+                    <div class="info-label">Duration</div>
+                    <div class="info-value" id="courseDuration">6 Weeks</div>
+                </div>
+
+                <div class="course-info">
+                    <div class="info-label">Level</div>
+                    <div class="info-value" id="courseLevelSidebar">Intermediate</div>
+                </div>
+
+                <div class="course-info">
+                    <div class="info-label">Format</div>
+                    <div class="info-value">Self-Paced + Live Sessions</div>
+                </div>
+
+                <div class="course-info">
+                    <div class="info-label">Certificate</div>
+                    <div class="info-value">Yes</div>
+                </div>
+
+                <button class="enroll-btn" onclick="enrollCourse()">Enroll Now</button>
+                <p style="text-align: center; color: #888; margin-top: 15px; font-size: 12px;">30-day money-back guarantee</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Related Courses -->
+    <div class="course-details-container">
+        <div class="related-courses">
+            <h2>Other Courses You Might Like</h2>
+            <div class="related-grid" id="relatedCoursesContainer">
+                <!-- Related courses will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section style="padding: 80px 50px; text-align: center; background: linear-gradient(135deg, #1a1a2e, #16213e); margin-top: 60px;">
+        <h2 style="font-size: 32px; margin-bottom: 20px;">Ready to Transform Your Career?</h2>
+        <p style="font-size: 16px; color: #ccc; margin-bottom: 30px;">Start your learning journey today with Jiyaan Institute</p>
+        <a href="contact.html" class="btn">Get Started</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Jiyaan Institute. All rights reserved.</p>
+        <p>Master Data Engineering • Transform Your Career</p>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="#" id="secure-wa" class="whatsapp">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-9.746 9.798c0 2.718.732 5.355 2.122 7.682l-2.25 6.863 7.05-1.843a9.847 9.847 0 004.884 1.235h.004c5.444 0 9.944-4.467 9.967-9.978.012-2.763-.69-5.357-2.001-7.465-1.327-2.124-3.196-3.835-5.482-4.745-1.232-.656-2.503-.967-3.8-.967z"/>
+        </svg>
+    </a>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        // Course data
+        const courseData = {
+            python: {
+                title: "Python Programming",
+                icon: "assets/images/python.webp",
+                tagline: "Master Python for Data Engineering and Automation",
+                difficulty: "Beginner to Advanced",
+                duration: "8 Weeks",
+                description: "<p>Learn Python programming from the ground up. This comprehensive course covers fundamental concepts, object-oriented programming, data structures, and advanced Python techniques used in data engineering.</p>",
+                learningPoints: [
+                    "Python fundamentals and syntax",
+                    "Data structures (lists, dictionaries, sets, tuples)",
+                    "Object-oriented programming principles",
+                    "File handling and working with APIs",
+                    "Data manipulation with pandas and NumPy",
+                    "Error handling and debugging techniques"
+                ],
+                requirements: [
+                    "Basic computer literacy",
+                    "No prior programming experience needed",
+                    "Dedication to practice and learning"
+                ],
+                targetAudience: "Perfect for beginners who want to start their programming journey, career switchers entering tech, or professionals looking to automate workflows."
+            },
+            sql: {
+                title: "SQL Mastery",
+                icon: "assets/images/sql.webp",
+                tagline: "Master Database Queries and Optimization",
+                difficulty: "Intermediate to Advanced",
+                duration: "6 Weeks",
+                description: "<p>Become a SQL expert. Learn to write efficient queries, optimize database performance, and master advanced SQL concepts essential for data engineering roles.</p>",
+                learningPoints: [
+                    "SQL fundamentals and database design",
+                    "Complex JOIN operations and subqueries",
+                    "Aggregation and window functions",
+                    "Query optimization and indexing",
+                    "Stored procedures and transactions",
+                    "Real-world performance tuning"
+                ],
+                requirements: [
+                    "Basic understanding of databases",
+                    "Python or similar programming background helpful",
+                    "Access to a database system"
+                ],
+                targetAudience: "Data analysts, database administrators, and data engineers who want to master SQL and optimize database performance."
+            },
+            pyspark: {
+                title: "PySpark",
+                icon: "assets/images/pyspark.webp",
+                tagline: "Distributed Computing and Big Data Processing",
+                difficulty: "Advanced",
+                duration: "8 Weeks",
+                description: "<p>Master Apache Spark with Python. Learn to process massive datasets using distributed computing and build scalable data pipelines for production environments.</p>",
+                learningPoints: [
+                    "Spark architecture and RDDs",
+                    "DataFrames and SQL in Spark",
+                    "Data processing and transformations",
+                    "Performance tuning and optimization",
+                    "Real-time streaming with Spark",
+                    "Integration with cloud platforms"
+                ],
+                requirements: [
+                    "Strong Python programming skills",
+                    "Understanding of SQL",
+                    "Basic Linux knowledge"
+                ],
+                targetAudience: "Data engineers, big data developers, and professionals working with large-scale data processing systems."
+            },
+            gcp: {
+                title: "Google Cloud Platform",
+                icon: "assets/images/gcp.webp",
+                tagline: "Deploy and Manage Cloud Applications",
+                difficulty: "Intermediate to Advanced",
+                duration: "6 Weeks",
+                description: "<p>Learn Google Cloud Platform comprehensively. From deploying applications to managing databases and implementing machine learning solutions on GCP.</p>",
+                learningPoints: [
+                    "GCP fundamentals and core services",
+                    "Compute Engine and App Engine",
+                    "Cloud Storage and Databases",
+                    "BigQuery for data analytics",
+                    "Cloud Functions and serverless computing",
+                    "Security and best practices"
+                ],
+                requirements: [
+                    "Cloud computing basics helpful",
+                    "Linux command line knowledge",
+                    "Understanding of networking concepts"
+                ],
+                targetAudience: "Cloud architects, DevOps engineers, and data engineers wanting to master GCP services."
+            },
+            bigdata: {
+                title: "Big Data Engineering",
+                icon: "assets/images/bigdata.webp",
+                tagline: "Build Scalable Data Pipelines",
+                difficulty: "Advanced",
+                duration: "10 Weeks",
+                description: "<p>Master the complete big data technology stack. Learn to design, build, and manage data pipelines that handle petabytes of data in production environments.</p>",
+                learningPoints: [
+                    "Big data concepts and architectures",
+                    "Hadoop ecosystem overview",
+                    "Apache Spark and distributed processing",
+                    "Data warehouse design",
+                    "ETL pipeline development",
+                    "Real-time data streaming"
+                ],
+                requirements: [
+                    "Advanced Python or Java skills",
+                    "SQL proficiency",
+                    "Understanding of distributed systems"
+                ],
+                targetAudience: "Senior data engineers and professionals leading big data initiatives in their organizations."
+            },
+            datamodelling: {
+                title: "Data Modeling",
+                icon: "assets/images/datamodelling.webp",
+                tagline: "Design Efficient Database Schemas",
+                difficulty: "Intermediate",
+                duration: "4 Weeks",
+                description: "<p>Learn to design efficient, scalable database schemas. Master normalization, dimensional modeling, and optimization techniques for relational and NoSQL databases.</p>",
+                learningPoints: [
+                    "Database design principles",
+                    "Normalization and denormalization",
+                    "Dimensional modeling for data warehouses",
+                    "Schema design best practices",
+                    "Performance optimization through modeling",
+                    "Tools and techniques for data modeling"
+                ],
+                requirements: [
+                    "SQL knowledge",
+                    "Understanding of database concepts",
+                    "Familiarity with business processes"
+                ],
+                targetAudience: "Database designers, data architects, and analysts responsible for database structure and optimization."
+            },
+            git: {
+                title: "Git & Version Control",
+                icon: "assets/images/git.webp",
+                tagline: "Master Collaborative Development",
+                difficulty: "Beginner",
+                duration: "3 Weeks",
+                description: "<p>Learn Git and version control systems. Essential for any developer working in teams, this course covers everything from basics to advanced workflows.</p>",
+                learningPoints: [
+                    "Git fundamentals and installation",
+                    "Repositories and commits",
+                    "Branching and merging strategies",
+                    "Remote repositories and GitHub",
+                    "Pull requests and code review",
+                    "Advanced Git workflows"
+                ],
+                requirements: [
+                    "Basic command line knowledge",
+                    "Any text editor or IDE"
+                ],
+                targetAudience: "Developers, data engineers, and anyone collaborating on code projects."
+            },
+            linux: {
+                title: "Linux System Administration",
+                icon: "assets/images/linux.webp",
+                tagline: "Master Server Management",
+                difficulty: "Beginner to Intermediate",
+                duration: "7 Weeks",
+                description: "<p>Become proficient in Linux system administration. Learn server management, user administration, security, and optimization techniques.</p>",
+                learningPoints: [
+                    "Linux fundamentals and file system",
+                    "User and permission management",
+                    "Package management and installation",
+                    "System services and processes",
+                    "Networking and security basics",
+                    "Shell scripting for automation"
+                ],
+                requirements: [
+                    "Basic computer knowledge",
+                    "Access to Linux system or VM"
+                ],
+                targetAudience: "System administrators, DevOps engineers, and developers working with Linux servers."
+            },
+            jira: {
+                title: "Jira Project Management",
+                icon: "assets/images/jira.webp",
+                tagline: "Master Agile Project Management",
+                difficulty: "Beginner",
+                duration: "3 Weeks",
+                description: "<p>Learn Jira for agile project management. Master issue tracking, sprint planning, and team collaboration using the industry-standard tool.</p>",
+                learningPoints: [
+                    "Jira interface and configuration",
+                    "Creating and managing issues",
+                    "Sprint planning and execution",
+                    "Reporting and dashboards",
+                    "Team collaboration features",
+                    "Integration with other tools"
+                ],
+                requirements: [
+                    "Basic project management knowledge",
+                    "Understanding of Agile methodology helpful"
+                ],
+                targetAudience: "Project managers, scrum masters, and team leads managing technical projects."
+            },
+            itskills: {
+                title: "Core IT Skills",
+                icon: "assets/images/itskills.webp",
+                tagline: "Foundation for Tech Careers",
+                difficulty: "Beginner",
+                duration: "5 Weeks",
+                description: "<p>Build a strong foundation in core IT concepts. This course covers essential knowledge every tech professional should have.</p>",
+                learningPoints: [
+                    "Computer hardware basics",
+                    "Operating systems overview",
+                    "Networking fundamentals",
+                    "Internet and web basics",
+                    "Cybersecurity introduction",
+                    "IT career paths and specializations"
+                ],
+                requirements: [
+                    "Basic computer literacy"
+                ],
+                targetAudience: "Career switchers, beginners in tech, and professionals looking to strengthen foundational IT knowledge."
+            },
+            jobprofile: {
+                title: "Job Profile Building",
+                icon: "assets/images/jobprofilebuilding.webp",
+                tagline: "Create Your Professional Brand",
+                difficulty: "Intermediate",
+                duration: "4 Weeks",
+                description: "<p>Build a standout professional profile that attracts employers. Learn to showcase your skills, build a strong portfolio, and ace interviews.</p>",
+                learningPoints: [
+                    "Resume and LinkedIn optimization",
+                    "Portfolio project creation",
+                    "Technical interview preparation",
+                    "Behavioral interview techniques",
+                    "Networking and personal branding",
+                    "Job search strategies"
+                ],
+                requirements: [
+                    "Technical skills in your specialization",
+                    "Desire to advance your career"
+                ],
+                targetAudience: "Job seekers, early-career professionals, and anyone looking to improve their job prospects."
+            },
+            realtime: {
+                title: "Real-Time Industry Projects",
+                icon: "assets/images/realtimeprojects.webp",
+                tagline: "Build Real-World Experience",
+                difficulty: "Advanced",
+                duration: "12 Weeks",
+                description: "<p>Work on real industry projects alongside experienced mentors. Gain practical experience, build your portfolio, and create work-ready projects.</p>",
+                learningPoints: [
+                    "Real-world project implementation",
+                    "Mentorship and code review",
+                    "Agile development practices",
+                    "Production deployment",
+                    "Performance optimization",
+                    "Professional development practices"
+                ],
+                requirements: [
+                    "Completion of relevant core courses",
+                    "Strong foundation in programming",
+                    "Commitment to hands-on work"
+                ],
+                targetAudience: "Advanced learners ready to gain real-world experience and build professional projects for their portfolio."
+            }
+        };
+
+        // Get course from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const courseId = urlParams.get('course')?.toLowerCase().replace(/\s+/g, '');
+
+        const course = courseData[courseId] || courseData.python;
+
+        // Populate course details
+        document.getElementById('courseTitle').textContent = course.title;
+        document.getElementById('courseIcon').src = course.icon;
+        document.getElementById('courseTagline').textContent = course.tagline;
+        document.getElementById('courseDescription').innerHTML = course.description;
+        document.getElementById('courseDifficulty').textContent = course.difficulty;
+        document.getElementById('courseDuration').textContent = course.duration;
+        document.getElementById('courseLevelSidebar').textContent = course.difficulty;
+
+        // Populate learning points
+        const learningList = document.getElementById('learningPoints');
+        course.learningPoints.forEach(point => {
+            const li = document.createElement('li');
+            li.textContent = point;
+            learningList.appendChild(li);
+        });
+
+        // Populate requirements
+        const requirementsList = document.getElementById('requirements');
+        course.requirements.forEach(req => {
+            const li = document.createElement('li');
+            li.textContent = req;
+            requirementsList.appendChild(li);
+        });
+
+        // Populate target audience
+        document.getElementById('targetAudience').textContent = course.targetAudience;
+
+        // Function to enroll
+        function enrollCourse() {
+            window.location.href = `contact.html?course=${encodeURIComponent(course.title)}`;
+        }
+
+        // Populate related courses
+        const relatedContainer = document.getElementById('relatedCoursesContainer');
+        const courseKeys = Object.keys(courseData);
+        const relatedCourses = courseKeys.filter(key => key !== courseId).slice(0, 3);
+
+        relatedCourses.forEach(key => {
+            const relCourse = courseData[key];
+            const html = `
+                <a href="course-detail.html?course=${key}" class="card" style="text-decoration: none;">
+                    <img src="${relCourse.icon}" alt="${relCourse.title}" class="card-icon">
+                    <h3 style="color: #fff;">${relCourse.title}</h3>
+                    <p>${relCourse.tagline}</p>
+                </a>
+            `;
+            relatedContainer.innerHTML += html;
+        });
+
+        // Initialize AOS
+        if (typeof AOS !== 'undefined') {
+            AOS.init({
+                once: true,
+                offset: 50
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Jiyaan Institute - Learn about our mission, vision, and expert instructors.">
+    <meta name="keywords" content="About Jiyaan, Education Platform, Data Engineering, Expert Instructors">
+    <title>About Jiyaan Institute</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/about.css">
+
+    <style>
+        .about-hero {
+            padding-top: 150px;
+            padding-bottom: 80px;
+            text-align: center;
+        }
+
+        .about-hero h1 {
+            font-size: clamp(28px, 5vw, 48px);
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            line-height: 1.8;
+            font-size: 16px;
+            color: #ccc;
+        }
+
+        .about-content h2 {
+            font-size: 28px;
+            color: #fff;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .value-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 4px solid #00ffcc;
+            backdrop-filter: blur(10px);
+            transition: 0.3s;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .value-card h3 {
+            color: #00ffcc;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .stat-card {
+            padding: 30px;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            border-radius: 15px;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: 800;
+            color: #00ffcc;
+        }
+
+        .stat-label {
+            color: #ccc;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="brand">
+            <img src="assets/images/logo.webp" alt="Jiyaan Institute Logo" class="logo glow">
+            <div class="brand-text">
+                <span class="brand-name">JIYAAN</span>
+                <p>Institute</p>
+            </div>
+        </div>
+        <span class="menu-toggle" id="menu-toggle">☰</span>
+        <nav id="nav">
+            <a href="index.html">Home</a>
+            <a href="index.html#courses">Courses</a>
+            <a href="about.html" class="active">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </nav>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-glow"></div>
+
+    <!-- About Hero -->
+    <section class="about-hero">
+        <h1>About <span style="color: #00ffcc;">Jiyaan Institute</span></h1>
+        <p style="font-size: 18px; color: #aaa;">Transforming Lives Through Technology Education</p>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-content">
+        <h2>Our Mission</h2>
+        <p>
+            At Jiyaan Institute, our mission is to empower aspiring data engineers and tech professionals with industry-relevant skills and knowledge. We believe in democratizing quality education by making expert-led courses accessible to everyone, regardless of their background or experience level.
+        </p>
+
+        <h2>Our Vision</h2>
+        <p>
+            We envision a world where talented individuals have access to world-class technical education that transforms their careers and lives. Our vision is to become the leading platform for data engineering and tech skills development, recognized for our innovative curriculum and exceptional learning outcomes.
+        </p>
+
+        <h2>Why Choose Jiyaan Institute?</h2>
+        <p>
+            We stand apart through our commitment to excellence, practical learning approach, and industry partnerships. Our courses are designed by experienced professionals who work in the field, ensuring that every lesson is relevant and applicable to real-world scenarios. We focus not just on knowledge transfer but on skill development and career growth.
+        </p>
+
+        <!-- Values -->
+        <h2>Our Core Values</h2>
+        <div class="values-grid">
+            <div class="value-card" data-aos="fade-up">
+                <h3>🎯 Excellence</h3>
+                <p>We strive for the highest quality in everything we do, from curriculum design to student support.</p>
+            </div>
+            <div class="value-card" data-aos="fade-up">
+                <h3>🚀 Innovation</h3>
+                <p>We continuously update our courses to reflect the latest technologies and industry trends.</p>
+            </div>
+            <div class="value-card" data-aos="fade-up">
+                <h3>💡 Practical Learning</h3>
+                <p>Our hands-on approach ensures students gain real skills they can immediately apply to their work.</p>
+            </div>
+            <div class="value-card" data-aos="fade-up">
+                <h3>🤝 Community</h3>
+                <p>We foster a supportive learning community where students can collaborate and grow together.</p>
+            </div>
+            <div class="value-card" data-aos="fade-up">
+                <h3>📈 Career Growth</h3>
+                <p>Our goal is to help students advance their careers and achieve their professional aspirations.</p>
+            </div>
+            <div class="value-card" data-aos="fade-up">
+                <h3>🌍 Accessibility</h3>
+                <p>We believe quality education should be accessible to everyone, everywhere, anytime.</p>
+            </div>
+        </div>
+
+        <!-- Statistics -->
+        <h2 style="text-align: center; margin-top: 80px;">Our Impact</h2>
+        <div class="stats-grid">
+            <div class="stat-card" data-aos="zoom-in">
+                <div class="stat-number">1000+</div>
+                <div class="stat-label">Students Trained</div>
+            </div>
+            <div class="stat-card" data-aos="zoom-in">
+                <div class="stat-number">12+</div>
+                <div class="stat-label">Courses Offered</div>
+            </div>
+            <div class="stat-card" data-aos="zoom-in">
+                <div class="stat-number">95%</div>
+                <div class="stat-label">Success Rate</div>
+            </div>
+            <div class="stat-card" data-aos="zoom-in">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Expert Instructors</div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 80px;">
+            <h2>Ready to Join Our Community?</h2>
+            <p style="margin-top: 20px; font-size: 16px;">Start your learning journey today and transform your career.</p>
+            <a href="contact.html" class="btn" style="margin-top: 30px;">Get Started Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Jiyaan Institute. All rights reserved.</p>
+        <p>Master Data Engineering • Transform Your Career</p>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="#" id="secure-wa" class="whatsapp">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-9.746 9.798c0 2.718.732 5.355 2.122 7.682l-2.25 6.863 7.05-1.843a9.847 9.847 0 004.884 1.235h.004c5.444 0 9.944-4.467 9.967-9.978.012-2.763-.69-5.357-2.001-7.465-1.327-2.124-3.196-3.835-5.482-4.745-1.232-.656-2.503-.967-3.8-.967z"/>
+        </svg>
+    </a>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
