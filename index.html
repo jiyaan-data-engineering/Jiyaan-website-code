@@ -705,6 +705,454 @@
       }
     }
 
+    /* ===== PREMIUM GROWTH CHART ===== */
+    .premium-growth-chart {
+      background: linear-gradient(135deg, rgba(0, 255, 204, 0.05) 0%, rgba(100, 149, 237, 0.05) 100%);
+      padding: 50px 40px;
+      border-radius: 16px;
+      border: 2px solid rgba(0, 255, 204, 0.2);
+      margin-top: 40px;
+      animation: slideInUp 0.8s ease-out;
+    }
+
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .chart-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .chart-subtitle {
+      color: #b0b8cc;
+      font-size: 0.95rem;
+      font-weight: 500;
+      margin: 0;
+      letter-spacing: 0.5px;
+    }
+
+    .growth-comparison {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .provider-column {
+      background: rgba(15, 21, 40, 0.6);
+      padding: 30px;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .provider-column:hover {
+      background: rgba(15, 21, 40, 0.8);
+      border-color: rgba(0, 255, 204, 0.2);
+      transform: translateY(-5px);
+    }
+
+    .provider-badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 25px;
+      font-weight: 700;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+    }
+
+    .provider-badge.gcp {
+      background: rgba(0, 255, 204, 0.1);
+      color: #00ffcc;
+      border: 1px solid rgba(0, 255, 204, 0.2);
+    }
+
+    .provider-badge.aws {
+      background: rgba(255, 165, 0, 0.1);
+      color: #ffa500;
+      border: 1px solid rgba(255, 165, 0, 0.2);
+    }
+
+    .provider-badge.azure {
+      background: rgba(100, 149, 237, 0.1);
+      color: #6495ed;
+      border: 1px solid rgba(100, 149, 237, 0.2);
+    }
+
+    .provider-icon {
+      font-size: 1.3rem;
+    }
+
+    .chart-bars-container {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-around;
+      height: 280px;
+      margin-bottom: 25px;
+      gap: 12px;
+    }
+
+    .year-bar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      flex: 1;
+      height: calc(var(--bar-height) * 280px / 100%);
+      background: linear-gradient(180deg, var(--bar-color-top) 0%, var(--bar-color-bottom) 100%);
+      border-radius: 8px 8px 0 0;
+      position: relative;
+      animation: growUp 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gcp-column .year-bar {
+      --bar-color-top: #00ffcc;
+      --bar-color-bottom: #00cc99;
+      animation-delay: 0.1s;
+    }
+
+    .aws-column .year-bar {
+      --bar-color-top: #ffa500;
+      --bar-color-bottom: #ff8c00;
+      animation-delay: 0.2s;
+    }
+
+    .azure-column .year-bar {
+      --bar-color-top: #6495ed;
+      --bar-color-bottom: #4169e1;
+      animation-delay: 0.3s;
+    }
+
+    .year-bar.projected {
+      opacity: 0.7;
+      border-top: 3px dashed currentColor;
+    }
+
+    .year-bar:hover {
+      filter: brightness(1.15);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    @keyframes growUp {
+      from {
+        height: 0;
+        opacity: 0;
+      }
+      to {
+        height: calc(var(--bar-height) * 280px / 100%);
+        opacity: 1;
+      }
+    }
+
+    .bar-value {
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .year-label {
+      color: #b0b8cc;
+      font-size: 0.8rem;
+      font-weight: 600;
+      position: absolute;
+      bottom: -25px;
+      white-space: nowrap;
+    }
+
+    .provider-stats {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .stat-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .stat-label {
+      color: #b0b8cc;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .stat-value {
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .stat-value.gcp {
+      color: #00ffcc;
+    }
+
+    .stat-value.aws {
+      color: #ffa500;
+    }
+
+    .stat-value.azure {
+      color: #6495ed;
+    }
+
+    .growth-insights-premium {
+      margin-top: 20px;
+    }
+
+    .insight-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .insight-box {
+      padding: 20px;
+      border-radius: 10px;
+      border-left: 4px solid;
+      transition: all 0.3s ease;
+    }
+
+    .insight-box h4 {
+      color: #fff;
+      margin: 0 0 8px 0;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .insight-box p {
+      color: #b0b8cc;
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .gcp-insight {
+      background: rgba(0, 255, 204, 0.1);
+      border-left-color: #00ffcc;
+    }
+
+    .aws-insight {
+      background: rgba(255, 165, 0, 0.1);
+      border-left-color: #ffa500;
+    }
+
+    .azure-insight {
+      background: rgba(100, 149, 237, 0.1);
+      border-left-color: #6495ed;
+    }
+
+    .insight-box:hover {
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 1024px) {
+      .growth-comparison {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .insight-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .premium-growth-chart {
+        padding: 30px 20px;
+      }
+
+      .growth-comparison {
+        grid-template-columns: 1fr;
+      }
+
+      .chart-bars-container {
+        height: 200px;
+      }
+
+      .insight-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ===== ANIMATED GROWTH CHART ===== */
+    .growth-chart-container {
+      margin-bottom: 60px;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .growth-chart-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+
+    .growth-column {
+      text-align: center;
+    }
+
+    .chart-box {
+      height: 400px;
+      background: rgba(0, 255, 204, 0.08);
+      border-radius: 10px;
+      position: relative;
+      border: 2px solid;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .chart-box:hover {
+      box-shadow: 0 15px 40px rgba(0, 255, 204, 0.2);
+      transform: translateY(-5px);
+    }
+
+    .chart-box.gcp {
+      border-color: rgba(0, 255, 204, 0.3);
+    }
+
+    .chart-box.aws {
+      border-color: rgba(255, 165, 0, 0.3);
+      background: rgba(255, 165, 0, 0.08);
+    }
+
+    .chart-box.azure {
+      border-color: rgba(100, 149, 237, 0.3);
+      background: rgba(100, 149, 237, 0.08);
+    }
+
+    .chart-bar {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px 8px 0 0;
+      animation: growBar 1.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+      font-weight: 700;
+      color: #0a0f1c;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+
+    .chart-bar:hover {
+      filter: brightness(1.2);
+      transform: scaleY(1.05);
+    }
+
+    .chart-bar.gcp {
+      background: linear-gradient(180deg, #00ffcc 0%, #00cc99 100%);
+    }
+
+    .chart-bar.aws {
+      background: linear-gradient(180deg, #ffa500 0%, #ff8c00 100%);
+    }
+
+    .chart-bar.azure {
+      background: linear-gradient(180deg, #6495ed 0%, #4169e1 100%);
+    }
+
+    .chart-bar.projected {
+      opacity: 0.6;
+      border: 2px dashed;
+    }
+
+    .chart-bar.projected.gcp {
+      border-color: #00ffcc;
+    }
+
+    .chart-bar.projected.aws {
+      border-color: #ffa500;
+    }
+
+    .chart-bar.projected.azure {
+      border-color: #6495ed;
+    }
+
+    @keyframes growBar {
+      from {
+        height: 0;
+      }
+      to {
+        height: 100%;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .chart-label {
+      margin-top: 20px;
+    }
+
+    .chart-title {
+      color: #00ffcc;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      animation: slideInDown 0.8s ease-out;
+    }
+
+    @keyframes slideInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .chart-stats {
+      color: #b0b8cc;
+      font-size: 0.85rem;
+      line-height: 1.8;
+      animation: fadeInUp 1s ease-out 0.2s both;
+    }
+
+    .chart-stats p {
+      margin: 5px 0;
+      transition: all 0.3s ease;
+    }
+
+    .chart-stats p:hover {
+      color: #00ffcc;
+      transform: translateX(5px);
+    }
+
+    .chart-stats .projected {
+      color: #00ffcc;
+      font-weight: 600;
+    }
+
     /* ===== ENHANCED COURSE CARDS ===== */
     .scroll-title {
       font-family: 'Outfit', sans-serif;
@@ -1086,9 +1534,138 @@
       <div class="container">
         <h2 class="section-heading">☁️ Cloud Market Growth: GCP vs AWS vs Azure (2020-2030)</h2>
 
-          <!-- Bar Chart -->
-          <div style="margin-bottom: 60px;">
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;">
+        <!-- Premium Animated Growth Chart -->
+        <div class="premium-growth-chart">
+          <div class="chart-header">
+            <p class="chart-subtitle">Market Revenue Projection (USD Billions)</p>
+          </div>
+
+          <div class="growth-comparison">
+            <!-- GCP Column -->
+            <div class="provider-column gcp-column">
+              <div class="provider-badge gcp">
+                <span class="provider-icon">🔷</span>
+                <span class="provider-name">Google Cloud</span>
+              </div>
+
+              <div class="chart-bars-container">
+                <div class="year-bar" style="--bar-height: 32%;">
+                  <div class="bar-value">$12.8B</div>
+                  <div class="year-label">2020</div>
+                </div>
+                <div class="year-bar" style="--bar-height: 70%;">
+                  <div class="bar-value">$28B</div>
+                  <div class="year-label">2025</div>
+                </div>
+                <div class="year-bar projected" style="--bar-height: 100%;">
+                  <div class="bar-value">$60B</div>
+                  <div class="year-label">2030 (Est.)</div>
+                </div>
+              </div>
+
+              <div class="provider-stats">
+                <div class="stat-item">
+                  <span class="stat-label">CAGR</span>
+                  <span class="stat-value gcp">55-60%</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-label">Growth</span>
+                  <span class="stat-value gcp">↗️ Fastest</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- AWS Column -->
+            <div class="provider-column aws-column">
+              <div class="provider-badge aws">
+                <span class="provider-icon">🟠</span>
+                <span class="provider-name">Amazon AWS</span>
+              </div>
+
+              <div class="chart-bars-container">
+                <div class="year-bar" style="--bar-height: 100%;">
+                  <div class="bar-value">$40.3B</div>
+                  <div class="year-label">2020</div>
+                </div>
+                <div class="year-bar" style="--bar-height: 118%;">
+                  <div class="bar-value">$75B</div>
+                  <div class="year-label">2025</div>
+                </div>
+                <div class="year-bar projected" style="--bar-height: 155%;">
+                  <div class="bar-value">$125B</div>
+                  <div class="year-label">2030 (Est.)</div>
+                </div>
+              </div>
+
+              <div class="provider-stats">
+                <div class="stat-item">
+                  <stat-label">Market Share</stat-label>
+                  <span class="stat-value aws">Largest</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-label">Growth</span>
+                  <span class="stat-value aws">→ Stable</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Azure Column -->
+            <div class="provider-column azure-column">
+              <div class="provider-badge azure">
+                <span class="provider-icon">🔵</span>
+                <span class="provider-name">Microsoft Azure</span>
+              </div>
+
+              <div class="chart-bars-container">
+                <div class="year-bar" style="--bar-height: 50%;">
+                  <div class="bar-value">$20.1B</div>
+                  <div class="year-label">2020</div>
+                </div>
+                <div class="year-bar" style="--bar-height: 130%;">
+                  <div class="bar-value">$52B</div>
+                  <div class="year-label">2025</div>
+                </div>
+                <div class="year-bar projected" style="--bar-height: 188%;">
+                  <div class="bar-value">$95B</div>
+                  <div class="year-label">2030 (Est.)</div>
+                </div>
+              </div>
+
+              <div class="provider-stats">
+                <div class="stat-item">
+                  <span class="stat-label">CAGR</span>
+                  <span class="stat-value azure">17-20%</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-label">Growth</span>
+                  <span class="stat-value azure">→ Steady</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Growth Insights -->
+          <div class="growth-insights-premium">
+            <div class="insight-row">
+              <div class="insight-box gcp-insight">
+                <h4>🚀 GCP Advantage</h4>
+                <p>Fastest growing cloud platform with AI/ML dominance</p>
+              </div>
+              <div class="insight-box aws-insight">
+                <h4>📊 AWS Position</h4>
+                <p>Largest market share but slower growth trajectory</p>
+              </div>
+              <div class="insight-box azure-insight">
+                <h4>📈 Azure Growth</h4>
+                <p>Consistent growth with enterprise hybrid solutions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <!-- Legacy Chart Grid (keeping for compatibility) -->
+          <div class="growth-chart-container" style="display: none;">
+            <div class="growth-chart-grid">
               <!-- GCP Column -->
               <div style="text-align: center;">
                 <div style="height: 400px; background: rgba(0, 255, 204, 0.08); border-radius: 10px; position: relative; border: 1px solid rgba(0, 255, 204, 0.15); overflow: hidden;">
