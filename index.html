@@ -3209,6 +3209,29 @@
       filter: drop-shadow(0 0 15px rgba(0, 255, 204, 0.6));
     }
 
+    /* Enhanced Footer Logo Animation */
+    .animated-footer-logo {
+      animation: rotate-logo 20s linear infinite;
+      filter: drop-shadow(0 0 10px rgba(0, 255, 204, 0.4));
+    }
+
+    /* Gradient Footer Name */
+    .gradient-footer-name {
+      background: linear-gradient(135deg, #00ffcc 0%, #4285F4 50%, #00ffcc 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
+      animation: gradient-shift 3s ease-in-out infinite !important;
+    }
+
+    /* Animated Footer Tagline */
+    .animated-footer-tagline {
+      color: #00ffcc !important;
+      animation: pulse 2s ease-in-out infinite !important;
+      font-weight: 700 !important;
+      letter-spacing: 1px !important;
+    }
+
     .footer-logo-text {
       padding-top: 5px;
     }
@@ -5961,7 +5984,7 @@
           <div class="footer-left">
             <div class="footer-logo-container">
               <div class="footer-logo-graphic">
-                <svg viewBox="0 0 200 200" class="jiyaan-logo-svg" xmlns="http://www.w3.org/2000/svg">
+                <svg viewBox="0 0 200 200" class="jiyaan-logo-svg animated-footer-logo" xmlns="http://www.w3.org/2000/svg">
                   <!-- Concentric circles -->
                   <circle cx="100" cy="100" r="60" fill="none" stroke="#1e88e5" stroke-width="1" opacity="0.2"/>
                   <circle cx="100" cy="100" r="45" fill="none" stroke="#1e88e5" stroke-width="1" opacity="0.15"/>
@@ -6025,9 +6048,9 @@
                 </svg>
               </div>
               <div class="footer-logo-text">
-                <h3 class="footer-logo-name">JIYAAN</h3>
+                <h3 class="footer-logo-name gradient-footer-name">JIYAAN</h3>
                 <p class="logo-subtitle">INSTITUTE OF TECHNOLOGY</p>
-                <p class="logo-tagline">GCP DATA ENGINEERING EXCELLENCE</p>
+                <p class="logo-tagline animated-footer-tagline">GCP DATA ENGINEERING EXCELLENCE</p>
               </div>
             </div>
             <p class="footer-description">
