@@ -1594,18 +1594,19 @@
     }
 
     .ultimate-scroll .card {
-      width: 180px;
-      height: 180px;
+      width: 260px;
+      height: 260px;
+      padding: 30px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 15px;
-      border-radius: 18px;
+      gap: 20px;
+      border-radius: 20px;
       text-decoration: none;
       color: #fff;
       font-weight: 600;
-      font-size: 1.1rem;
+      font-size: 1.25rem;
       cursor: pointer;
       transition: all 0.3s ease;
       position: relative;
@@ -1632,8 +1633,8 @@
     }
 
     .ultimate-scroll .card img {
-      width: 60px;
-      height: 60px;
+      width: 90px;
+      height: 90px;
       filter: drop-shadow(0 0 8px rgba(0, 255, 204, 0.4));
       transition: all 0.3s ease;
     }
@@ -1673,14 +1674,31 @@
       }
 
       .ultimate-scroll .card {
-        width: 150px;
-        height: 150px;
-        font-size: 0.95rem;
+        width: 200px;
+        height: 200px;
+        padding: 24px;
+        gap: 16px;
+        font-size: 1.05rem;
       }
 
       .ultimate-scroll .card img {
-        width: 50px;
-        height: 50px;
+        width: 70px;
+        height: 70px;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .ultimate-scroll .card {
+        width: 240px;
+        height: 240px;
+        padding: 28px;
+        gap: 18px;
+        font-size: 1.15rem;
+      }
+
+      .ultimate-scroll .card img {
+        width: 80px;
+        height: 80px;
       }
     }
   </style>
