@@ -2768,32 +2768,162 @@
       transform: translateY(-8px) scale(1.05);
     }
 
-    .service-icon {
+    /* GCP Information Grid */
+    .gcp-info-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-bottom: 80px;
+    }
+
+    .info-card {
+      background: linear-gradient(135deg, rgba(66, 133, 244, 0.1) 0%, rgba(52, 168, 83, 0.08) 100%);
+      border: 2px solid;
+      border-radius: 14px;
+      padding: 28px;
+      text-align: center;
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      animation: slideInUp 0.8s ease-out backwards;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .info-card:nth-child(1) { animation-delay: 0.1s; border-color: rgba(66, 133, 244, 0.4); }
+    .info-card:nth-child(2) { animation-delay: 0.15s; border-color: rgba(234, 67, 53, 0.4); }
+    .info-card:nth-child(3) { animation-delay: 0.2s; border-color: rgba(251, 188, 4, 0.4); }
+    .info-card:nth-child(4) { animation-delay: 0.25s; border-color: rgba(52, 168, 83, 0.4); }
+    .info-card:nth-child(5) { animation-delay: 0.3s; border-color: rgba(66, 133, 244, 0.4); }
+    .info-card:nth-child(6) { animation-delay: 0.35s; border-color: rgba(234, 67, 53, 0.4); }
+    .info-card:nth-child(7) { animation-delay: 0.4s; border-color: rgba(251, 188, 4, 0.4); }
+    .info-card:nth-child(8) { animation-delay: 0.45s; border-color: rgba(52, 168, 83, 0.4); }
+
+    .info-card:hover {
+      border-color: #00ffcc;
+      background: linear-gradient(135deg, rgba(0, 255, 204, 0.1) 0%, rgba(0, 255, 204, 0.05) 100%);
+      box-shadow: 0 15px 40px rgba(0, 255, 204, 0.2);
+      transform: translateY(-10px) scale(1.04);
+    }
+
+    .info-header {
+      color: #b0b8cc;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .info-value {
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(135deg, #4285F4, #00ffcc, #34A853);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .info-subtext {
+      color: #b0b8cc;
+      font-size: 0.8rem;
+      line-height: 1.5;
+    }
+
+    /* Tech Stack */
+    .tech-stack {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      margin-bottom: 60px;
+    }
+
+    .tech-item {
+      background: linear-gradient(135deg, rgba(66, 133, 244, 0.1) 0%, rgba(52, 168, 83, 0.08) 100%);
+      border: 2px solid;
+      border-radius: 12px;
+      padding: 30px;
+      text-align: center;
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      animation: slideInUp 0.8s ease-out backwards;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .tech-item.java { animation-delay: 0.1s; border-color: rgba(66, 133, 244, 0.5); }
+    .tech-item.cpp { animation-delay: 0.2s; border-color: rgba(234, 67, 53, 0.5); }
+    .tech-item.python { animation-delay: 0.3s; border-color: rgba(251, 188, 4, 0.5); }
+    .tech-item.go { animation-delay: 0.4s; border-color: rgba(52, 168, 83, 0.5); }
+    .tech-item.ruby { animation-delay: 0.5s; border-color: rgba(66, 133, 244, 0.5); }
+
+    .tech-item:hover {
+      border-color: #00ffcc;
+      background: linear-gradient(135deg, rgba(0, 255, 204, 0.15) 0%, rgba(0, 255, 204, 0.08) 100%);
+      box-shadow: 0 15px 40px rgba(0, 255, 204, 0.2);
+      transform: translateY(-12px) scale(1.08);
+    }
+
+    .tech-name {
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.15rem;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .tech-icon {
       font-size: 2.5rem;
-      display: block;
-      margin-bottom: 15px;
       transition: transform 0.3s ease;
     }
 
-    .service-box:hover .service-icon {
-      transform: scale(1.2) rotate(10deg);
+    .tech-item:hover .tech-icon {
+      transform: scale(1.3) rotate(15deg);
     }
 
-    .service-box h4 {
-      font-weight: 700;
-      font-size: 1.15rem;
-      margin: 15px 0 10px 0;
-      font-family: 'Outfit', sans-serif;
-      position: relative;
-      z-index: 2;
+    @media (max-width: 1024px) {
+      .gcp-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+      }
+
+      .tech-stack {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
     }
 
-    .service-box p {
-      color: rgba(255, 255, 255, 0.8);
-      font-size: 0.9rem;
-      line-height: 1.6;
-      position: relative;
-      z-index: 2;
+    @media (max-width: 768px) {
+      .gcp-info-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-bottom: 50px;
+      }
+
+      .info-card {
+        padding: 25px;
+      }
+
+      .info-value {
+        font-size: 1.3rem;
+      }
+
+      .tech-stack {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+      }
+
+      .tech-item {
+        padding: 25px;
+      }
+
+      .tech-icon {
+        font-size: 2rem;
+      }
     }
 
     /* Timeline Styles */
@@ -2890,116 +3020,6 @@
       line-height: 1.6;
     }
 
-    /* Infrastructure Section */
-    .infrastructure-highlight {
-      background: linear-gradient(135deg, rgba(0, 255, 204, 0.05) 0%, rgba(66, 133, 244, 0.05) 100%);
-      border: 2px solid rgba(0, 255, 204, 0.15);
-      border-radius: 16px;
-      padding: 50px;
-      margin-bottom: 80px;
-    }
-
-    .infrastructure-intro {
-      text-align: center;
-      color: #b0b8cc;
-      font-size: 1.05rem;
-      margin-bottom: 40px;
-    }
-
-    .infrastructure-items {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 25px;
-    }
-
-    .infra-item {
-      text-align: center;
-      padding: 25px;
-      background: rgba(66, 133, 244, 0.06);
-      border-radius: 12px;
-      transition: all 0.3s ease;
-      border: 1px solid rgba(0, 255, 204, 0.1);
-    }
-
-    .infra-item:hover {
-      border-color: #00ffcc;
-      background: rgba(0, 255, 204, 0.1);
-      transform: translateY(-8px);
-    }
-
-    .infra-emoji {
-      font-size: 2.5rem;
-      display: block;
-      margin-bottom: 12px;
-    }
-
-    .infra-item h5 {
-      color: #fff;
-      font-weight: 700;
-      font-size: 1.05rem;
-      margin: 12px 0 8px 0;
-      font-family: 'Outfit', sans-serif;
-    }
-
-    .infra-item p {
-      color: #b0b8cc;
-      font-size: 0.85rem;
-      margin: 0;
-      line-height: 1.6;
-    }
-
-    /* Google Cloud Ecosystem */
-    .google-cloud-ecosystem {
-      background: linear-gradient(135deg, rgba(66, 133, 244, 0.08) 0%, rgba(52, 168, 83, 0.08) 100%);
-      border: 2px solid rgba(66, 133, 244, 0.15);
-      border-radius: 16px;
-      padding: 50px;
-      margin-bottom: 60px;
-    }
-
-    .ecosystem-intro {
-      text-align: center;
-      color: #b0b8cc;
-      font-size: 1.05rem;
-      margin-bottom: 40px;
-    }
-
-    .ecosystem-components {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 25px;
-    }
-
-    .ecosystem-box {
-      background: rgba(0, 255, 204, 0.06);
-      border: 2px solid rgba(0, 255, 204, 0.2);
-      border-radius: 12px;
-      padding: 30px;
-      text-align: center;
-      transition: all 0.3s ease;
-    }
-
-    .ecosystem-box:hover {
-      border-color: #00ffcc;
-      background: rgba(0, 255, 204, 0.12);
-      transform: translateY(-8px);
-      box-shadow: 0 15px 35px rgba(0, 255, 204, 0.2);
-    }
-
-    .ecosystem-box h5 {
-      color: #00ffcc;
-      font-weight: 700;
-      font-size: 1.1rem;
-      margin: 0 0 10px 0;
-      font-family: 'Outfit', sans-serif;
-    }
-
-    .ecosystem-box p {
-      color: #b0b8cc;
-      font-size: 0.9rem;
-      margin: 0;
-      line-height: 1.6;
-    }
 
     @media (max-width: 1024px) {
       .gcp-overview-section {
@@ -3342,31 +3362,80 @@
           </div>
         </div>
 
-        <!-- Core Services -->
-        <h3 class="subsection-title">Services Offered</h3>
-        <div class="services-showcase">
-          <div class="service-box google-blue">
-            <span class="service-icon">💾</span>
-            <h4>Computing</h4>
-            <p>Compute Engine, App Engine, Cloud Functions</p>
+        <!-- GCP Company Information -->
+        <h3 class="subsection-title">GCP Company Information</h3>
+        <div class="gcp-info-grid">
+          <div class="info-card info-owner">
+            <div class="info-header">Owner</div>
+            <div class="info-value">Google</div>
+            <div class="info-subtext">Founded by Larry Page & Sergey Brin</div>
           </div>
 
-          <div class="service-box google-red">
-            <span class="service-icon">📊</span>
-            <h4>Data Storage</h4>
-            <p>Cloud Storage, BigTable, Datastore, Firestore</p>
+          <div class="info-card info-ceo">
+            <div class="info-header">CEO</div>
+            <div class="info-value">Thomas Kurian</div>
+            <div class="info-subtext">Leading Innovation & Growth</div>
           </div>
 
-          <div class="service-box google-yellow">
-            <span class="service-icon">📈</span>
-            <h4>Data Analytics</h4>
-            <p>BigQuery, Cloud Dataflow, Cloud DataPrep</p>
+          <div class="info-card info-industry">
+            <div class="info-header">Industry</div>
+            <div class="info-value">Cloud Computing</div>
+            <div class="info-subtext">Web Services & Infrastructure</div>
           </div>
 
-          <div class="service-box google-green">
-            <span class="service-icon">🤖</span>
-            <h4>Machine Learning</h4>
-            <p>Vertex AI, TensorFlow, AutoML, ML APIs</p>
+          <div class="info-card info-launched">
+            <div class="info-header">Launched</div>
+            <div class="info-value">April 7, 2008</div>
+            <div class="info-subtext">18 Years of Innovation</div>
+          </div>
+
+          <div class="info-card info-revenue">
+            <div class="info-header">Revenue (2022)</div>
+            <div class="info-value">US$26.3B</div>
+            <div class="info-subtext">📈 Increasing Growth</div>
+          </div>
+
+          <div class="info-card info-income">
+            <div class="info-header">Operating Income (2022)</div>
+            <div class="info-value">US$−2.97B</div>
+            <div class="info-subtext">Investment Phase</div>
+          </div>
+
+          <div class="info-card info-status">
+            <div class="info-header">Current Status</div>
+            <div class="info-value">🟢 Active</div>
+            <div class="info-subtext">Continuously Growing</div>
+          </div>
+
+          <div class="info-card info-url">
+            <div class="info-header">Official Website</div>
+            <div class="info-value">cloud.google.com</div>
+            <div class="info-subtext">Enterprise Cloud Services</div>
+          </div>
+        </div>
+
+        <!-- Technologies & Languages -->
+        <h3 class="subsection-title">Built With</h3>
+        <div class="tech-stack">
+          <div class="tech-item java">
+            <span class="tech-name">Java</span>
+            <span class="tech-icon">☕</span>
+          </div>
+          <div class="tech-item cpp">
+            <span class="tech-name">C++</span>
+            <span class="tech-icon">⚙️</span>
+          </div>
+          <div class="tech-item python">
+            <span class="tech-name">Python</span>
+            <span class="tech-icon">🐍</span>
+          </div>
+          <div class="tech-item go">
+            <span class="tech-name">Go</span>
+            <span class="tech-icon">🚀</span>
+          </div>
+          <div class="tech-item ruby">
+            <span class="tech-name">Ruby</span>
+            <span class="tech-icon">💎</span>
           </div>
         </div>
 
@@ -3432,57 +3501,6 @@
           </div>
         </div>
 
-        <!-- Infrastructure Advantage -->
-        <div class="infrastructure-highlight">
-          <h3 class="subsection-title">Powered by Google's Proven Infrastructure</h3>
-          <p class="infrastructure-intro">GCP uses the same infrastructure as Google's own world-class products:</p>
-          <div class="infrastructure-items">
-            <div class="infra-item">
-              <span class="infra-emoji">🔍</span>
-              <h5>Google Search</h5>
-              <p>Handles billions of search queries daily with unmatched reliability</p>
-            </div>
-            <div class="infra-item">
-              <span class="infra-emoji">📧</span>
-              <h5>Gmail</h5>
-              <p>Powers billions of users with enterprise-grade email infrastructure</p>
-            </div>
-            <div class="infra-item">
-              <span class="infra-emoji">🎬</span>
-              <h5>YouTube</h5>
-              <p>Streams billions of videos globally with massive data processing</p>
-            </div>
-            <div class="infra-item">
-              <span class="infra-emoji">🗺️</span>
-              <h5>Google Maps</h5>
-              <p>Global scale infrastructure and mapping data processing expertise</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Google Cloud Ecosystem -->
-        <div class="google-cloud-ecosystem">
-          <h3 class="subsection-title">Part of Google Cloud Ecosystem</h3>
-          <p class="ecosystem-intro">GCP is part of Google Cloud - a comprehensive suite of services:</p>
-          <div class="ecosystem-components">
-            <div class="ecosystem-box">
-              <h5>☁️ GCP</h5>
-              <p>Public Cloud Infrastructure, Platform & Serverless Services</p>
-            </div>
-            <div class="ecosystem-box">
-              <h5>🏢 Google Workspace</h5>
-              <p>G Suite - Productivity & Collaboration Tools</p>
-            </div>
-            <div class="ecosystem-box">
-              <h5>🔧 Android & ChromeOS</h5>
-              <p>Enterprise Versions of Mobile & Operating Systems</p>
-            </div>
-            <div class="ecosystem-box">
-              <h5>🔗 APIs</h5>
-              <p>Machine Learning & Mapping Services & APIs</p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
