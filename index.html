@@ -3139,6 +3139,18 @@
 
     .footer-logo {
       margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icon {
+      font-size: 2.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .footer-logo:hover .logo-icon {
+      transform: scale(1.15) rotate(-10deg);
     }
 
     .footer-logo h3 {
@@ -3157,6 +3169,26 @@
       margin: 8px 0 0 0;
       letter-spacing: 1.5px;
       text-transform: uppercase;
+    }
+
+    .footer-description {
+      color: #b0b8cc;
+      font-size: 0.9rem;
+      line-height: 1.7;
+      margin: 20px 0 0 0;
+    }
+
+    .footer-quote {
+      color: #00ffcc;
+      font-size: 0.95rem;
+      font-style: italic;
+      font-weight: 600;
+      margin: 20px 0 0 0;
+      padding: 15px;
+      border-left: 3px solid #00ffcc;
+      background: rgba(0, 255, 204, 0.05);
+      border-radius: 4px;
+      line-height: 1.6;
     }
 
     /* Footer Center - Quick Links */
@@ -3319,8 +3351,25 @@
         margin-top: 60px;
       }
 
+      .footer-logo {
+        gap: 10px;
+      }
+
+      .logo-icon {
+        font-size: 2rem;
+      }
+
       .footer-logo h3 {
         font-size: 1.4rem;
+      }
+
+      .footer-description {
+        font-size: 0.85rem;
+      }
+
+      .footer-quote {
+        font-size: 0.85rem;
+        padding: 12px;
       }
 
       .footer-heading {
@@ -4966,9 +5015,16 @@
           <!-- Footer Left: Logo & Description -->
           <div class="footer-left">
             <div class="footer-logo">
-              <h3>🎓 JIYAAN</h3>
+              <span class="logo-icon">📘</span>
+              <h3>JIYAAN</h3>
               <p class="logo-subtitle">INSTITUTE OF TECHNOLOGY</p>
             </div>
+            <p class="footer-description">
+              India's Premier GCP Data Engineering Institute. Shaping careers through expert-driven, hands-on cloud training and 100% placement support.
+            </p>
+            <p class="footer-quote">
+              "Master Cloud, Master Your Future" - Building Data Engineers Who Transform Industries
+            </p>
           </div>
 
           <!-- Footer Center: Quick Links -->
